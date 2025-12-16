@@ -1,0 +1,65 @@
+{
+  "CELESTE-PRO-2024-001": {
+    "usada": false,
+    "producto": "Professional",
+    "fecha_venta": "2024-01-01",
+    "email_cliente": "",
+    "notas": "Licencia Professional - 1 año",
+    "precio": 299.99,
+    "moneda": "USD"
+  },
+  "CELESTE-STD-2024-001": {
+    "usada": false,
+    "producto": "Standard",
+    "fecha_venta": "2024-01-01",
+    "email_cliente": "",
+    "notas": "Licencia Standard - 30 días",
+    "precio": 49.99,
+    "moneda": "USD"
+  },
+  "CELESTE-PRO-2024-002": {
+    "usada": false,
+    "producto": "Professional",
+    "fecha_venta": "2024-01-01",
+    "email_cliente": "",
+    "notas": "Licencia Professional - 1 año",
+    "precio": 299.99,
+    "moneda": "USD"
+  },
+  "CELESTE-STD-2024-002": {
+    "usada": false,
+    "producto": "Standard",
+    "fecha_venta": "2024-01-01",
+    "email_cliente": "",
+    "notas": "Licencia Standard - 30 días",
+    "precio": 49.99,
+    "moneda": "USD"
+  },
+  "CELESTE-PRO-2024-003": {
+    "usada": false,
+    "producto": "Professional",
+    "fecha_venta": "2024-01-01",
+    "email_cliente": "",
+    "notas": "Licencia Professional - 1 año",
+    "precio": 299.99,
+    "moneda": "USD"
+  },
+  "CELESTE-STD-2024-003": {
+    "usada": false,
+    "producto": "Standard",
+    "fecha_venta": "2024-01-01",
+    "email_cliente": "",
+    "notas": "Licencia Standard - 30 días",
+    "precio": 49.99,
+    "moneda": "USD"
+  },
+  "CELESTE-TEST-001": {
+    "usada": false,
+    "producto": "Test",
+    "fecha_venta": "2024-01-01",
+    "email_cliente": "test@example.com",
+    "notas": "Key de prueba - 7 días",
+    "precio": 0.00,
+    "moneda": "USD"
+  }
+}
