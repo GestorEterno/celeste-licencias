@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ÚNETE - VISION OLYMPUS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="unete.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        // Inicializar EmailJS con tu Public Key
+        (function() {
+            emailjs.init("DN6UcarY8AZ2-jfTS");
+        })();
+    </script>
+</head>
+<body>
+    <!-- Fondo galáctico EXACTAMENTE IGUAL A TECNOLOGÍA -->
+    <div class="galaxy-background"></div>
+    <div class="starfield"></div>
+    <div class="nebula-overlay"></div>
+    <div class="particles"></div>
+    
+    <!-- Barra de progreso EXACTAMENTE IGUAL A TECNOLOGÍA -->
+    <div class="reading-progress"></div>
+    
+    <!-- Cabecera EXACTAMENTE IGUAL A TECNOLOGÍA -->
+    <header class="cyber-header">
+        <div class="logo-container">
+            <h1 class="logo-glitch" data-text="VISION OLYMPUS">VISION OLYMPUS</h1>
+        </div>
+        <nav class="cyber-nav">
+            <a href="index.html" class="nav-link">INICIO</a>
+            <a href="tecnologia.html" class="nav-link">TECNOLOGÍA</a>
+            <a href="filosofia.html" class="nav-link">FILOSOFÍA</a>
+            <a href="comunidad.html" class="nav-link">COMUNIDAD</a>
+            <a href="unete.html" class="nav-link active">ÚNETE</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section - AHORA EXACTAMENTE IGUAL A FILOSOFÍA -->
+    <section class="philosophy-hero">
+        <div class="hero-orbit">
+            <div class="orbit-ring ring-1"></div>
+            <div class="orbit-ring ring-2"></div>
+            <div class="orbit-ring ring-3"></div>
+            <div class="core-globe"></div>
+        </div>
+        <div class="section-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">ÚNETE A LA <span class="hero-accent">REVOLUCIÓN</span></h1>
+                    <p class="hero-subtitle">FORMA PARTE DEL CAMBIO</p>
+                    
+                    <!-- Stats Section - MODIFICADO CON LOS NUEVOS REQUISITOS -->
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="stat-number">24</div>
+                            <div class="stat-label">Miembros<br>Activos</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">15</div>
+                            <div class="stat-label">Proyectos<br>Activos</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Trabajo<br>Remoto</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario de Unión - ACTUALIZADO CON NUEVOS ROLES -->
+    <section class="join-form-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">SOLICITUD DE INGRESO</h2>
+                <p class="section-subtitle">Completa el formulario y nos pondremos en contacto contigo</p>
+            </div>
+
+            <form id="cyber-form" class="cyber-form">
+                <div class="form-grid">
+                    <!-- Información Personal -->
+                    <div class="form-group">
+                        <h3 class="form-group-title">INFORMACIÓN PERSONAL</h3>
+                        
+                        <div class="form-field">
+                            <label class="field-label">NOMBRE COMPLETO *</label>
+                            <input type="text" name="nombre" class="cyber-input" required>
+                            <div class="input-glow"></div>
+                        </div>
+
+                        <div class="form-field">
+                            <label class="field-label">EMAIL *</label>
+                            <input type="email" name="email" class="cyber-input" required>
+                            <div class="input-glow"></div>
+                        </div>
+
+                        <div class="form-field">
+                            <label class="field-label">TELÉFONO (OPCIONAL)</label>
+                            <input type="tel" name="telefono" class="cyber-input">
+                            <div class="input-glow"></div>
+                        </div>
+
+                        <div class="form-field">
+                            <label class="field-label">PAÍS *</label>
+                            <input type="text" name="pais" class="cyber-input" required>
+                            <div class="input-glow"></div>
+                        </div>
+                    </div>
+
+                    <!-- Información Profesional -->
+                    <div class="form-group">
+                        <h3 class="form-group-title">INFORMACIÓN PROFESIONAL</h3>
+
+                        <div class="form-field">
+                            <label class="field-label">ROL PRINCIPAL *</label>
+                            <select name="rol_principal" class="cyber-select" required>
+                                <option value="">Selecciona tu rol</option>
+                                <option value="ciberseguridad">Ciberseguridad</option>
+                                <option value="desarrollador">Desarrollador</option>
+                                <option value="ilustrador">Ilustrador</option>
+                                <option value="estratega">Estratega</option>
+                                <option value="ingeniero">Ingeniero</option>
+                                <option value="diseñador">Diseñador</option>
+                                <option value="embajador">Embajador</option>
+                                <option value="backend">Backend</option>
+                                <option value="gestor">Gestor</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                            <div class="input-glow"></div>
+                        </div>
+
+                        <div class="form-field">
+                            <label class="field-label">AÑOS DE EXPERIENCIA *</label>
+                            <select name="experiencia" class="cyber-select" required>
+                                <option value="">Selecciona experiencia</option>
+                                <option value="0-1">0-1 años</option>
+                                <option value="1-3">1-3 años</option>
+                                <option value="3-5">3-5 años</option>
+                                <option value="5-10">5-10 años</option>
+                                <option value="10+">10+ años</option>
+                            </select>
+                            <div class="input-glow"></div>
+                        </div>
+
+                        <div class="form-field">
+                            <label class="field-label">HABILIDADES TÉCNICAS *</label>
+                            <textarea name="habilidades" class="cyber-textarea" placeholder="Lista tus principales habilidades técnicas..." required></textarea>
+                            <div class="input-glow"></div>
+                        </div>
+
+                        <div class="form-field">
+                            <label class="field-label">PORTAFOLIO/LINKEDIN (OPCIONAL)</label>
+                            <input type="url" name="portafolio" class="cyber-input" placeholder="https://">
+                            <div class="input-glow"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Motivación -->
+                <div class="form-group full-width">
+                    <h3 class="form-group-title">MOTIVACIÓN</h3>
+                    
+                    <div class="form-field">
+                        <label class="field-label">¿POR QUÉ QUIERES UNIRTE A VISION OLYMPUS? *</label>
+                        <textarea name="motivacion" class="cyber-textarea" rows="5" placeholder="Cuéntanos qué te motiva a formar parte de nuestro proyecto..." required></textarea>
+                        <div class="input-glow"></div>
+                    </div>
+
+                    <div class="form-field">
+                        <label class="field-label">¿CÓMO PUEDES CONTRIBUIR AL PROYECTO? *</label>
+                        <textarea name="contribucion" class="cyber-textarea" rows="4" placeholder="Describe cómo tus habilidades pueden aportar valor..." required></textarea>
+                        <div class="input-glow"></div>
+                    </div>
+
+                    <div class="form-field">
+                        <label class="field-label">DISPONIBILIDAD SEMANAL (HORAS APROXIMADAS) *</label>
+                        <select name="disponibilidad" class="cyber-select" required>
+                            <option value="">Selecciona disponibilidad</option>
+                            <option value="5-10">5-10 horas</option>
+                            <option value="10-20">10-20 horas</option>
+                            <option value="20-30">20-30 horas</option>
+                            <option value="30+">30+ horas</option>
+                        </select>
+                        <div class="input-glow"></div>
+                    </div>
+                </div>
+
+                <!-- Términos y Envío - MANTENIDO ORIGINAL -->
+                <div class="form-footer">
+                    <div class="terms-agreement">
+                        <input type="checkbox" name="terminos" id="terminos" required>
+                        <label for="terminos" class="terms-label">
+                            Acepto que mis datos sean procesados según la 
+                            <a href="politica-privacidad.html" class="terms-link">Política de Privacidad</a> 
+                            y comprendo que me contactarán por email.
+                        </label>
+                    </div>
+
+                    <button type="submit" class="cta-button primary submit-button">
+                        <span class="button-text">ENVIAR SOLICITUD</span>
+                        <span class="button-glow"></span>
+                    </button>
+                </div>
+            </form>
+
+            <!-- Mensaje de éxito (oculto inicialmente) - MANTENIDO ORIGINAL -->
+            <div id="success-message" class="success-message" style="display: none;">
+                <div class="success-content">
+                    <div class="success-icon">🚀</div>
+                    <h3 class="success-title">SOLICITUD ENVIADA CON ÉXITO</h3>
+                    <p class="success-description">Hemos recibido tu solicitud. Te contactaremos en las próximas 24-48 horas.</p>
+                    <div class="success-buttons">
+                        <button onclick="resetForm()" class="cta-button primary">ENVIAR OTRA SOLICITUD</button>
+                        <a href="index.html" class="cta-button secondary">VOLVER AL INICIO</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Proceso - MANTENIDO ORIGINAL -->
+    <section class="process-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">PROCESO DE SELECCIÓN</h2>
+                <p class="section-subtitle">Así es como evaluamos cada solicitud</p>
+            </div>
+
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-icon">📨</div>
+                    <h3 class="step-title">Recepción</h3>
+                    <p class="step-description">Recibimos y revisamos tu solicitud en un plazo máximo de 72 horas.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-icon">👥</div>
+                    <h3 class="step-title">Evaluación</h3>
+                    <p class="step-description">Analizamos tu perfil y cómo se alinea con nuestras necesidades actuales.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-icon">💬</div>
+                    <h3 class="step-title">Entrevista</h3>
+                    <p class="step-description">Si tu perfil es compatible, coordinamos una entrevista virtual.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-icon">🎯</div>
+                    <h3 class="step-title">Incorporación</h3>
+                    <p class="step-description">Los seleccionados reciben acceso a nuestra plataforma y documentación.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - EXACTAMENTE IGUAL A TECNOLOGÍA -->
+    <footer class="tech-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>VISION OLYMPUS</h3>
+                    <p>Tecnología avanzada para todos</p>
+                </div>
+                <div class="footer-links">
+                    <a href="politica-privacidad.html" class="footer-link">Política de Privacidad</a>
+                    <a href="términos-condiciones.html" class="footer-link">Términos y Condiciones</a>
+                    <a href="preguntas-frecuentes.html" class="footer-link">Preguntas Frecuentes</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2025 Vision Olympus. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="unete.js"></script>
+</body>
+</html>

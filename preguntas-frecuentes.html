@@ -1,0 +1,603 @@
+<!-- preguntas-frecuentes.html - Estilo Vision Olympus -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PREGUNTAS FRECUENTES - VISION OLYMPUS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="preguntas-frecuentes.css">
+</head>
+<body>
+    <!-- Fondo galáctico -->
+    <div class="galaxy-background"></div>
+    <div class="starfield"></div>
+    <div class="nebula-overlay"></div>
+    <div class="particles"></div>
+    
+    <!-- Barra de progreso -->
+    <div class="reading-progress"></div>
+    
+    <!-- Cabecera -->
+    <header class="cyber-header">
+        <div class="logo-container">
+            <h1 class="logo-glitch" data-text="VISION OLYMPUS">VISION OLYMPUS</h1>
+        </div>
+        <nav class="cyber-nav">
+            <a href="index.html" class="nav-link">INICIO</a>
+            <a href="tecnologia.html" class="nav-link">TECNOLOGÍA</a>
+            <a href="filosofia.html" class="nav-link">FILOSOFÍA</a>
+            <a href="comunidad.html" class="nav-link">COMUNIDAD</a>
+            <a href="unete.html" class="nav-link">ÚNETE</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="faq-hero">
+        <div class="hero-orbit">
+            <div class="orbit-ring ring-1"></div>
+            <div class="orbit-ring ring-2"></div>
+            <div class="orbit-ring ring-3"></div>
+            <div class="core-globe"></div>
+        </div>
+        <div class="section-container">
+            <div class="hero-content">
+                <div class="hero-left">
+                    <h1 class="hero-title">PREGUNTAS<br><span class="hero-accent">FRECUENTES</span></h1>
+                    <p class="hero-description">Encuentra respuestas a todas tus dudas sobre Vision Olympus, nuestra tecnología, filosofía y cómo unirte a nuestra comunidad.</p>
+                    
+                    <div class="search-container">
+                        <div class="search-box">
+                            <i class="fas fa-search"></i>
+                            <input type="text" id="faq-search" placeholder="Buscar en preguntas frecuentes...">
+                            <div class="search-results"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-right">
+                    <div class="quick-stats">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-question-circle"></i>
+                            </div>
+                            <div class="stat-info">
+                                <div class="stat-number">24+</div>
+                                <div class="stat-label">Preguntas Resueltas</div>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="stat-info">
+                                <div class="stat-number">24/7</div>
+                                <div class="stat-label">Soporte Activo</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="emergency-contact">
+                        <h3>¿No encuentras tu respuesta?</h3>
+                        <p>Nuestro equipo de soporte está listo para ayudarte personalmente.</p>
+                        <button id="contact-support-btn" class="cta-button primary">
+                            <i class="fas fa-envelope"></i>
+                            CONTACTAR SOPORTE
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Categorías -->
+    <section class="categories-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">CATEGORÍAS DE AYUDA</h2>
+                <p class="section-subtitle">Navega por nuestras categorías organizadas para encontrar rápidamente lo que necesitas</p>
+            </div>
+
+            <div class="categories-grid">
+                <div class="category-card" data-category="general">
+                    <div class="category-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 class="category-title">General</h3>
+                    <p class="category-description">Información básica sobre Vision Olympus y nuestro propósito</p>
+                    <span class="category-count">8 preguntas</span>
+                </div>
+
+                <div class="category-card" data-category="tecnologia">
+                    <div class="category-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3 class="category-title">Tecnología</h3>
+                    <p class="category-description">Detalles sobre nuestras aplicaciones y desarrollo tecnológico</p>
+                    <span class="category-count">10 preguntas</span>
+                </div>
+
+                <div class="category-card" data-category="cuenta">
+                    <div class="category-icon">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h3 class="category-title">Cuenta & Acceso</h3>
+                    <p class="category-description">Gestión de cuenta, acceso y configuración de perfil</p>
+                    <span class="category-count">5 preguntas</span>
+                </div>
+
+                <div class="category-card" data-category="precios">
+                    <div class="category-icon">
+                        <i class="fas fa-tag"></i>
+                    </div>
+                    <h3 class="category-title">Precios & Planes</h3>
+                    <p class="category-description">Información sobre costos, suscripciones y beneficios</p>
+                    <span class="category-count">6 preguntas</span>
+                </div>
+
+                <div class="category-card" data-category="comunidad">
+                    <div class="category-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="category-title">Comunidad</h3>
+                    <p class="category-description">Sobre nuestra comunidad y cómo participar</p>
+                    <span class="category-count">7 preguntas</span>
+                </div>
+
+                <div class="category-card" data-category="empleo">
+                    <div class="category-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3 class="category-title">Empleo & Carreras</h3>
+                    <p class="category-description">Oportunidades laborales y unirse al equipo</p>
+                    <span class="category-count">9 preguntas</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Preguntas Frecuentes -->
+    <section class="faq-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">PREGUNTAS FRECUENTES</h2>
+                <p class="section-subtitle">Respuestas detalladas a las preguntas más comunes de nuestra comunidad</p>
+            </div>
+
+            <div class="faq-container">
+                <!-- Categoría General -->
+                <div class="faq-category" data-category="general">
+                    <h3 class="category-header">
+                        <i class="fas fa-globe"></i>
+                        Preguntas Generales
+                    </h3>
+                    
+                    <div class="faq-accordion">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>¿Qué es Vision Olympus?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Vision Olympus es un proyecto tecnológico integral que desarrolla 12 aplicaciones especializadas para mejorar todos los aspectos de la vida moderna. Nuestra misión es crear tecnología avanzada accesible para todos, con un precio único de 1 USD mensual por aplicación.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>¿Quién está detrás de Vision Olympus?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>El proyecto está liderado por Santino Gimenez como CEO y fundador, junto con un equipo de 24 especialistas en tecnología, diseño, inteligencia artificial y desarrollo de software. Contamos con expertos como Cristhian Martínez en desarrollo móvil, Laura Méndez en IA y Carlos Rodríguez en arquitectura de sistemas.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>¿Cuándo estarán disponibles las aplicaciones?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Estamos trabajando en un roadmap de 3 fases (2024-2030). Las primeras 4 aplicaciones (Tempo, Noema, Ecomyse, Vitalion) estarán disponibles entre 2024-2026. Las aplicaciones de las fases 2 y 3 se lanzarán progresivamente hasta 2030.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>¿Cuál es la misión principal de Vision Olympus?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Nuestra misión es crear tecnología avanzada accesible para todos. Creemos que la tecnología de vanguardia no debería ser un privilegio exclusivo, sino un derecho fundamental. Por eso todas nuestras aplicaciones tienen un precio único de 1 USD mensual y nuestros empleados tienen acceso gratuito como parte de nuestra comunidad.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>¿Qué filosofía guía a Vision Olympus?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Nos guía la creencia de que la tecnología debe estar al servicio de las personas, no al revés. Rechazamos modelos extractivos de datos y plataformas cerradas. Creemos en construir alternativas superiores junto al sistema existente, no tomando el poder por la fuerza sino haciendo gradualmente irrelevante el sistema actual.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Categoría Tecnología -->
+                <div class="faq-category" data-category="tecnologia">
+                    <h3 class="category-header">
+                        <i class="fas fa-microchip"></i>
+                        Tecnología & Aplicaciones
+                    </h3>
+                    
+                    <div class="faq-accordion">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>¿Las aplicaciones funcionarán offline?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Sí, todas nuestras aplicaciones tendrán funcionalidad offline básica. Podrás acceder a tus datos, realizar anotaciones y usar funciones principales sin conexión. La sincronización se realizará automáticamente cuando recuperes la conexión.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>¿En qué dispositivos estarán disponibles?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Todas las aplicaciones estarán disponibles para iOS y Android. Las aplicaciones principales también tendrán versiones web y de escritorio (Windows, macOS, Linux). Olympus, nuestro centro de control, estará optimizado específicamente para PC.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>¿Cómo garantizan la seguridad de mis datos?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Implementamos cifrado de grado militar, autenticación biométrica y protocolos de seguridad avanzados. Tus datos nunca se venden a terceros y mantenemos transparencia total sobre cómo utilizamos la información. Puedes consultar nuestra Política de Privacidad para más detalles.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>¿Qué aplicaciones están en desarrollo?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Estamos desarrollando 12 aplicaciones especializadas: TEMPO (gestión de tiempo), NOEMA (salud mental), ECOMYSE (finanzas), VITALION (salud física), HALO (comunicación), OLYMPUS ACADEMY (educación), ASTRA (entretenimiento), OLYMPUS (centro de control), ATLAS AI (asistente IA), AURA (video), SOLARIS (hogar inteligente) y TERRA (viajes).</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>¿Tienen su propio sistema operativo?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>En nuestra Fase 3 (2029-2030) planeamos desarrollar sistemas operativos propios como parte de nuestro ecosistema tecnológico avanzado. Actualmente nos enfocamos en aplicaciones que funcionen en sistemas operativos existentes para garantizar máxima accesibilidad.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Categoría Cuenta & Acceso -->
+                <div class="faq-category" data-category="cuenta">
+                    <h3 class="category-header">
+                        <i class="fas fa-user-circle"></i>
+                        Cuenta & Acceso
+                    </h3>
+                    
+                    <div class="faq-accordion">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>¿Cómo creo una cuenta en Vision Olympus?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Cuando lancemos nuestras primeras aplicaciones, podrás crear una cuenta directamente desde cada app o a través de nuestro portal unificado. El proceso será simple y requerirá solo información básica. Todos los empleados de Vision Olympus tendrán acceso automático a todas las aplicaciones.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>¿Puedo usar la misma cuenta en todas las aplicaciones?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Sí, estamos desarrollando un sistema de autenticación unificado que te permitirá usar la misma cuenta en todas las aplicaciones de Vision Olympus. Esto facilitará la experiencia y permitirá una integración perfecta entre nuestras diferentes soluciones.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>¿Qué opciones de recuperación de cuenta ofrecen?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Ofreceremos múltiples métodos de recuperación: verificación por correo electrónico, preguntas de seguridad y, en el futuro, opciones biométricas. La seguridad de tu cuenta es nuestra prioridad, por lo que implementaremos protocolos robustos para proteger tu información.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Categoría Precios -->
+                <div class="faq-category" data-category="precios">
+                    <h3 class="category-header">
+                        <i class="fas fa-tag"></i>
+                        Precios & Suscripciones
+                    </h3>
+                    
+                    <div class="faq-accordion">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>¿Realmente cuesta solo 1 USD por aplicación?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Sí, exactamente. Cada aplicación tiene un precio único de 1 USD mensual. No hay planes escalonados ni funciones premium adicionales. Todo el contenido y funcionalidades están incluidos en ese precio. Los empleados de Vision Olympus tienen acceso gratuito a todas las aplicaciones.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>¿Hay descuentos por múltiples aplicaciones?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Actualmente no ofrecemos paquetes combinados, ya que cada aplicación está diseñada para funcionar de forma independiente. Sin embargo, estamos evaluando opciones de suscripción al ecosistema completo para el futuro, manteniendo siempre precios accesibles.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>¿Puedo probar las aplicaciones antes de pagar?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Sí, todas las aplicaciones tendrán períodos de prueba gratuitos. El tiempo exacto de prueba variará por aplicación, pero generalmente será de 14 a 30 días. Durante este período tendrás acceso completo a todas las funcionalidades.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>¿Qué métodos de pago aceptan?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Aceptaremos tarjetas de crédito/débito principales, PayPal y, en el futuro, planeamos integrar opciones de pago con criptomonedas para mayor accesibilidad global. Estamos trabajando para garantizar que el proceso de pago sea seguro y sencillo para todos los usuarios.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>¿Ofrecen reembolsos?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Sí, ofrecemos reembolsos dentro de los primeros 7 días de cualquier suscripción si no estás satisfecho con el servicio. Creemos en la transparencia y queremos que nuestros usuarios confíen en que entregaremos valor por su inversión.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Categoría Comunidad -->
+                <div class="faq-category" data-category="comunidad">
+                    <h3 class="category-header">
+                        <i class="fas fa-users"></i>
+                        Comunidad
+                    </h3>
+                    
+                    <div class="faq-accordion">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>¿Qué es la Comunidad Olympus?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>La Comunidad Olympus es un ecosistema colaborativo donde desarrolladores, pensadores y usuarios trabajan juntos para crear tecnología que empodere, no que controle. Es un colectivo evolutivo donde cada miembro contribuye, crece y define el futuro digital de manera transparente y ética.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>¿Cómo puedo participar en la comunidad?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Puedes unirte como desarrollador, diseñador UX/UI, documentador, traductor, tester o embajador. Cada rol contribuye de manera diferente al proyecto. Visita nuestra página "Únete" para conocer los requisitos específicos y el proceso de solicitud.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>¿Cómo funciona la gobernanza en la comunidad?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Implementamos una estructura circular donde cada contribución importa. Cualquier miembro puede proponer mejoras, que luego pasan por debate comunitario, desarrollo colaborativo, pruebas y validación, e implementación. Cada miembro tiene voz en la dirección del proyecto.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>¿Qué beneficios obtengo al unirme a la comunidad?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Como miembro de la comunidad, tendrás acceso gratuito a todas las aplicaciones de Vision Olympus, participación en decisiones del proyecto, oportunidades de networking con profesionales afines, y la satisfacción de contribuir a un proyecto que está redefiniendo la relación entre humanos y tecnología.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Categoría Empleo -->
+                <div class="faq-category" data-category="empleo">
+                    <h3 class="category-header">
+                        <i class="fas fa-briefcase"></i>
+                        Empleo & Carreras
+                    </h3>
+                    
+                    <div class="faq-accordion">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>¿Qué tipos de roles están disponibles?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Buscamos desarrolladores, diseñadores UX/UI, documentadores, traductores, testers y embajadores. Cada rol contribuye de manera única a nuestro ecosistema. Valoramos tanto las habilidades técnicas como la alineación con nuestra filosofía y misión.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>¿Es necesario tener experiencia previa?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>No necesariamente. Valoramos la pasión, el compromiso y la capacidad de aprendizaje. Para algunos roles técnicos se requieren habilidades específicas, pero para otros como tester o embajador, la motivación y alineación con nuestros valores son igual de importantes.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>¿Cómo es el proceso de selección?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>El proceso incluye: 1) Recepción y revisión de solicitud en 72 horas, 2) Evaluación de perfil y alineación con necesidades, 3) Entrevista virtual si el perfil es compatible, 4) Incorporación con acceso a plataforma y documentación para seleccionados.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>¿Ofrecen trabajo remoto?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Sí, todo nuestro trabajo es 100% remoto. Creemos en el talento sin fronteras y valoramos la diversidad de perspectivas que aportan miembros de diferentes partes del mundo. Utilizamos herramientas colaborativas modernas para mantener una comunicación efectiva.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>¿Qué beneficios ofrecen a los empleados?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Nuestros empleados reciben acceso gratuito a todas las aplicaciones de Vision Olympus, oportunidades de crecimiento profesional, participación en decisiones del proyecto, ambiente de trabajo colaborativo y la satisfacción de contribuir a un proyecto con impacto social positivo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto Adicional -->
+    <section class="contact-section" id="contact-form-section">
+        <div class="section-container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>¿Sigue sin estar claro?</h3>
+                    <p>Nuestro equipo está aquí para ayudarte. Contáctanos a través de cualquiera de estos medios:</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Correo Electrónico</strong>
+                                <span>cnolympus@gmail.com</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Tiempo de Respuesta</strong>
+                                <span>Menos de 24 horas</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <i class="fas fa-comments"></i>
+                            <div>
+                                <strong>Chat en Vivo</strong>
+                                <span>Disponible pronto</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Envíanos tu pregunta</h3>
+                    <form id="question-form">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Tu nombre" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Tu correo electrónico" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <select id="category" required>
+                                <option value="">Selecciona una categoría</option>
+                                <option value="general">General</option>
+                                <option value="tecnologia">Tecnología</option>
+                                <option value="cuenta">Cuenta & Acceso</option>
+                                <option value="precios">Precios & Planes</option>
+                                <option value="comunidad">Comunidad</option>
+                                <option value="empleo">Empleo & Carreras</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="question" placeholder="Describe tu pregunta o problema..." rows="4" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="cta-button primary">
+                            <i class="fas fa-paper-plane"></i>
+                            ENVIAR PREGUNTA
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - IDÉNTICO AL INDEX -->
+    <footer class="tech-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>VISION OLYMPUS</h3>
+                    <p>Tecnología avanzada para todos</p>
+                </div>
+                <div class="footer-links">
+                    <a href="politica-privacidad.html" class="footer-link">Política de Privacidad</a>
+                    <a href="términos-condiciones.html" class="footer-link">Términos y Condiciones</a>
+                    <a href="preguntas-frecuentes.html" class="footer-link active">Preguntas Frecuentes</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2025 Vision Olympus. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="preguntas-frecuentes.js"></script>
+</body>
+</html>
