@@ -267,7 +267,7 @@ function createOrbitalParticle(container, index) {
     particle.style.animation = `orbital-particle-${index} ${duration}s linear infinite`;
     particle.style.animationDelay = `${delay}s`;
     
-    container.appendChild(particle);
+    container.appendChild( particle);
 }
 
 // Nueva función para animar la sección de compromiso
