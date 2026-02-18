@@ -1,4 +1,4 @@
-// tecnologia.js - Versión Corregida
+// tecnologia.js - Versión Corregida con nuevos datos de apps
 
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Vision Olympus - Tecnología cargada');
@@ -292,7 +292,7 @@ function initAppModals() {
     const modal = document.querySelector('.app-modal');
     const modalClose = document.querySelector('.modal-close');
     
-    // Datos de aplicaciones para los modales (actualizados)
+    // Datos de aplicaciones actualizados
     const appData = {
         tempo: {
             title: 'TEMPO',
@@ -330,76 +330,78 @@ function initAppModals() {
             features: ['Sin Algoritmos', 'Comunidad Real', 'Arte en Fondos', 'Privacidad Total'],
             technical: 'Olympus es una red social donde el contenido se muestra cronológicamente, sin manipulaciones. Los artistas pueden vender sus fondos directamente. No hay seguimiento de usuarios ni venta de datos. Mensajería encriptada y perfiles personalizables. Pensada para fomentar conexiones auténticas.'
         },
-        halo: {
-            title: 'HALO',
-            tagline: 'Comunicación Segura Unificada',
-            badge: 'Fase 2',
-            icon: 'fas fa-comments',
-            description: 'Comunicación encriptada, perfiles personal y profesional, sin recolección de datos.',
-            features: ['Mensajería Segura', 'Perfiles Múltiples', 'Videollamadas', 'Sin Vigilancia'],
-            technical: 'Halo es una plataforma de comunicación todo-en-uno con cifrado de extremo a extremo. Permite crear perfiles separados para trabajo y vida personal, conmutando fácilmente. No almacena metadatos ni registra tus conversaciones. Videollamadas peer-to-peer cuando es posible.'
-        },
-        academy: {
+        // Fase 2: Olympus Academy (cuatro variantes)
+        academy_carreras: {
             title: 'OLYMPUS ACADEMY',
-            tagline: 'La Primera Academia de Prestigio Global',
+            tagline: 'Carreras de Prestigio Global',
             badge: 'Fase 2',
             icon: 'fas fa-graduation-cap',
-            description: 'Carreras con títulos validados por tu país, certificaciones reconocidas internacionalmente. Los graduados tienen prioridad para ser empleados de Olympus. Educación de élite accesible.',
-            features: ['Títulos Validados', 'Prestigio Global', 'Prioridad Laboral', 'Educación Online'],
-            technical: 'Olympus Academy ofrece carreras universitarias con validez oficial en múltiples países. Los exámenes son supervisados mediante sistemas avanzados que garantizan la integridad académica. Los graduados pasan a formar parte de una bolsa de trabajo exclusiva para empresas del ecosistema Olympus. La plataforma de aprendizaje combina vídeos, materiales interactivos y tutorías personalizadas.'
+            description: 'Carreras universitarias con títulos validados por tu país y reconocimiento internacional. Las más prestigiosas del mundo.',
+            features: ['Títulos Oficiales', 'Prestigio Global', 'Reconocimiento Internacional', 'Acreditación Estatal'],
+            technical: 'Olympus Academy ofrece programas de grado y posgrado diseñados en colaboración con las mejores universidades del mundo. Los títulos son validados por los ministerios de educación de cada país, garantizando su validez oficial. El plan de estudios es riguroso y actualizado constantemente por expertos de cada disciplina.'
         },
-        astra: {
-            title: 'ASTRA',
-            tagline: 'Entretenimiento Democrático',
+        academy_cert: {
+            title: 'OLYMPUS ACADEMY',
+            tagline: 'Certificaciones de Élite',
             badge: 'Fase 2',
-            icon: 'fas fa-film',
-            description: 'Streaming a $1 mensual, apoyo a pequeños productores, sin algoritmos de manipulación.',
-            features: ['Streaming Accesible', 'Apoyo a Creadores', 'Sin Recomendaciones', 'Contenido Diverso'],
-            technical: 'Astra ofrece series, películas y documentales por una cuota simbólica. Los productores independientes pueden financiar sus proyectos mediante la plataforma. No hay algoritmos de recomendación; el contenido se organiza por categorías y comunidad. Los ingresos se distribuyen de forma transparente.'
+            icon: 'fas fa-certificate',
+            description: 'Certificaciones profesionales con validez en cualquier país. Avaladas por las mejores instituciones.',
+            features: ['Certificaciones', 'Reconocimiento Mundial', 'Aval Internacional', 'Especializaciones'],
+            technical: 'Las certificaciones de Olympus Academy son reconocidas por empresas y gobiernos de todo el mundo. Cada certificación implica exámenes supervisados y proyectos prácticos que demuestran la competencia del alumno. Son ideales para profesionales que buscan destacar en su campo.'
         },
-        olympus_control: {
-            title: 'OLYMPUS HUB',
-            tagline: 'Centro de Control Unificado',
+        academy_examenes: {
+            title: 'OLYMPUS ACADEMY',
+            tagline: 'Exámenes de Élite',
             badge: 'Fase 2',
-            icon: 'fas fa-tachometer-alt',
-            description: 'Vista y acceso a todas las apps desde tu PC, integración total, dashboard personalizable.',
-            features: ['Control Centralizado', 'Integración Total', 'Dashboard Personalizable', 'Sincronización'],
-            technical: 'Olympus Hub es la aplicación de escritorio que unifica todas las herramientas del ecosistema. Proporciona una visión global de tus datos (locales) y acceso rápido a cada app. Incluye automatizaciones entre apps y un sistema de plugins para expandir funcionalidades.'
+            icon: 'fas fa-pencil-alt',
+            description: 'Sistema de evaluación riguroso que garantiza la excelencia. Imposible de fraudes, con supervisión avanzada.',
+            features: ['Exámenes Seguros', 'Supervisión IA', 'Anti-fraude', 'Evaluación Continua'],
+            technical: 'El sistema de exámenes utiliza inteligencia artificial y supervisión remota para garantizar la integridad académica. Las pruebas son adaptativas y se realizan en entornos controlados. Los resultados son inmediatos y se emiten certificados digitales con firma electrónica verificable.'
         },
+        academy_empleo: {
+            title: 'OLYMPUS ACADEMY',
+            tagline: 'Empleo Prioritario',
+            badge: 'Fase 2',
+            icon: 'fas fa-briefcase',
+            description: 'Los graduados tienen prioridad para ser empleados en todas las empresas del ecosistema Olympus. Tu futuro asegurado.',
+            features: ['Bolsa de Trabajo', 'Prioridad Olympus', 'Networking Exclusivo', 'Orientación Laboral'],
+            technical: 'Los graduados de Olympus Academy pasan a formar parte de una bolsa de trabajo exclusiva. Las empresas del ecosistema Olympus (y colaboradoras) tienen acceso prioritario a estos perfiles. Además, se ofrecen servicios de orientación profesional y preparación de entrevistas.'
+        },
+        // Fase 3: Robótica y tecnología futurista
         atlas: {
             title: 'ATLAS AI',
-            tagline: 'Asistente Inteligente Sin Límites',
+            tagline: 'IA Local y Privada',
             badge: 'Fase 3',
             icon: 'fas fa-robot',
-            description: 'IA avanzada que funciona sin conexión a servidores. Tus datos nunca salen de tu dispositivo. Asistente verdaderamente personal.',
+            description: 'Asistente de inteligencia artificial que funciona sin conexión a servidores. Tus datos nunca salen de tu dispositivo.',
             features: ['IA Local', 'Privacidad Total', 'Sin Conexión', 'Personalizable'],
             technical: 'Atlas es un asistente de IA que se ejecuta completamente en tu dispositivo. No requiere conexión a internet para funcionar, garantizando que tus conversaciones y datos nunca sean compartidos. Puede ayudarte con tareas, recordatorios, generación de contenido y más. Aprende de tus patrones de uso de forma privada.'
         },
-        aura: {
-            title: 'AURA',
-            tagline: 'Plataforma de Video Consciente',
-            badge: 'Fase 3',
-            icon: 'fas fa-play-circle',
-            description: 'YouTube sin videos con IA, streaming, control de tiempo, sin recomendaciones adictivas. Contenido que suma.',
-            features: ['Sin Adicción', 'Contenido Auténtico', 'Control de Tiempo', 'Streaming'],
-            technical: 'Aura es una plataforma de video donde el contenido es creado exclusivamente por humanos. No hay recomendaciones automáticas; tú eliges lo que ver. Incluye límites de tiempo configurables y estadísticas de consumo. Los creadores reciben una compensación justa basada en visualizaciones reales.'
-        },
         solaris: {
             title: 'SOLARIS',
-            tagline: 'Control Total de Robots y Hogar',
+            tagline: 'Control de Robots y Hogar',
             badge: 'Fase 3',
-            icon: 'fas fa-robot',
+            icon: 'fas fa-microchip',
             description: 'Gestiona robots y dispositivos del hogar sin conexión a la nube. Todo queda en tu red local. Tuyo de verdad.',
             features: ['Control Local', 'Sin Telemetría', 'Automatización', 'Privacidad'],
             technical: 'Solaris te permite controlar todos tus dispositivos inteligentes (robots, luces, termostatos) sin pasar por servidores externos. La comunicación es local y encriptada. Puedes crear automatizaciones complejas que se ejecuten sin depender de internet. Compatible con estándares abiertos.'
         },
+        aura: {
+            title: 'AURA',
+            tagline: 'Video Consciente y Privado',
+            badge: 'Fase 3',
+            icon: 'fas fa-play-circle',
+            description: 'Plataforma de video sin recomendaciones adictivas, sin seguimiento. Contenido que suma, no que engancha.',
+            features: ['Sin Adicción', 'Privacidad', 'Contenido Auténtico', 'Control de Tiempo'],
+            technical: 'Aura es una plataforma de video donde el contenido es creado exclusivamente por humanos. No hay recomendaciones automáticas; tú eliges lo que ver. Incluye límites de tiempo configurables y estadísticas de consumo. Los creadores reciben una compensación justa basada en visualizaciones reales.'
+        },
         terra: {
             title: 'TERRA',
-            tagline: 'Plataforma de Viajes Inteligentes',
+            tagline: 'Viajes Inteligentes y Privados',
             badge: 'Fase 3',
             icon: 'fas fa-map-marked-alt',
-            description: 'Planificación de viajes con IA local, recomendaciones sin seguimiento, comunidad de viajeros auténticos.',
-            features: ['Privacidad en Viajes', 'Sin Rastreo', 'Recomendaciones Locales', 'Comunidad'],
+            description: 'Planificación de viajes con IA local, recomendaciones sin rastreo. Comunidad de viajeros auténticos.',
+            features: ['Sin Rastreo', 'Recomendaciones Locales', 'Comunidad', 'Privacidad'],
             technical: 'Terra te ayuda a planificar viajes utilizando datos descargados y procesados localmente. No rastrea tu ubicación ni compra datos con terceros. Las recomendaciones provienen de una comunidad de viajeros verificados. Puedes sincronizar tus planes entre dispositivos de forma cifrada.'
         }
     };
@@ -421,7 +423,6 @@ function initAppModals() {
         });
     });
     
-    // Función para abrir modal
     function openModal(appId) {
         const app = appData[appId];
         if (!app) return;
@@ -446,7 +447,6 @@ function initAppModals() {
         document.body.style.overflow = 'hidden';
     }
     
-    // Cerrar modal
     modalClose.addEventListener('click', closeModal);
     modal.addEventListener('click', function(e) {
         if (e.target === modal) {
