@@ -1,6 +1,6 @@
-/* ARCHIVO: index.css (COMPLETO - CON FOOTER PERFECCIONADO) */
+/* ARCHIVO: index.css (COMPLETO - VERSIÓN FINAL ABSOLUTA) */
 
-/* Reset y configuración base */
+/* ========== RESET Y CONFIGURACIÓN BASE ========== */
 * {
     margin: 0;
     padding: 0;
@@ -34,7 +34,7 @@ body {
     cursor: default;
 }
 
-/* Fondo galáctico */
+/* ========== FONDOS GALÁCTICOS Y PARTÍCULAS ========== */
 .galaxy-background {
     position: fixed;
     top: 0;
@@ -89,7 +89,6 @@ body {
     mix-blend-mode: screen;
 }
 
-/* Partículas */
 .particles {
     position: fixed;
     top: 0;
@@ -108,11 +107,15 @@ body {
 }
 
 @keyframes cosmic-float {
-    0% { transform: translateY(100vh) translateX(0) rotate(0deg); }
-    100% { transform: translateY(-100px) translateX(20px) rotate(180deg); }
+    0% {
+        transform: translateY(100vh) translateX(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-100px) translateX(20px) rotate(180deg);
+    }
 }
 
-/* Barra de progreso */
+/* ========== BARRA DE PROGRESO ========== */
 .reading-progress {
     position: fixed;
     top: 0;
@@ -125,7 +128,7 @@ body {
     box-shadow: 0 0 10px var(--quantum-blue);
 }
 
-/* CABECERA */
+/* ========== CABECERA ========== */
 .cyber-header {
     display: flex;
     justify-content: space-between;
@@ -233,7 +236,7 @@ body {
     width: 100%;
 }
 
-/* Animaciones de glitch completas */
+/* ========== ANIMACIONES GLITCH (COMPLETAS) ========== */
 @keyframes glitch-anim {
     0% { clip: rect(42px, 9999px, 44px, 0); }
     5% { clip: rect(12px, 9999px, 59px, 0); }
@@ -282,14 +285,14 @@ body {
     100% { clip: rect(38px, 9999px, 49px, 0); }
 }
 
-/* Contenedor principal */
+/* ========== CONTENEDOR PRINCIPAL ========== */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 40px;
 }
 
-/* Secciones generales */
+/* ========== SECCIONES GENERALES ========== */
 section {
     padding: 15px 0;
     position: relative;
@@ -353,7 +356,7 @@ section {
     font-weight: 600;
 }
 
-/* ========== HERO (98vh) ========== */
+/* ========== HERO SECTION ========== */
 .hero-section {
     min-height: 98vh;
     display: flex;
@@ -387,9 +390,27 @@ section {
     opacity: 0;
 }
 
-.ring-1 { width: 60vmin; height: 60vmin; animation-duration: 40s; animation-delay: 0.5s; }
-.ring-2 { width: 40vmin; height: 40vmin; animation-duration: 30s; animation-direction: reverse; animation-delay: 0.8s; }
-.ring-3 { width: 20vmin; height: 20vmin; animation-duration: 20s; animation-delay: 1.1s; }
+.ring-1 {
+    width: 60vmin;
+    height: 60vmin;
+    animation-duration: 40s;
+    animation-delay: 0.5s;
+}
+
+.ring-2 {
+    width: 40vmin;
+    height: 40vmin;
+    animation-duration: 30s;
+    animation-direction: reverse;
+    animation-delay: 0.8s;
+}
+
+.ring-3 {
+    width: 20vmin;
+    height: 20vmin;
+    animation-duration: 20s;
+    animation-delay: 1.1s;
+}
 
 .core-globe {
     position: absolute;
@@ -806,7 +827,7 @@ section {
     font-style: italic;
 }
 
-/* Botones CTA */
+/* ========== BOTONES CTA ========== */
 .cta-button {
     padding: 10px 16px;
     font-family: 'Orbitron', sans-serif;
@@ -869,7 +890,7 @@ section {
 .tech-footer {
     background: var(--dark-matter);
     border-top: 1px solid rgba(0, 243, 255, 0.2);
-    padding: 15px 0 8px; /* reducido aún más para acercar elementos */
+    padding: 10px 0 5px;
 }
 
 .footer-container {
@@ -879,28 +900,30 @@ section {
 }
 
 .footer-content {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
-    margin-bottom: 5px; /* reducido para acercar a los enlaces */
-    flex-wrap: wrap;
-    gap: 8px; /* reducido */
+    margin-bottom: 3px;
+}
+
+.footer-logo {
+    text-align: left;
 }
 
 .footer-logo h3 {
     font-family: 'Orbitron', sans-serif;
-    font-size: 0.9rem; /* aumentado un 10% respecto a 0.8rem */
+    font-size: 1rem;
     color: var(--stellar-white);
-    margin-bottom: 0;
+    margin: 0;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 
 .footer-links {
     display: flex;
-    gap: 12px; /* reducido */
-    flex: 2;
     justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
 }
 
 .footer-link {
@@ -909,6 +932,7 @@ section {
     font-size: 0.7rem;
     transition: color 0.3s ease;
     position: relative;
+    white-space: nowrap;
 }
 
 .footer-link:hover {
@@ -932,14 +956,13 @@ section {
 
 .footer-social {
     display: flex;
-    gap: 6px; /* reducido */
-    flex: 1;
     justify-content: flex-end;
+    gap: 6px;
 }
 
 .social-link {
     color: rgba(255, 255, 255, 0.7);
-    font-size: 1rem; /* ligeramente reducido para compensar */
+    font-size: 1rem;
     transition: all 0.3s ease;
     width: 28px;
     height: 28px;
@@ -958,13 +981,13 @@ section {
 
 .footer-copyright {
     text-align: center;
-    padding-top: 5px; /* reducido */
+    padding-top: 3px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     color: rgba(255, 255, 255, 0.7);
-    font-size: 0.6rem; /* reducido */
+    font-size: 0.75rem;
 }
 
-/* Botón Volver al Inicio */
+/* ========== BOTÓN VOLVER AL INICIO ========== */
 .back-to-top {
     position: fixed;
     bottom: 20px;
@@ -991,7 +1014,7 @@ section {
     box-shadow: 0 0 20px rgba(0, 243, 255, 0.8);
 }
 
-/* Responsive */
+/* ========== RESPONSIVE ========== */
 @media (max-width: 1024px) {
     .hero-title {
         font-size: 2.2rem;
@@ -1041,15 +1064,17 @@ section {
         flex-direction: column;
         gap: 8px;
     }
-    /* Ajustes responsivos para footer */
+    /* Footer responsive */
     .footer-content {
-        flex-direction: column;
+        grid-template-columns: 1fr;
         text-align: center;
-        gap: 5px;
+        gap: 8px;
+    }
+    .footer-logo {
+        text-align: center;
     }
     .footer-links {
-        flex-direction: column;
-        gap: 5px;
+        justify-content: center;
     }
     .footer-social {
         justify-content: center;
