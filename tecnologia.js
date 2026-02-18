@@ -1,4 +1,4 @@
-// tecnologia.js - Versión Corregida (Fase 2 y 3 como entidades únicas)
+// tecnologia.js - Versión Corregida (solo modales para Fase 1)
 
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Vision Olympus - Tecnología cargada');
@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     setupScrollEffects();
     createStellarField();
     initElementAnimations();
-    initAppModals();
+    initAppModals(); // Solo para las 4 apps de Fase 1
     initOrbitalAnimation();
 });
 
@@ -121,7 +121,7 @@ function initElementAnimations() {
     }, observerOptions);
     
     const elementsToAnimate = document.querySelectorAll(
-        '.application-card, .innovation-card, .team-member, .roadmap-phase'
+        '.application-card, .innovation-card, .team-member, .roadmap-phase, .concept-section'
     );
     
     elementsToAnimate.forEach(el => {
@@ -286,13 +286,13 @@ function createOrbitalParticle(container, index) {
     container.appendChild(particle);
 }
 
-// Inicializar modales de aplicaciones
+// Inicializar modales de aplicaciones (solo Fase 1)
 function initAppModals() {
     const appCards = document.querySelectorAll('.application-card');
     const modal = document.querySelector('.app-modal');
     const modalClose = document.querySelector('.modal-close');
     
-    // Datos de aplicaciones actualizados (solo las 4 de Fase 1, más Academy y Robótica)
+    // Datos de aplicaciones de Fase 1
     const appData = {
         tempo: {
             title: 'TEMPO',
@@ -329,24 +329,6 @@ function initAppModals() {
             description: 'Estética cuidada, fondos de artistas, sin algoritmos adictivos. Conecta de verdad, sin ser el producto.',
             features: ['Sin Algoritmos', 'Comunidad Real', 'Arte en Fondos', 'Privacidad Total'],
             technical: 'Olympus es una red social donde el contenido se muestra cronológicamente, sin manipulaciones. Los artistas pueden vender sus fondos directamente. No hay seguimiento de usuarios ni venta de datos. Mensajería encriptada y perfiles personalizables. Pensada para fomentar conexiones auténticas.'
-        },
-        academy: {
-            title: 'OLYMPUS ACADEMY',
-            tagline: 'La Primera Academia de Prestigio Global',
-            badge: 'Fase 2',
-            icon: 'fas fa-graduation-cap',
-            description: 'Carreras con títulos validados por tu país, certificaciones de prestigio internacional, exámenes seguros y prioridad de empleo en Olympus. Educación de élite accesible para todos.',
-            features: ['Títulos Oficiales', 'Certificaciones Globales', 'Exámenes Seguros', 'Empleo Prioritario'],
-            technical: 'Olympus Academy ofrece programas de grado y posgrado diseñados en colaboración con las mejores universidades del mundo. Los títulos son validados por los ministerios de educación de cada país, garantizando su validez oficial. El plan de estudios es riguroso y actualizado constantemente por expertos de cada disciplina. Los graduados tienen acceso prioritario a oportunidades laborales dentro del ecosistema Olympus.'
-        },
-        robotica: {
-            title: 'ROBÓTICA AVANZADA',
-            tagline: 'Tecnología Accesible y Privada',
-            badge: 'Fase 3',
-            icon: 'fas fa-robot',
-            description: 'Robots y dispositivos inteligentes que funcionan sin conexión a la nube. Tus datos nunca salen de tu hogar. Tecnología futurista realmente tuya, sin vigilancia ni dependencia de servidores externos.',
-            features: ['Control Local', 'Privacidad Total', 'Sin Telemetría', 'Independiente'],
-            technical: 'Nuestra línea de robótica y tecnología avanzada se basa en el principio de soberanía digital. Todos los dispositivos operan con inteligencia artificial local, sin necesidad de conexión a internet. Los datos de uso y sensores permanecen en tu red doméstica, bajo tu control. Los robots son completamente personalizables y no reportan información a ningún servidor externo. Así, la tecnología futurista deja de ser una amenaza para convertirse en una herramienta verdaderamente tuya.'
         }
     };
     
