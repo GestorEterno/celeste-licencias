@@ -943,7 +943,7 @@ section {
     line-height: 1.5;
 }
 
-/* SECCIÓN EQUIPO TECNOLÓGICO */
+/* SECCIÓN EQUIPO TECNOLÓGICO - 20% más vertical */
 .team-section {
     background: rgba(15, 15, 35, 0.6);
 }
@@ -958,7 +958,7 @@ section {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(0, 243, 255, 0.2);
     border-radius: 10px;
-    padding: 20px;
+    padding: 24px 20px; /* Aumentado verticalmente */
     text-align: center;
     transition: all 0.3s ease;
 }
@@ -970,8 +970,8 @@ section {
 }
 
 .member-avatar {
-    width: 60px;
-    height: 60px;
+    width: 70px; /* Aumentado */
+    height: 70px;
     background: rgba(0, 243, 255, 0.1);
     border: 2px solid rgba(0, 243, 255, 0.3);
     border-radius: 50%;
@@ -985,7 +985,7 @@ section {
 
 .avatar-initials {
     font-family: 'Orbitron', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.4rem; /* Aumentado */
     font-weight: 700;
     color: var(--quantum-blue);
     text-transform: uppercase;
@@ -1043,7 +1043,7 @@ section {
     border: 1px solid rgba(0, 243, 255, 0.2);
 }
 
-/* Roadmap Section Horizontal */
+/* Roadmap Section - 20% más vertical */
 .roadmap-section {
     background: rgba(10, 10, 26, 0.4);
 }
@@ -1070,7 +1070,7 @@ section {
 }
 
 .phase-header {
-    padding: 20px 20px 12px;
+    padding: 22px 20px 14px; /* Aumentado verticalmente */
     background: rgba(0, 243, 255, 0.05);
     border-bottom: 1px solid rgba(0, 243, 255, 0.1);
     position: relative;
@@ -1109,7 +1109,7 @@ section {
 }
 
 .phase-content {
-    padding: 15px 20px 20px;
+    padding: 18px 20px 24px; /* Aumentado verticalmente */
 }
 
 .phase-description {
