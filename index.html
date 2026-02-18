@@ -1,13 +1,13 @@
-<!-- ARCHIVO: index.html (VERSIÓN FINAL DEFINITIVA - ENLACE CORREGIDO) -->
+<!-- tecnologia.html - Versión Corregida (Fase 2: Olympus Academy; Fase 3: Robótica) -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vision Olympus · El despertar</title>
-    <link rel="stylesheet" href="index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>TECNOLOGÍA - VISION OLYMPUS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="tecnologia.css">
 </head>
 <body>
     <!-- Fondo galáctico -->
@@ -16,190 +16,437 @@
     <div class="nebula-overlay"></div>
     <div class="particles"></div>
     
-    <!-- Barra de progreso de lectura -->
+    <!-- Barra de progreso -->
     <div class="reading-progress"></div>
     
-    <!-- Cabecera -->
+    <!-- Cabecera (idéntica a index) -->
     <header class="cyber-header">
         <div class="logo-container">
             <h1 class="logo-glitch" data-text="VISION OLYMPUS">VISION OLYMPUS</h1>
         </div>
         <nav class="cyber-nav">
-            <a href="index.html" class="nav-link active">INICIO</a>
-            <a href="tecnologia.html" class="nav-link">TECNOLOGÍA</a>
+            <a href="index.html" class="nav-link">INICIO</a>
+            <a href="tecnologia.html" class="nav-link active">TECNOLOGÍA</a>
             <a href="filosofia.html" class="nav-link">FILOSOFÍA</a>
             <a href="comunidad.html" class="nav-link">COMUNIDAD</a>
             <a href="unete.html" class="nav-link">ÚNETE</a>
         </nav>
     </header>
 
-    <!-- HERO -->
-    <section id="hero" class="hero-section">
+    <!-- Hero Section - reducido un 10% -->
+    <section class="tech-hero">
         <div class="hero-orbit">
             <div class="orbit-ring ring-1"></div>
             <div class="orbit-ring ring-2"></div>
             <div class="orbit-ring ring-3"></div>
             <div class="core-globe"></div>
         </div>
-        
-        <div class="container">
+        <div class="section-container">
             <div class="hero-content">
-                <div class="hero-text">
-                    <div class="hero-badge">UN NUEVO COMIENZO</div>
-                    <h1 class="hero-title">
-                        MIENTRAS EL MUNDO <span class="title-accent">SE DERRUMBA</span><br>
-                        NOSOTROS <span class="title-accent">CONSTRUIMOS</span>
-                    </h1>
-                    <p class="hero-subtitle">Vision Olympus no es una empresa. Es un refugio.</p>
+                <div class="hero-left">
+                    <h1 class="hero-title">ARQUITECTURA<br><span class="hero-accent">TECNOLÓGICA</span><br>PARA EL FUTURO</h1>
                     
-                    <div class="hero-description">
-                        <p>En medio del ruido, la superficialidad y la dependencia digital, nace un espacio para quienes buscan profundidad, libertad y propósito. No venimos a competir, venimos a redefinir lo que la tecnología puede ser: una herramienta para expandir la conciencia humana, no para secuestrarla.</p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="stat-number">12</div>
+                            <div class="stat-label">Aplicaciones<br>en Desarrollo</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Código<br>Propietario</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">24</div>
+                            <div class="stat-label">Miembros<br>en Equipo</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">$1</div>
+                            <div class="stat-label">Precio Mensual<br>Por App</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-right">
+                    <p class="hero-description">Desarrollamos soluciones que priorizan eficiencia, seguridad y experiencia del usuario. Nuestro ecosistema tecnológico está diseñado para evolucionar con la humanidad.</p>
+                    
+                    <div class="hero-mission">
+                        <p>Creemos que la tecnología avanzada debe ser <strong>accesible para todos</strong>. Por eso todas nuestras aplicaciones tienen un precio único de <strong>1 USD mensual</strong>. Además, <strong>todos nuestros empleados tendrán acceso gratuito</strong> como parte de nuestra comunidad en Vision Olympus.</p>
                     </div>
                     
-                    <div class="hero-cta-compact">
-                        <div class="cta-buttons">
-                            <!-- CORREGIDO: ahora apunta a #contraste (DOS REALIDADES) -->
-                            <a href="#contraste" class="cta-button primary">
-                                <i class="fas fa-eye"></i>
-                                DESCUBRE LA VISIÓN
-                            </a>
-                            <a href="#usuarios" class="cta-button secondary">
-                                <i class="fas fa-users"></i>
-                                FORMA PARTE
-                            </a>
+                    <div class="hero-cta">
+                        <a href="#aplicaciones" class="cta-button primary">EXPLORAR ECOSISTEMA</a>
+                        <a href="#roadmap" class="cta-button secondary">VER ROADMAP</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Aplicaciones - con Fase 1 (4 apps), Fase 2 (Olympus Academy) y Fase 3 (Robótica) -->
+    <section id="aplicaciones" class="applications-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">ECOSISTEMA TECNOLÓGICO INTEGRAL</h2>
+                <p class="section-subtitle">Doce aplicaciones fundamentales diseñadas para recuperar el control digital</p>
+            </div>
+
+            <div class="applications-grid">
+                <!-- FASE 1: Aplicaciones principales (4 apps) -->
+                <div class="application-card card-active" data-app="tempo">
+                    <div class="app-header">
+                        <div class="app-icon"><i class="fas fa-clock"></i></div>
+                        <div class="app-badge">Fase 1</div>
+                    </div>
+                    <h3 class="app-title">TEMPO</h3>
+                    <p class="app-tagline">Sistema Operativo de Tu Tiempo</p>
+                    <p class="app-description">Gestión consciente del tiempo. Productividad con sentido, no vacía. Para personas, equipos y empresas.</p>
+                    <div class="app-features">
+                        <span class="feature-tag">Gestión de Tiempo</span>
+                        <span class="feature-tag">Productividad Consciente</span>
+                    </div>
+                    <div class="app-expand-btn">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                </div>
+
+                <div class="application-card card-active" data-app="noema">
+                    <div class="app-header">
+                        <div class="app-icon"><i class="fas fa-brain"></i></div>
+                        <div class="app-badge">Fase 1</div>
+                    </div>
+                    <h3 class="app-title">NOEMA</h3>
+                    <p class="app-tagline">Santuario Digital Mental</p>
+                    <p class="app-description">Entrena tu mente: meditación, diario, test de IQ y capacidades cognitivas. Conócete a ti mismo.</p>
+                    <div class="app-features">
+                        <span class="feature-tag">Entrenamiento Mental</span>
+                        <span class="feature-tag">Diario Personal</span>
+                    </div>
+                    <div class="app-expand-btn">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                </div>
+
+                <div class="application-card card-active" data-app="vitalion">
+                    <div class="app-header">
+                        <div class="app-icon"><i class="fas fa-heartbeat"></i></div>
+                        <div class="app-badge">Fase 1</div>
+                    </div>
+                    <h3 class="app-title">VITALION</h3>
+                    <p class="app-tagline">Arquitectura de Salud Integral</p>
+                    <p class="app-description">Salud integral: entrenamiento, nutrición, seguimiento. Tu cuerpo como templo, no como métrica.</p>
+                    <div class="app-features">
+                        <span class="feature-tag">Entrenamiento</span>
+                        <span class="feature-tag">Nutrición</span>
+                    </div>
+                    <div class="app-expand-btn">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                </div>
+
+                <div class="application-card card-active" data-app="olympus_social">
+                    <div class="app-header">
+                        <div class="app-icon"><i class="fas fa-globe"></i></div>
+                        <div class="app-badge">Fase 1</div>
+                    </div>
+                    <h3 class="app-title">OLYMPUS</h3>
+                    <p class="app-tagline">La Red Social que Mereces</p>
+                    <p class="app-description">Estética cuidada, fondos de artistas, sin algoritmos adictivos. Conecta de verdad, sin ser el producto.</p>
+                    <div class="app-features">
+                        <span class="feature-tag">Sin Algoritmos</span>
+                        <span class="feature-tag">Comunidad Real</span>
+                    </div>
+                    <div class="app-expand-btn">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                </div>
+
+                <!-- FASE 2: Olympus Academy (una sola tarjeta que ocupa 2 columnas) -->
+                <div class="application-card card-planned card-span-2" data-app="academy">
+                    <div class="app-header">
+                        <div class="app-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <div class="app-badge">Fase 2</div>
+                    </div>
+                    <h3 class="app-title">OLYMPUS ACADEMY</h3>
+                    <p class="app-tagline">La Primera Academia de Prestigio Global</p>
+                    <p class="app-description">Carreras con títulos validados por tu país, certificaciones de prestigio internacional, exámenes seguros y prioridad de empleo en Olympus. Educación de élite accesible para todos.</p>
+                    <div class="app-features">
+                        <span class="feature-tag">Títulos Oficiales</span>
+                        <span class="feature-tag">Certificaciones Globales</span>
+                        <span class="feature-tag">Exámenes Seguros</span>
+                        <span class="feature-tag">Empleo Prioritario</span>
+                    </div>
+                    <div class="app-expand-btn">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                </div>
+
+                <!-- FASE 3: Robótica y Tecnología Futurista (una sola tarjeta que ocupa 2 columnas) -->
+                <div class="application-card card-future card-span-2" data-app="robotica">
+                    <div class="app-header">
+                        <div class="app-icon"><i class="fas fa-robot"></i></div>
+                        <div class="app-badge">Fase 3</div>
+                    </div>
+                    <h3 class="app-title">ROBÓTICA AVANZADA</h3>
+                    <p class="app-tagline">Tecnología Accesible y Privada</p>
+                    <p class="app-description">Robots y dispositivos inteligentes que funcionan sin conexión a la nube. Tus datos nunca salen de tu hogar. Tecnología futurista realmente tuya, sin vigilancia ni dependencia de servidores externos.</p>
+                    <div class="app-features">
+                        <span class="feature-tag">Control Local</span>
+                        <span class="feature-tag">Privacidad Total</span>
+                        <span class="feature-tag">Sin Telemetría</span>
+                        <span class="feature-tag">Independiente</span>
+                    </div>
+                    <div class="app-expand-btn">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- Nota extra sobre videojuegos -->
+            <p style="text-align: center; margin-top: 25px; font-size: 0.75rem; color: rgba(255,255,255,0.7);">
+                <i class="fas fa-gamepad" style="margin-right: 5px;"></i> Además, desarrollamos proyectos de videojuegos independientes como parte de nuestra visión de entretenimiento consciente.
+            </p>
+        </div>
+    </section>
+
+    <!-- SECCIÓN VISIÓN DE INNOVACIÓN COMPACTA -->
+    <section class="innovations-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">VISIÓN DE INNOVACIÓN</h2>
+                <p class="section-subtitle">Nuestro enfoque para desarrollar tecnología avanzada y accesible</p>
+            </div>
+
+            <div class="innovations-grid">
+                <div class="innovation-card">
+                    <div class="innovation-content">
+                        <h3 class="innovation-title">SEGURIDAD INTEGRAL</h3>
+                        <p class="innovation-description">Implementamos protocolos de seguridad de nivel empresarial en todas nuestras aplicaciones, garantizando protección absoluta de datos con cifrado avanzado y autenticación biométrica.</p>
+                    </div>
+                    <div class="innovation-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                </div>
+
+                <div class="innovation-card">
+                    <div class="innovation-content">
+                        <h3 class="innovation-title">INTELIGENCIA ADAPTATIVA</h3>
+                        <p class="innovation-description">Nuestros sistemas utilizan IA especializada que aprende y se adapta a cada usuario, proporcionando experiencias personalizadas sin comprometer la privacidad.</p>
+                    </div>
+                    <div class="innovation-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                </div>
+
+                <div class="innovation-card">
+                    <div class="innovation-content">
+                        <h3 class="innovation-title">ACCESIBILIDAD UNIVERSAL</h3>
+                        <p class="innovation-description">Diseñamos cada aplicación pensando en todos los usuarios, con interfaces intuitivas, soporte para múltiples idiomas y compatibilidad con tecnologías asistivas.</p>
+                    </div>
+                    <div class="innovation-icon">
+                        <i class="fas fa-universal-access"></i>
+                    </div>
+                </div>
+
+                <div class="innovation-card">
+                    <div class="innovation-content">
+                        <h3 class="innovation-title">ECOSISTEMA INTEGRADO</h3>
+                        <p class="innovation-description">Todas nuestras aplicaciones funcionan en perfecta sincronización, compartiendo datos de forma segura para ofrecer una experiencia unificada y coherente.</p>
+                    </div>
+                    <div class="innovation-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN EQUIPO TECNOLÓGICO - 20% más vertical -->
+    <section class="team-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">EQUIPO TECNOLÓGICO</h2>
+                <p class="section-subtitle">Los visionarios que están construyendo el futuro accesible</p>
+            </div>
+
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <div class="avatar-glow"></div>
+                        <div class="avatar-initials">SG</div>
+                    </div>
+                    <h3 class="member-name">Santino Gimenez</h3>
+                    <p class="member-role">CEO & Fundador</p>
+                    <p class="member-bio">Visionario con extraordinaria capacidad de liderazgo y eficiencia operativa. Especializado en identificar oportunidades y construir equipos de alto rendimiento.</p>
+                    <div class="member-expertise">
+                        <span class="expertise-tag">Liderazgo Estratégico</span>
+                        <span class="expertise-tag">Eficiencia Operativa</span>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <div class="avatar-glow"></div>
+                        <div class="avatar-initials">CM</div>
+                    </div>
+                    <h3 class="member-name">Cristhian Martínez</h3>
+                    <p class="member-role">Desarrollador de Software y Aplicaciones Móviles</p>
+                    <p class="member-bio">Especialista en desarrollo de aplicaciones móviles nativas y multiplataforma. Experto en interfaces de usuario fluidas y experiencia de usuario optimizada.</p>
+                    <div class="member-expertise">
+                        <span class="expertise-tag">Apps Móviles</span>
+                        <span class="expertise-tag">UI/UX</span>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <div class="avatar-glow"></div>
+                        <div class="avatar-initials">LM</div>
+                    </div>
+                    <h3 class="member-name">Laura Méndez</h3>
+                    <p class="member-role">Directora de IA</p>
+                    <p class="member-bio">PhD en Ciencias de la Computación con 3 años de experiencia en desarrollo de inteligencia artificial ética y sistemas de aprendizaje automático.</p>
+                    <div class="member-expertise">
+                        <span class="expertise-tag">IA Especializada</span>
+                        <span class="expertise-tag">Ética Computacional</span>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <div class="avatar-glow"></div>
+                        <div class="avatar-initials">CR</div>
+                    </div>
+                    <h3 class="member-name">Carlos Rodríguez</h3>
+                    <p class="member-role">Arquitecto de Sistemas</p>
+                    <p class="member-bio">Experto en diseño de sistemas distribuidos y arquitecturas cloud. Especializado en escalabilidad y rendimiento de aplicaciones empresariales.</p>
+                    <div class="member-expertise">
+                        <span class="expertise-tag">Arquitectura Cloud</span>
+                        <span class="expertise-tag">Escalabilidad</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap Section - 20% más vertical y con fases actualizadas -->
+    <section id="roadmap" class="roadmap-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">ROADMAP ESTRATÉGICO</h2>
+                <p class="section-subtitle">Nuestra hoja de ruta para construir el futuro tecnológico accesible</p>
+            </div>
+            
+            <div class="roadmap-horizontal">
+                <div class="roadmap-phase">
+                    <div class="phase-header">
+                        <div class="phase-number">01</div>
+                        <h3 class="phase-title">DESARROLLO DE APLICACIONES BASE</h3>
+                        <span class="phase-year">2024-2026</span>
+                    </div>
+                    <div class="phase-content">
+                        <p class="phase-description">Lanzamiento de las cuatro aplicaciones fundamentales: Tempo, Noema, Vitalion y Olympus (red social). Establecer la base de usuarios y la filosofía del ecosistema.</p>
+                        <div class="phase-milestones">
+                            <div class="milestone completed">
+                                <i class="fas fa-check"></i>
+                                <span class="milestone-text">Planificación y diseño</span>
+                            </div>
+                            <div class="milestone current">
+                                <i class="fas fa-code"></i>
+                                <span class="milestone-text">Desarrollo de aplicaciones Fase 1</span>
+                            </div>
+                            <div class="milestone">
+                                <i class="fas fa-rocket"></i>
+                                <span class="milestone-text">Lanzamiento oficial</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="roadmap-phase">
+                    <div class="phase-header">
+                        <div class="phase-number">02</div>
+                        <h3 class="phase-title">OLYMPUS ACADEMY: EDUCACIÓN DE ÉLITE</h3>
+                        <span class="phase-year">2027-2028</span>
+                    </div>
+                    <div class="phase-content">
+                        <p class="phase-description">Lanzamiento de Olympus Academy, la primera academia de prestigio global con títulos validados por cada país, certificaciones internacionales y prioridad de empleo para graduados en el ecosistema Olympus.</p>
+                        <div class="phase-milestones">
+                            <div class="milestone">
+                                <i class="fas fa-university"></i>
+                                <span class="milestone-text">Desarrollo de plataforma educativa</span>
+                            </div>
+                            <div class="milestone">
+                                <i class="fas fa-globe"></i>
+                                <span class="milestone-text">Validación internacional de títulos</span>
+                            </div>
+                            <div class="milestone">
+                                <i class="fas fa-briefcase"></i>
+                                <span class="milestone-text">Programa de empleo prioritario</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="roadmap-phase">
+                    <div class="phase-header">
+                        <div class="phase-number">03</div>
+                        <h3 class="phase-title">ROBÓTICA Y TECNOLOGÍA AVANZADA</h3>
+                        <span class="phase-year">2029-2030</span>
+                    </div>
+                    <div class="phase-content">
+                        <p class="phase-description">Desarrollo de robots y dispositivos inteligentes que funcionan sin conexión a la nube, con IA local y control total por parte del usuario. Tecnología futurista accesible para todos, no solo para ricos.</p>
+                        <div class="phase-milestones">
+                            <div class="milestone">
+                                <i class="fas fa-robot"></i>
+                                <span class="milestone-text">Prototipos de robótica local</span>
+                            </div>
+                            <div class="milestone">
+                                <i class="fas fa-microchip"></i>
+                                <span class="milestone-text">IA sin conexión a servidores</span>
+                            </div>
+                            <div class="milestone">
+                                <i class="fas fa-home"></i>
+                                <span class="milestone-text">Ecosistema de hogar inteligente privado</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- Nota extra sobre videojuegos en roadmap -->
+            <p style="text-align: center; margin-top: 30px; font-size: 0.75rem; color: rgba(255,255,255,0.7);">
+                <i class="fas fa-gamepad" style="margin-right: 5px;"></i> Proyectos paralelos: desarrollo de videojuegos independientes con la misma filosofía de privacidad y experiencia significativa.
+            </p>
         </div>
     </section>
 
-    <!-- SECCIÓN DE CONTRASTE (DOS REALIDADES) -->
-    <section id="contraste" class="contrast-section">
-        <div class="container">
-            <h2 class="section-title glitch-text" data-text="DOS REALIDADES">DOS REALIDADES</h2>
-            <p class="section-subtitle">Elige el mundo en el que quieres vivir.</p>
-            
-            <div class="contrast-grid">
-                <div class="contrast-card world-today">
-                    <div class="contrast-icon">
-                        <i class="fas fa-skull"></i>
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="section-container">
+            <div class="cta-content">
+                <h2 class="cta-title">CONSTRUYAMOS EL FUTURO JUNTOS</h2>
+                <p class="cta-description">Estamos desarrollando tecnología avanzada que será accesible para todos. Únete a nuestra visión de crear un ecosistema tecnológico que empodere a la humanidad.</p>
+                <div class="cta-stats">
+                    <div class="cta-stat">
+                        <span class="cta-stat-value">12</span>
+                        <span class="cta-stat-label">Aplicaciones</span>
                     </div>
-                    <h3>EL MUNDO QUE SE DESMORONA</h3>
-                    <ul class="contrast-list">
-                        <li><i class="fas fa-times-circle"></i> Redes que envenenan la atención</li>
-                        <li><i class="fas fa-times-circle"></i> Datos explotados sin tu permiso</li>
-                        <li><i class="fas fa-times-circle"></i> Soledad hiperconectada</li>
-                        <li><i class="fas fa-times-circle"></i> Innovación solo para el lucro</li>
-                    </ul>
-                </div>
-                
-                <div class="contrast-card olympus-vision">
-                    <div class="contrast-icon">
-                        <i class="fas fa-leaf"></i>
+                    <div class="cta-stat">
+                        <span class="cta-stat-value">24</span>
+                        <span class="cta-stat-label">Miembros</span>
                     </div>
-                    <h3>OLYMPUS: LO QUE CONSTRUIMOS</h3>
-                    <ul class="contrast-list">
-                        <li><i class="fas fa-check-circle"></i> Tecnología que respeta tu mente</li>
-                        <li><i class="fas fa-check-circle"></i> Control total de tus datos</li>
-                        <li><i class="fas fa-check-circle"></i> Comunidad real, no audiencia</li>
-                        <li><i class="fas fa-check-circle"></i> Innovación con propósito humano</li>
-                    </ul>
+                    <div class="cta-stat">
+                        <span class="cta-stat-value">$1</span>
+                        <span class="cta-stat-label">Precio por App</span>
+                    </div>
+                </div>
+                <div class="cta-buttons">
+                    <a href="unete.html" class="cta-button primary">UNIRSE AL PROYECTO</a>
+                    <a href="filosofia.html" class="cta-button secondary">CONOCER VISIÓN</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- DECLARACIÓN DE VISIÓN -->
-    <section id="vision" class="vision-statement-section">
-        <div class="container">
-            <div class="vision-card">
-                <p class="vision-quote">“No queremos ser la próxima gran tecnológica. Queremos ser la última. Queremos construir herramientas que ya no necesiten mejorarse, porque estarán en armonía con la naturaleza humana.”</p>
-                <p class="vision-author">— Colectivo Fundacional</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- PRIMER PROYECTO: 4 APLICACIONES -->
-    <section id="apps" class="apps-section">
-        <div class="container">
-            <h2 class="section-title glitch-text" data-text="PRIMER PROYECTO">PRIMER PROYECTO</h2>
-            <p class="section-subtitle">4 aplicaciones para la gestión completa de tu vida</p>
-            
-            <div class="apps-grid">
-                <div class="app-card">
-                    <div class="app-icon"><i class="fas fa-hourglass-half"></i></div>
-                    <h3>TEMPO</h3>
-                    <p>Gestión del tiempo consciente, para personas, equipos y empresas. No productividad vacía, sino tiempo con sentido.</p>
-                </div>
-                <div class="app-card">
-                    <div class="app-icon"><i class="fas fa-brain"></i></div>
-                    <h3>NOEMA</h3>
-                    <p>Entrena tu mente: meditación, diario, test de IQ y capacidades cognitivas. Conócete a ti mismo.</p>
-                </div>
-                <div class="app-card">
-                    <div class="app-icon"><i class="fas fa-heartbeat"></i></div>
-                    <h3>VITALION</h3>
-                    <p>Salud integral: entrenamiento, nutrición, seguimiento. Tu cuerpo como templo, no como métrica.</p>
-                </div>
-                <div class="app-card">
-                    <div class="app-icon"><i class="fas fa-globe"></i></div>
-                    <h3>OLYMPUS</h3>
-                    <p>La red social que mereces: estética cuidada, fondos de artistas, sin algoritmos adictivos. Conecta de verdad.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECCIÓN PARA USUARIOS -->
-    <section id="usuarios" class="join-section">
-        <div class="container">
-            <h2 class="section-title glitch-text" data-text="¿Y YO QUÉ GANO AL SER USUARIO DE OLYMPUS?">¿Y YO QUÉ GANO AL SER USUARIO DE OLYMPUS?</h2>
-            <p class="section-subtitle">Solo por descargar la app Olympus, ya formas parte de la nueva sociedad.</p>
-            
-            <div class="join-grid">
-                <div class="join-item">
-                    <div class="join-icon"><i class="fas fa-seedling"></i></div>
-                    <h4>PROPÓSITO</h4>
-                    <p>Ser parte de algo más grande que tú mismo. Ayudar a construir el mundo en el que quieres vivir.</p>
-                </div>
-                <div class="join-item">
-                    <div class="join-icon"><i class="fas fa-users"></i></div>
-                    <h4>COMUNIDAD</h4>
-                    <p>Conectar con mentes afines, con valores profundos, lejos del ruido y la superficialidad.</p>
-                </div>
-                <div class="join-item">
-                    <div class="join-icon"><i class="fas fa-sliders-h"></i></div>
-                    <h4>CONTROL DE TU VIDA</h4>
-                    <p>Nuestras apps te devuelven el control: sobre tu tiempo, tu mente, tu cuerpo y tus relaciones.</p>
-                </div>
-                <div class="join-item">
-                    <div class="join-icon"><i class="fas fa-rocket"></i></div>
-                    <h4>EVOLUCIÓN PERSONAL</h4>
-                    <p>Cada herramienta está diseñada para ayudarte a crecer, a ser mejor versión de ti mismo cada día.</p>
-                </div>
-            </div>
-            <div style="text-align: center; margin-top: 20px;">
-                <p class="cta-note" style="font-size:0.8rem;">¿Quieres contribuir activamente? <a href="unete.html" style="color:var(--quantum-blue); text-decoration:underline;">Únete al proyecto</a></p>
-            </div>
-        </div>
-    </section>
-
-    <!-- LLAMADO FINAL -->
-    <section class="final-cta-simplified">
-        <div class="container">
-            <h3 class="section-title glitch-text" data-text="EL FUTURO SE CONSTRUYE HOY">EL FUTURO SE CONSTRUYE HOY</h3>
-            <p class="section-subtitle">No esperes a que el mundo cambie solo. Forma parte del cambio.</p>
-            <div class="final-cta-buttons">
-                <a href="tecnologia.html" class="cta-button primary">EXPLORAR TECNOLOGÍA</a>
-                <a href="filosofia.html" class="cta-button secondary">PROFUNDIZAR EN LA VISIÓN</a>
-                <a href="unete.html" class="cta-button primary">UNIRSE AL PROYECTO</a>
-            </div>
-            <p class="cta-note">Ni un paso atrás. Juntos hacia lo eterno.</p>
-        </div>
-    </section>
-
-    <!-- Footer -->
+    <!-- Footer - IDÉNTICO AL INDEX -->
     <footer class="tech-footer">
         <div class="footer-container">
             <div class="footer-content">
@@ -224,9 +471,29 @@
         </div>
     </footer>
 
-    <!-- Botón Volver al Inicio -->
-    <button class="back-to-top">↑</button>
+    <!-- Modal para detalles de aplicaciones -->
+    <div class="app-modal">
+        <div class="modal-content">
+            <div class="modal-close">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="modal-header">
+                <div class="modal-icon"></div>
+                <div>
+                    <h3 class="modal-title"></h3>
+                    <p class="modal-tagline"></p>
+                </div>
+                <div class="modal-badge"></div>
+            </div>
+            <p class="modal-description"></p>
+            <div class="modal-features"></div>
+            <div class="modal-details">
+                <h4>Detalles Técnicos</h4>
+                <p class="modal-technical"></p>
+            </div>
+        </div>
+    </div>
 
-    <script src="index.js"></script>
+    <script src="tecnologia.js"></script>
 </body>
 </html>
