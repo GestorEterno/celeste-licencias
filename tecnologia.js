@@ -292,43 +292,43 @@ function initAppModals() {
     const modal = document.querySelector('.app-modal');
     const modalClose = document.querySelector('.modal-close');
     
-    // Datos de aplicaciones de Fase 1
+    // Datos de aplicaciones de Fase 1 (descripciones ampliadas)
     const appData = {
         tempo: {
             title: 'TEMPO',
             tagline: 'Sistema Operativo de Tu Tiempo',
             badge: 'Fase 1',
             icon: 'fas fa-clock',
-            description: 'Gestión consciente del tiempo. Productividad con sentido, no vacía. Para personas, equipos y empresas.',
-            features: ['Gestión de Tiempo', 'Productividad Consciente', 'Calendario', 'Gráficos de Progreso'],
-            technical: 'Tempo es una aplicación integral para la gestión del tiempo que prioriza el bienestar sobre la productividad vacía. Incluye calendario inteligente, seguimiento de hábitos y análisis de cómo inviertes tu tiempo. Diseñada para ayudarte a enfocarte en lo que realmente importa, sin caer en la trampa de la productividad tóxica. Los datos se almacenan localmente con opción de sincronización cifrada entre dispositivos.'
+            description: 'Gestión consciente del tiempo personal, en equipo y empresas. Crea listas de objetivos grupales, haz seguimiento de hábitos, organiza tu día y el de tu equipo. Todo en una interfaz intuitiva que prioriza tu bienestar sobre la productividad vacía.',
+            features: ['Gestión de Tiempo', 'Objetivos en Grupo', 'Tracker de Hábitos', 'Calendario Compartido'],
+            technical: 'Tempo es una aplicación integral para la gestión del tiempo que permite sincronizar tareas personales y profesionales. Incluye calendario inteligente, seguimiento de hábitos, y herramientas de colaboración para equipos. Los datos se almacenan localmente con opción de sincronización cifrada entre dispositivos.'
         },
         noema: {
             title: 'NOEMA',
             tagline: 'Santuario Digital Mental',
             badge: 'Fase 1',
             icon: 'fas fa-brain',
-            description: 'Entrena tu mente: meditación, diario, test de IQ y capacidades cognitivas. Conócete a ti mismo.',
-            features: ['Entrenamiento Mental', 'Diario Personal', 'Test Cognitivos', 'Meditación Guiada'],
-            technical: 'Noema combina journaling avanzado con ejercicios de neuroplasticidad. La app aprende de tus patrones emocionales y cognitivos para ofrecerte ejercicios personalizados. Todos los datos permanecen en tu dispositivo, garantizando privacidad total. Incluye recordatorios conscientes y análisis de progreso a largo plazo.'
+            description: 'Entrena tu mente con ejercicios cognitivos, meditación guiada y un diario personal. Fortalece capacidades como memoria, atención y creatividad. Conócete a ti mismo a través de tests de inteligencia y seguimiento de tu evolución mental.',
+            features: ['Entrenamiento Cognitivo', 'Diario Personal', 'Meditación', 'Tests de IQ'],
+            technical: 'Noema combina neurociencia y bienestar. Ofrece ejercicios personalizados para mejorar habilidades cognitivas, un diario con análisis de patrones emocionales y meditaciones guiadas. Todos los datos permanecen en tu dispositivo.'
         },
         vitalion: {
             title: 'VITALION',
             tagline: 'Arquitectura de Salud Integral',
             badge: 'Fase 1',
             icon: 'fas fa-heartbeat',
-            description: 'Salud integral: entrenamiento, nutrición, seguimiento. Tu cuerpo como templo, no como métrica.',
-            features: ['Entrenamiento Personalizado', 'Nutrición Adaptativa', 'Seguimiento de Salud', 'Análisis de Progreso'],
-            technical: 'Vitalion ofrece planes de entrenamiento y nutrición que se adaptan a tus objetivos y condición física. Utiliza IA local para ajustar las rutinas según tu evolución. No comparte datos con terceros. Integración opcional con wearables (datos siempre bajo tu control).'
+            description: 'Salud integral: entrenamiento personalizado y planes de alimentación adaptados a tus objetivos. Tu cuerpo como templo, no como métrica. Sigue tu progreso con IA local que ajusta rutinas según tu evolución.',
+            features: ['Entrenamiento Personalizado', 'Nutrición Adaptativa', 'Seguimiento de Salud', 'Planes de Ejercicio'],
+            technical: 'Vitalion utiliza IA local para crear rutinas de entrenamiento y nutrición que se adaptan a tu condición física y metas. No comparte datos con terceros. Integración opcional con wearables bajo tu control.'
         },
         olympus_social: {
-            title: 'OLYMPUS (Red Social)',
+            title: 'OLYMPUS',
             tagline: 'La Red Social que Mereces',
             badge: 'Fase 1',
             icon: 'fas fa-globe',
-            description: 'Estética cuidada, fondos de artistas, sin algoritmos adictivos. Conecta de verdad, sin ser el producto.',
-            features: ['Sin Algoritmos', 'Comunidad Real', 'Arte en Fondos', 'Privacidad Total'],
-            technical: 'Olympus es una red social donde el contenido se muestra cronológicamente, sin manipulaciones. Los artistas pueden vender sus fondos directamente. No hay seguimiento de usuarios ni venta de datos. Mensajería encriptada y perfiles personalizables. Pensada para fomentar conexiones auténticas.'
+            description: 'Red social sana sin algoritmos adictivos. Prohibido el contenido generado por IA. Explora publicaciones tipo Reddit/Twitter, artículos científicos, cuentos, libros y reflexiones creados por usuarios. Los creadores ganan según interacciones. Personaliza la estética con temas de ilustradores y animadores profesionales. Sin Reels, sin manipulación, eres libre de indagar y leer.',
+            features: ['Sin IA', 'Arte Visual', 'Artículos Científicos', 'Recompensas a Creadores'],
+            technical: 'Olympus es una red social donde el contenido se muestra cronológicamente. Los usuarios pueden publicar textos, imágenes y artículos. Los temas visuales son creados por artistas y se pueden adquirir. No hay seguimiento ni venta de datos. Mensajería encriptada.'
         }
     };
     
