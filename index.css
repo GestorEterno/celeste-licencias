@@ -1,4 +1,4 @@
-/* ARCHIVO: index.css (COMPLETO - VERSIÓN FINAL) */
+/* ARCHIVO: index.css (COMPLETO - CON HERO LIGERAMENTE MÁS GRANDE) */
 
 /* Reset y configuración base */
 * {
@@ -353,9 +353,9 @@ section {
     font-weight: 600;
 }
 
-/* ========== HERO ========== */
+/* ========== HERO (ligeramente más grande) ========== */
 .hero-section {
-    min-height: 90vh;
+    min-height: 95vh;  /* Aumentado de 90vh a 95vh para ocupar más pantalla */
     display: flex;
     align-items: center;
     padding: 100px 0 60px;
