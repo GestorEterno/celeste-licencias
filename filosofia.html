@@ -1,13 +1,13 @@
-<!-- filosofia.html -->
+<!-- ARCHIVO: index.html (VERSIÓN COMPLETA - NUEVA VISIÓN) -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FILOSOFÍA - VISION OLYMPUS</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Vision Olympus · El despertar</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="filosofia.css">
 </head>
 <body>
     <!-- Fondo galáctico -->
@@ -16,204 +16,188 @@
     <div class="nebula-overlay"></div>
     <div class="particles"></div>
     
-    <!-- Barra de progreso -->
+    <!-- Barra de progreso de lectura -->
     <div class="reading-progress"></div>
     
-    <!-- Cabecera -->
+    <!-- Cabecera (sin cambios) -->
     <header class="cyber-header">
         <div class="logo-container">
             <h1 class="logo-glitch" data-text="VISION OLYMPUS">VISION OLYMPUS</h1>
         </div>
         <nav class="cyber-nav">
-            <a href="index.html" class="nav-link">INICIO</a>
+            <a href="index.html" class="nav-link active">INICIO</a>
             <a href="tecnologia.html" class="nav-link">TECNOLOGÍA</a>
-            <a href="filosofia.html" class="nav-link active">FILOSOFÍA</a>
+            <a href="filosofia.html" class="nav-link">FILOSOFÍA</a>
             <a href="comunidad.html" class="nav-link">COMUNIDAD</a>
             <a href="unete.html" class="nav-link">ÚNETE</a>
         </nav>
     </header>
 
-    <!-- Hero Section con anillo orbital -->
-    <section class="philosophy-hero">
+    <!-- HERO REDISEÑADO (más compacto) -->
+    <section id="hero" class="hero-section">
         <div class="hero-orbit">
             <div class="orbit-ring ring-1"></div>
             <div class="orbit-ring ring-2"></div>
             <div class="orbit-ring ring-3"></div>
             <div class="core-globe"></div>
         </div>
-        <div class="section-container">
+        
+        <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1 class="hero-title">EL DESPERTAR <span class="hero-accent">COMIENZA</span></h1>
-                    <p class="hero-subtitle">Un viaje hacia el futuro de la humanidad</p>
-                    <div class="hero-guide">
-                        <div class="pulsar-beacon"></div>
-                        <span>Desplázate para iniciar la travesía</span>
+                    <div class="hero-badge">UN NUEVO COMIENZO</div>
+                    <h1 class="hero-title">
+                        MIENTRAS EL MUNDO <span class="title-accent">SE DERRUMBA</span><br>
+                        NOSOTROS <span class="title-accent">CONSTRUIMOS</span>
+                    </h1>
+                    <p class="hero-subtitle">Vision Olympus no es una empresa. Es un refugio.</p>
+                    
+                    <div class="hero-description">
+                        <p>En medio del ruido, la superficialidad y la dependencia digital, nace un espacio para quienes buscan profundidad, libertad y propósito. No venimos a competir, venimos a redefinir lo que la tecnología puede ser: una herramienta para expandir la conciencia humana, no para secuestrarla.</p>
+                    </div>
+                    
+                    <div class="hero-cta-compact">
+                        <div class="cta-buttons">
+                            <a href="#vision" class="cta-button primary">
+                                <i class="fas fa-eye"></i>
+                                DESCUBRE LA VISIÓN
+                            </a>
+                            <a href="#unete" class="cta-button secondary">
+                                <i class="fas fa-users"></i>
+                                FORMA PARTE
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Journey Sections -->
-    <main class="philosophy-journey">
-        <!-- Constelación 1: La Realidad Actual -->
-        <section class="journey-section" id="realidad">
-            <div class="section-container">
-                <div class="section-content">
-                    <div class="section-header">
-                        <div class="section-marker">I</div>
-                        <h2 class="section-title">EL MUNDO QUE HEMOS CREADO</h2>
+    <!-- SECCIÓN DE CONTRASTE: EL MUNDO DE HOY VS OLYMPUS -->
+    <section id="contraste" class="contrast-section">
+        <div class="container">
+            <h2 class="section-title glitch-text" data-text="DOS REALIDADES">DOS REALIDADES</h2>
+            <p class="section-subtitle">Elige el mundo en el que quieres vivir.</p>
+            
+            <div class="contrast-grid">
+                <!-- Columna izquierda: mundo actual -->
+                <div class="contrast-card world-today">
+                    <div class="contrast-icon">
+                        <i class="fas fa-skull"></i>
                     </div>
-                    <div class="section-texts">
-                        <p class="journey-text">Observa a tu alrededor con ojos despiertos. Un planeta de contrastes brutales donde la abundancia tecnológica coexiste con la escasez humana más básica.</p>
-                        <p class="journey-text">Miles de millones conectados digitalmente, pero profundamente desconectados entre sí. Avances que prometían igualdad, pero que en su lugar crearon nuevas divisiones, nuevas élites, nuevas formas de exclusión.</p>
-                        <p class="journey-text">Nos vendieron un futuro de prosperidad infinita, pero heredamos un presente de deudas crecientes. Nos prometieron libertad a través de la tecnología, pero construyeron jaulas digitales más sofisticadas que cualquier prisión física.</p>
-                        <p class="journey-text">Y en medio de esta distopía silenciosa que hemos normalizado, una pregunta emerge desde las profundidades de nuestra conciencia colectiva: <span class="highlight-question">¿realmente éste es el mejor futuro que podemos construir?</span></p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Constelación 2: Los Números que Duelen -->
-        <section class="journey-section" id="numeros">
-            <div class="section-container">
-                <div class="section-content">
-                    <div class="section-header">
-                        <div class="section-marker">II</div>
-                        <h2 class="section-title">LOS NÚMEROS QUE DUELEN</h2>
-                    </div>
-                    <div class="section-texts">
-                        <p class="journey-text">Detrás del brillo hipnótico de las pantallas, existen estadísticas que deberían conmovernos hasta la médula: <span class="highlight-stat">800 millones</span> de seres humanos se acuestan con hambre cada noche.</p>
-                        <p class="journey-text"><span class="highlight-stat">3.000 millones</span> sobreviven con menos de $5 al día mientras el <span class="highlight-stat">1%</span> acumula riquezas que superan la imaginación humana más desbordada.</p>
-                        <p class="journey-text">La tecnología que debería liberarnos se convirtió en el instrumento perfecto de control masivo. Algoritmos que predicen nuestro comportamiento, plataformas que monetizan nuestra atención, sistemas diseñados para mantenernos distraídos mientras el mundo se desmorona a nuestro alrededor.</p>
-                        <p class="journey-text">Y lo más preocupante: hemos normalizado esta realidad. Aceptamos que esto es simplemente "lo que hay", como si no existieran alternativas, como si fuéramos incapaces de crear algo mejor.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Constelación 3: El Nacimiento de Olympus -->
-        <section class="journey-section" id="nacimiento">
-            <div class="section-container">
-                <div class="section-content">
-                    <div class="section-header">
-                        <div class="section-marker">III</div>
-                        <h2 class="section-title">EL NACIMIENTO DE OLYMPUS</h2>
-                    </div>
-                    <div class="section-texts">
-                        <p class="journey-text">En este panorama de resignación colectiva, surge una chispa de conciencia. Una pregunta simple pero profundamente revolucionaria: <span class="highlight-vision">¿y si lo hacemos diferente?</span></p>
-                        <p class="journey-text">No una protesta violente que destruye lo existente, no un manifiesto vacío que solo señala problemas. Sino una construcción paciente, meticulosa, ladrillo a ladrillo, de una alternativa real y tangible.</p>
-                        <p class="journey-text">Así nace <span class="highlight-olympus">VISION OLYMPUS</span>. No como una empresa tradicional, sino como un movimiento evolutivo. No como una startup más, sino como un faro en la oscuridad.</p>
-                        <p class="journey-text">Nuestro objetivo no es competir en el sistema existente. Es crear uno nuevo, paralelo, mejor, verdaderamente accesible. Un ecosistema donde la tecnología cumpla su promesa original: liberar el potencial humano.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Constelación 4: Los Fundamentos Éticos -->
-        <section class="journey-section" id="etica">
-            <div class="section-container">
-                <div class="section-content">
-                    <div class="section-header">
-                        <div class="section-marker">IV</div>
-                        <h2 class="section-title">LOS FUNDAMENTOS ÉTICOS</h2>
-                    </div>
-                    <div class="section-texts">
-                        <p class="journey-text">En un mundo donde la tecnología avanza a velocidad de vértigo, nos enfrentamos a una encrucijada ética sin precedentes. Cada innovación, cada algoritmo, cada sistema que diseñamos lleva impregnado una serie de valores y decisiones morales que moldean el futuro de la humanidad.</p>
-                        <p class="journey-text">En Vision Olympus, hemos elegido conscientemente un camino diferente. No nos limitamos a seguir las tendencias del mercado o a maximizar beneficios a corto plazo. Nuestra brújula ética nos guía en cada decisión, prioritizando el bienestar colectivo sobre el interés individual, la transparencia sobre el secretismo, la colaboración sobre la competencia.</p>
-                        <p class="journey-text">Creemos que la tecnología debe estar al servicio de las personas, no al revés. Por eso, desarrollamos herramientas que amplifican el potencial humano, nunca que lo restrinjan. Compartimos abiertamente nuestro conocimiento porque creemos que la información es un derecho humano fundamental, no un privilegio de pago. Y diseñamos nuestras soluciones para escalar globalmente, priorizando a quienes más las necesitan.</p>
-                        <p class="journey-text">Estos no son solo ideales abstractos. Son compromisos concretos que se materializan en cada línea de código, en cada interfaz de usuario, en cada algoritmo que diseñamos. Son la base sobre la cual estamos construyendo un futuro donde la tecnología no solo sea avanzada, sino también sabia, compasiva y profundamente humana.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Constelación 5: La Revolución del Acceso -->
-        <section class="journey-section" id="acceso">
-            <div class="section-container">
-                <div class="section-content">
-                    <div class="section-header">
-                        <div class="section-marker">V</div>
-                        <h2 class="section-title">LA REVOLUCIÓN DEL ACCESO</h2>
-                    </div>
-                    <div class="section-texts">
-                        <p class="journey-text">Imagina un mundo donde el precio no sea nunca más una barrera. Donde la tecnología de vanguardia esté disponible para todos, sin excepción, sin condiciones, sin letras pequeñas.</p>
-                        <p class="journey-text">Visualiza comunidades donde la delincuencia sea una reliquia del pasado. Donde caminar de noche no sea un acto de valentía, sino la normalidad cotidiana. Donde la seguridad emerja naturalmente del diseño social, no de la vigilancia constante.</p>
-                        <p class="journey-text">Concibe ciudades que funcionen como ecosistemas simbióticos perfectos, donde cada elemento contribuya al bienestar colectivo, donde los residuos de unos sean los recursos de otros, donde la eficiencia sirva a la armonía.</p>
-                        <p class="journey-text">Esto no es una utopía inalcanzable. Es un proyecto de ingeniería social y tecnológica que estamos construyendo ahora mismo, en este preciso momento histórico.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Constelación 6: El Cambio Silencioso -->
-        <section class="journey-section" id="cambio">
-            <div class="section-container">
-                <div class="section-content">
-                    <div class="section-header">
-                        <div class="section-marker">VI</div>
-                        <h2 class="section-title">EL CAMBIO SILENCIOSO</h2>
-                    </div>
-                    <div class="section-texts">
-                        <p class="journey-text">No necesitamos tomar el poder por la fuerza. Necesitamos hacerlo gradualmente irrelevante mediante la creación de alternativas superiores.</p>
-                        <p class="journey-text">No buscamos destruir el sistema actual mediante la confrontación. Estamos construyendo uno mejor justo al lado, que eventualmente lo volverá obsoleto por simple comparación.</p>
-                        <p class="journey-text">Esta revolución no se gana en las calles con violencia ni con consignas vacías. Se construye con código limpio, con algoritmos éticos, con redes descentralizadas, con aplicaciones que empoderan realmente.</p>
-                        <p class="journey-text">Cada línea que escribimos, cada aplicación que desarrollamos, cada persona que empoderamos con nuestras herramientas, es un paso más hacia el mundo que merecemos pero que aún no nos atrevemos a imaginar completamente.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Constelación 7: El Amanecer Tecnológico -->
-        <section class="journey-section" id="amanecer">
-            <div class="section-container">
-                <div class="section-content">
-                    <div class="section-header">
-                        <div class="section-marker">VII</div>
-                        <h2 class="section-title">EL AMANECER TECNOLÓGICO</h2>
-                    </div>
-                    <div class="section-texts">
-                        <p class="journey-text">En el horizonte cercano vislumbramos un futuro donde la tecnología realmente sirve a la humanidad. Un futuro donde la educación se personaliza hasta niveles antes inimaginables, detectando talentos ocultos y nutriendo potencial dormido en cada individuo.</p>
-                        <p class="journey-text">Donde la salud se convierte en un proceso preventivo y proactivo, con tecnología que anticipa enfermedades antes de que se manifiesten, que personaliza tratamientos con precisión molecular y hace que la atención médica de calidad sea un derecho universal, no un privilegio económico.</p>
-                        <p class="journey-text">Donde la energía limpia, descentralizada y prácticamente infinita elimina para siempre la pobreza energética y provee recursos ilimitados para el desarrollo humano consciente.</p>
-                        <p class="journey-text">Estos no son sueños lejanos. Son realidades que estamos construyendo hoy, con cada decisión, con cada línea de código, con cada persona que se une a esta visión.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Decision Portal -->
-    <section class="decision-portal">
-        <div class="section-container">
-            <div class="portal-content">
-                <h2 class="portal-title">EL VIAJE CONTINÚA CONTIGO</h2>
-                <div class="portal-messages">
-                    <p class="portal-text">Has contemplado la realidad con ojos abiertos. Has comprendido la visión en su profundidad. Has vislumbrado el camino hacia adelante.</p>
-                    <p class="portal-text">Ahora llega el momento de la elección más importante de esta era:</p>
-                    <p class="portal-question">¿Serás espectador pasivo del cambio o arquitecto activo del futuro?</p>
+                    <h3>EL MUNDO QUE SE DESMORONA</h3>
+                    <ul class="contrast-list">
+                        <li><i class="fas fa-times-circle"></i> Redes que envenenan la atención</li>
+                        <li><i class="fas fa-times-circle"></i> Datos explotados sin tu permiso</li>
+                        <li><i class="fas fa-times-circle"></i> Soledad hiperconectada</li>
+                        <li><i class="fas fa-times-circle"></i> Innovación solo para el lucro</li>
+                    </ul>
                 </div>
                 
-                <div class="portal-actions">
-                    <a href="unete.html" class="portal-button primary">
-                        <span>UNIRME A LA CONSTRUCCIÓN</span>
-                        <div class="button-glow"></div>
-                    </a>
-                    <a href="comunidad.html" class="portal-button secondary">
-                        <span>EXPLORAR LA COMUNIDAD</span>
-                    </a>
-                </div>
-
-                <div class="philosophy-quote">
-                    <p>"La tecnología no es buena ni mala; tampoco es neutral. Es un arma que debe estar en manos de quienes no han olvidado su humanidad."</p>
-                    <span>- Melvin Kranzberg, adaptado para la era digital</span>
+                <!-- Columna derecha: Olympus -->
+                <div class="contrast-card olympus-vision">
+                    <div class="contrast-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>OLYMPUS: LO QUE CONSTRUIMOS</h3>
+                    <ul class="contrast-list">
+                        <li><i class="fas fa-check-circle"></i> Tecnología que respeta tu mente</li>
+                        <li><i class="fas fa-check-circle"></i> Control total de tus datos</li>
+                        <li><i class="fas fa-check-circle"></i> Comunidad real, no audiencia</li>
+                        <li><i class="fas fa-check-circle"></i> Innovación con propósito humano</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- DECLARACIÓN DE VISIÓN -->
+    <section id="vision" class="vision-statement-section">
+        <div class="container">
+            <div class="vision-card">
+                <p class="vision-quote">“No queremos ser la próxima gran tecnológica. Queremos ser la última. Queremos construir herramientas que ya no necesiten mejorarse, porque estarán en armonía con la naturaleza humana.”</p>
+                <p class="vision-author">— Colectivo Fundacional</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- LAS CUATRO APLICACIONES SEMILLA -->
+    <section id="apps" class="apps-section">
+        <div class="container">
+            <h2 class="section-title glitch-text" data-text="PRIMERAS SEMILLAS">PRIMERAS SEMILLAS</h2>
+            <p class="section-subtitle">Cuatro herramientas para cultivar una nueva forma de vivir.</p>
+            
+            <div class="apps-grid">
+                <div class="app-card">
+                    <div class="app-icon"><i class="fas fa-hourglass-half"></i></div>
+                    <h3>TEMPO</h3>
+                    <p>Gestión del tiempo consciente, para personas, equipos y empresas. No productividad vacía, sino tiempo con sentido.</p>
+                </div>
+                <div class="app-card">
+                    <div class="app-icon"><i class="fas fa-brain"></i></div>
+                    <h3>NOEMA</h3>
+                    <p>Entrena tu mente: meditación, diario, test de IQ y capacidades cognitivas. Conócete a ti mismo.</p>
+                </div>
+                <div class="app-card">
+                    <div class="app-icon"><i class="fas fa-heartbeat"></i></div>
+                    <h3>VITALION</h3>
+                    <p>Salud integral: entrenamiento, nutrición, seguimiento. Tu cuerpo como templo, no como métrica.</p>
+                </div>
+                <div class="app-card">
+                    <div class="app-icon"><i class="fas fa-globe"></i></div>
+                    <h3>OLYMPUS</h3>
+                    <p>La red social que mereces: estética cuidada, fondos de artistas, sin algoritmos adictivos. Conecta de verdad.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- POR QUÉ UNIRSE (sin dinero, solo propósito) -->
+    <section id="unete" class="join-section">
+        <div class="container">
+            <h2 class="section-title glitch-text" data-text="¿Y YO QUÉ GANO?">¿Y YO QUÉ GANO?</h2>
+            <p class="section-subtitle">Nada de dinero. Algo mucho más valioso.</p>
+            
+            <div class="join-grid">
+                <div class="join-item">
+                    <div class="join-icon"><i class="fas fa-seedling"></i></div>
+                    <h4>PROPÓSITO</h4>
+                    <p>Ser parte de algo más grande que tú mismo. Ayudar a construir el mundo en el que quieres vivir.</p>
+                </div>
+                <div class="join-item">
+                    <div class="join-icon"><i class="fas fa-users"></i></div>
+                    <h4>COMUNIDAD</h4>
+                    <p>Conectar con mentes afines, con valores profundos, lejos del ruido y la superficialidad.</p>
+                </div>
+                <div class="join-item">
+                    <div class="join-icon"><i class="fas fa-rocket"></i></div>
+                    <h4>ACCESO TEMPRANO</h4>
+                    <p>Ser de los primeros en probar y moldear las herramientas que cambiarán la forma de vivir.</p>
+                </div>
+                <div class="join-item">
+                    <div class="join-icon"><i class="fas fa-scroll"></i></div>
+                    <h4>LEGADO</h4>
+                    <p>Tu nombre formará parte de la historia de este movimiento. Un legado imborrable.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LLAMADO FINAL -->
+    <section class="final-cta-simplified">
+        <div class="container">
+            <h3 class="section-title glitch-text" data-text="EL FUTURO SE CONSTRUYE HOY">EL FUTURO SE CONSTRUYE HOY</h3>
+            <p class="section-subtitle">No esperes a que el mundo cambie solo. Forma parte del cambio.</p>
+            <div class="final-cta-buttons">
+                <a href="tecnologia.html" class="cta-button primary">EXPLORAR TECNOLOGÍA</a>
+                <a href="filosofia.html" class="cta-button secondary">PROFUNDIZAR EN LA VISIÓN</a>
+                <a href="comunidad.html" class="cta-button primary">UNIRSE A LA COMUNIDAD</a>
+            </div>
+            <p class="cta-note">Ni un paso atrás. Juntos hacia lo eterno.</p>
+        </div>
+    </section>
+
+    <!-- Footer (sin cambios) -->
     <footer class="tech-footer">
         <div class="footer-container">
             <div class="footer-content">
@@ -223,7 +207,7 @@
                 </div>
                 <div class="footer-links">
                     <a href="politica-privacidad.html" class="footer-link">Política de Privacidad</a>
-                    <a href="términos-condiciones.html" class="footer-link">Términos y Condiciones</a>
+                    <a href="terminos-condiciones.html" class="footer-link">Términos y Condiciones</a>
                     <a href="preguntas-frecuentes.html" class="footer-link">Preguntas Frecuentes</a>
                 </div>
                 <div class="footer-social">
@@ -239,6 +223,9 @@
         </div>
     </footer>
 
-    <script src="filosofia.js"></script>
+    <!-- Botón Volver al Inicio -->
+    <button class="back-to-top">↑</button>
+
+    <script src="index.js"></script>
 </body>
 </html>
