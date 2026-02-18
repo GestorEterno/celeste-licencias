@@ -88,7 +88,7 @@ body {
     mix-blend-mode: screen;
 }
 
-/* Barra de progreso (idéntica a filosofia) */
+/* Barra de progreso */
 .reading-progress {
     position: fixed;
     top: 0;
@@ -101,7 +101,7 @@ body {
     box-shadow: 0 0 10px var(--quantum-blue);
 }
 
-/* Cabecera (idéntica a filosofia) */
+/* Cabecera */
 .cyber-header {
     display: flex;
     justify-content: space-between;
@@ -209,7 +209,7 @@ body {
     width: 100%;
 }
 
-/* Animaciones de glitch (idénticas a filosofia) */
+/* Animaciones de glitch */
 @keyframes glitch-anim {
     0% { clip: rect(42px, 9999px, 44px, 0); }
     5% { clip: rect(12px, 9999px, 59px, 0); }
@@ -265,7 +265,7 @@ body {
     padding: 0 40px;
 }
 
-/* Hero Section con anillo orbital (igual a filosofia, pero sin stats) */
+/* Hero Section */
 .philosophy-hero {
     min-height: 100vh;
     display: flex;
@@ -426,21 +426,39 @@ body {
     100% { opacity: 1; transform: translateY(0); }
 }
 
-.hero-description {
-    font-size: 1.2rem;
-    line-height: 1.7;
-    color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 30px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+/* Guía de scroll (como en filosofía) */
+.hero-guide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
     opacity: 0;
-    animation: description-appear 1s ease-out 1.5s forwards;
+    animation: guide-appear 1s ease-out 1.5s forwards;
 }
 
-@keyframes description-appear {
+@keyframes guide-appear {
     0% { opacity: 0; transform: translateY(20px); }
     100% { opacity: 1; transform: translateY(0); }
+}
+
+.pulsar-beacon {
+    width: 1px;
+    height: 30px;
+    background: var(--quantum-blue);
+    animation: pulsar-beacon 2s infinite;
+}
+
+@keyframes pulsar-beacon {
+    0%, 100% { opacity: 0.3; transform: scaleY(0.5); }
+    50% { opacity: 1; transform: scaleY(1); }
+}
+
+.hero-guide span {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.8rem;
+    color: var(--quantum-blue);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
 }
 
 /* Secciones generales */
@@ -711,7 +729,7 @@ section {
     border: 1px solid rgba(0, 243, 255, 0.3);
 }
 
-/* Sección de Testimonios - PSICOLÓGICAMENTE AVANZADA */
+/* Sección de Testimonios */
 .testimonials-section {
     background: rgba(15, 15, 35, 0.6);
 }
@@ -832,6 +850,14 @@ section {
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.9);
     margin-bottom: 30px;
+}
+
+.cta-note {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: var(--supernova-yellow);
+    font-style: italic;
+    text-shadow: 0 0 8px rgba(255,255,0,0.4);
 }
 
 .cta-buttons {
@@ -1068,18 +1094,13 @@ section {
         margin-bottom: 10px;
     }
 
-    .cta-buttons, .hero-cta {
+    .cta-buttons {
         flex-direction: column;
         align-items: center;
     }
     
     .section-container {
         padding: 0 20px;
-    }
-    
-    .hero-stats {
-        flex-direction: column;
-        gap: 15px;
     }
     
     .footer-content {
@@ -1141,4 +1162,17 @@ section {
     .hero-orbit {
         display: none;
     }
+}
+
+/* Highlight para textos importantes (como en filosofía) */
+.highlight-us {
+    color: var(--quantum-blue);
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(0, 243, 255, 0.7);
+    animation: us-pulse 2s infinite alternate;
+}
+
+@keyframes us-pulse {
+    0% { text-shadow: 0 0 5px rgba(0, 243, 255, 0.6); }
+    100% { text-shadow: 0 0 20px rgba(0, 243, 255, 1); }
 }
