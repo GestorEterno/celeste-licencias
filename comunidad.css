@@ -1,6 +1,5 @@
-/* comunidad.css - Versión Mejorada con Hero MEJORADO */
-
-/* Reset y configuración base - IDÉNTICO A FILOSOFÍA */
+/* comunidad.css - Versión Mejorada con header/footer idénticos a filosofia.css */
+/* Reset y configuración base */
 * {
     margin: 0;
     padding: 0;
@@ -34,7 +33,7 @@ body {
     cursor: default;
 }
 
-/* Fondo galáctico EXACTAMENTE IGUAL A FILOSOFÍA */
+/* Fondo galáctico */
 .galaxy-background {
     position: fixed;
     top: 0;
@@ -89,7 +88,7 @@ body {
     mix-blend-mode: screen;
 }
 
-/* Barra de progreso EXACTAMENTE IGUAL A FILOSOFÍA */
+/* Barra de progreso (idéntica a filosofia) */
 .reading-progress {
     position: fixed;
     top: 0;
@@ -102,7 +101,7 @@ body {
     box-shadow: 0 0 10px var(--quantum-blue);
 }
 
-/* CABECERA - EXACTAMENTE IGUAL A FILOSOFÍA */
+/* Cabecera (idéntica a filosofia) */
 .cyber-header {
     display: flex;
     justify-content: space-between;
@@ -210,137 +209,53 @@ body {
     width: 100%;
 }
 
-/* Animaciones de glitch EXACTAMENTE IGUALES A FILOSOFÍA */
+/* Animaciones de glitch (idénticas a filosofia) */
 @keyframes glitch-anim {
-    0% {
-        clip: rect(42px, 9999px, 44px, 0);
-    }
-    5% {
-        clip: rect(12px, 9999px, 59px, 0);
-    }
-    10% {
-        clip: rect(48px, 9999px, 29px, 0);
-    }
-    15% {
-        clip: rect(42px, 9999px, 73px, 0);
-    }
-    20% {
-        clip: rect(63px, 9999px, 27px, 0);
-    }
-    25% {
-        clip: rect(34px, 9999px, 55px, 0);
-    }
-    30% {
-        clip: rect(86px, 9999px, 73px, 0);
-    }
-    35% {
-        clip: rect(20px, 9999px, 20px, 0);
-    }
-    40% {
-        clip: rect(26px, 9999px, 60px, 0);
-    }
-    45% {
-        clip: rect(25px, 9999px, 66px, 0);
-    }
-    50% {
-        clip: rect(57px, 9999px, 98px, 0);
-    }
-    55% {
-        clip: rect(5px, 9999px, 46px, 0);
-    }
-    60% {
-        clip: rect(82px, 9999px, 31px, 0);
-    }
-    65% {
-        clip: rect(54px, 9999px, 27px, 0);
-    }
-    70% {
-        clip: rect(28px, 9999px, 99px, 0);
-    }
-    75% {
-        clip: rect(45px, 9999px, 69px, 0);
-    }
-    80% {
-        clip: rect(23px, 9999px, 85px, 0);
-    }
-    85% {
-        clip: rect(54px, 9999px, 84px, 0);
-    }
-    90% {
-        clip: rect(45px, 9999px, 47px, 0);
-    }
-    95% {
-        clip: rect(37px, 9999px, 20px, 0);
-    }
-    100% {
-        clip: rect(4px, 9999px, 91px, 0);
-    }
+    0% { clip: rect(42px, 9999px, 44px, 0); }
+    5% { clip: rect(12px, 9999px, 59px, 0); }
+    10% { clip: rect(48px, 9999px, 29px, 0); }
+    15% { clip: rect(42px, 9999px, 73px, 0); }
+    20% { clip: rect(63px, 9999px, 27px, 0); }
+    25% { clip: rect(34px, 9999px, 55px, 0); }
+    30% { clip: rect(86px, 9999px, 73px, 0); }
+    35% { clip: rect(20px, 9999px, 20px, 0); }
+    40% { clip: rect(26px, 9999px, 60px, 0); }
+    45% { clip: rect(25px, 9999px, 66px, 0); }
+    50% { clip: rect(57px, 9999px, 98px, 0); }
+    55% { clip: rect(5px, 9999px, 46px, 0); }
+    60% { clip: rect(82px, 9999px, 31px, 0); }
+    65% { clip: rect(54px, 9999px, 27px, 0); }
+    70% { clip: rect(28px, 9999px, 99px, 0); }
+    75% { clip: rect(45px, 9999px, 69px, 0); }
+    80% { clip: rect(23px, 9999px, 85px, 0); }
+    85% { clip: rect(54px, 9999px, 84px, 0); }
+    90% { clip: rect(45px, 9999px, 47px, 0); }
+    95% { clip: rect(37px, 9999px, 20px, 0); }
+    100% { clip: rect(4px, 9999px, 91px, 0); }
 }
 
 @keyframes glitch-anim2 {
-    0% {
-        clip: rect(65px, 9999px, 100px, 0);
-    }
-    5% {
-        clip: rect(52px, 9999px, 74px, 0);
-    }
-    10% {
-        clip: rect(79px, 9999px, 85px, 0);
-    }
-    15% {
-        clip: rect(75px, 9999px, 5px, 0);
-    }
-    20% {
-        clip: rect(67px, 9999px, 61px, 0);
-    }
-    25% {
-        clip: rect(14px, 9999px, 79px, 0);
-    }
-    30% {
-        clip: rect(1px, 9999px, 66px, 0);
-    }
-    35% {
-        clip: rect(86px, 9999px, 30px, 0);
-    }
-    40% {
-        clip: rect(23px, 9999px, 98px, 0);
-    }
-    45% {
-        clip: rect(85px, 9999px, 72px, 0);
-    }
-    50% {
-        clip: rect(71px, 9999px, 75px, 0);
-    }
-    55% {
-        clip: rect(2px, 9999px, 48px, 0);
-    }
-    60% {
-        clip: rect(30px, 9999px, 16px, 0);
-    }
-    65% {
-        clip: rect(59px, 9999px, 50px, 0);
-    }
-    70% {
-        clip: rect(41px, 9999px, 62px, 0);
-    }
-    75% {
-        clip: rect(2px, 9999px, 82px, 0);
-    }
-    80% {
-        clip: rect(47px, 9999px, 73px, 0);
-    }
-    85% {
-        clip: rect(3px, 9999px, 27px, 0);
-    }
-    90% {
-        clip: rect(26px, 9999px, 55px, 0);
-    }
-    95% {
-        clip: rect(42px, 9999px, 97px, 0);
-    }
-    100% {
-        clip: rect(38px, 9999px, 49px, 0);
-    }
+    0% { clip: rect(65px, 9999px, 100px, 0); }
+    5% { clip: rect(52px, 9999px, 74px, 0); }
+    10% { clip: rect(79px, 9999px, 85px, 0); }
+    15% { clip: rect(75px, 9999px, 5px, 0); }
+    20% { clip: rect(67px, 9999px, 61px, 0); }
+    25% { clip: rect(14px, 9999px, 79px, 0); }
+    30% { clip: rect(1px, 9999px, 66px, 0); }
+    35% { clip: rect(86px, 9999px, 30px, 0); }
+    40% { clip: rect(23px, 9999px, 98px, 0); }
+    45% { clip: rect(85px, 9999px, 72px, 0); }
+    50% { clip: rect(71px, 9999px, 75px, 0); }
+    55% { clip: rect(2px, 9999px, 48px, 0); }
+    60% { clip: rect(30px, 9999px, 16px, 0); }
+    65% { clip: rect(59px, 9999px, 50px, 0); }
+    70% { clip: rect(41px, 9999px, 62px, 0); }
+    75% { clip: rect(2px, 9999px, 82px, 0); }
+    80% { clip: rect(47px, 9999px, 73px, 0); }
+    85% { clip: rect(3px, 9999px, 27px, 0); }
+    90% { clip: rect(26px, 9999px, 55px, 0); }
+    95% { clip: rect(42px, 9999px, 97px, 0); }
+    100% { clip: rect(38px, 9999px, 49px, 0); }
 }
 
 /* Contenedores generales */
@@ -350,7 +265,7 @@ body {
     padding: 0 40px;
 }
 
-/* Hero Section - MEJORADA */
+/* Hero Section con anillo orbital (igual a filosofia, pero sin stats) */
 .philosophy-hero {
     min-height: 100vh;
     display: flex;
@@ -421,64 +336,25 @@ body {
     transform: translate(-50%, -50%) scale(0);
 }
 
-/* Nuevas animaciones de aparición - IGUALES A FILOSOFÍA */
 @keyframes orbit-appear {
-    0% {
-        opacity: 0;
-        transform: translate(-50%, -50%) scale(0.8);
-    }
-    100% {
-        opacity: 0.7;
-        transform: translate(-50%, -50%) scale(1);
-    }
+    0% { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
+    100% { opacity: 0.7; transform: translate(-50%, -50%) scale(1); }
 }
 
 @keyframes core-appear {
-    0% {
-        opacity: 0;
-        transform: translate(-50%, -50%) scale(0);
-    }
-    70% {
-        opacity: 0.8;
-        transform: translate(-50%, -50%) scale(1.1);
-    }
-    100% {
-        opacity: 1;
-        transform: translate(-50%, -50%) scale(1);
-    }
-}
-
-@keyframes ring-appear {
-    0% {
-        opacity: 0;
-        transform: translate(-50%, -50%) scale(0.5) rotate(0deg);
-    }
-    100% {
-        opacity: 1;
-        transform: translate(-50%, -50%) scale(1) rotate(180deg);
-    }
+    0% { opacity: 0; transform: translate(-50%, -50%) scale(0); }
+    70% { opacity: 0.8; transform: translate(-50%, -50%) scale(1.1); }
+    100% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
 }
 
 @keyframes orbit-rotate {
-    0% { 
-        transform: translate(-50%, -50%) rotate(0deg);
-        opacity: 1;
-    }
-    100% { 
-        transform: translate(-50%, -50%) rotate(360deg);
-        opacity: 1;
-    }
+    0% { transform: translate(-50%, -50%) rotate(0deg); opacity: 1; }
+    100% { transform: translate(-50%, -50%) rotate(360deg); opacity: 1; }
 }
 
 @keyframes core-pulse {
-    0% { 
-        box-shadow: 0 0 20px var(--quantum-blue);
-        transform: translate(-50%, -50%) scale(1);
-    }
-    100% { 
-        box-shadow: 0 0 60px var(--quantum-blue), 0 0 100px var(--pulsar-pink);
-        transform: translate(-50%, -50%) scale(1.1);
-    }
+    0% { box-shadow: 0 0 20px var(--quantum-blue); transform: translate(-50%, -50%) scale(1); }
+    100% { box-shadow: 0 0 60px var(--quantum-blue), 0 0 100px var(--pulsar-pink); transform: translate(-50%, -50%) scale(1.1); }
 }
 
 .hero-content {
@@ -491,14 +367,8 @@ body {
 }
 
 @keyframes hero-content-appear {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
 
 .hero-text {
@@ -521,16 +391,8 @@ body {
 }
 
 @keyframes title-appear {
-    0% {
-        opacity: 0;
-        transform: translateY(40px);
-        text-shadow: 0 0 20px transparent;
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-        text-shadow: 0 0 20px rgba(0, 243, 255, 0.3);
-    }
+    0% { opacity: 0; transform: translateY(40px); text-shadow: 0 0 20px transparent; }
+    100% { opacity: 1; transform: translateY(0); text-shadow: 0 0 20px rgba(0, 243, 255, 0.3); }
 }
 
 .hero-accent {
@@ -544,12 +406,8 @@ body {
 }
 
 @keyframes accent-glow {
-    0% {
-        filter: drop-shadow(0 0 5px rgba(0, 243, 255, 0.5));
-    }
-    100% {
-        filter: drop-shadow(0 0 15px rgba(255, 0, 255, 0.7));
-    }
+    0% { filter: drop-shadow(0 0 5px rgba(0, 243, 255, 0.5)); }
+    100% { filter: drop-shadow(0 0 15px rgba(255, 0, 255, 0.7)); }
 }
 
 .hero-subtitle {
@@ -564,14 +422,8 @@ body {
 }
 
 @keyframes subtitle-appear {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
 
 .hero-description {
@@ -587,88 +439,8 @@ body {
 }
 
 @keyframes description-appear {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.hero-stats {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-bottom: 30px;
-    opacity: 0;
-    animation: stats-appear 1s ease-out 1.8s forwards;
-}
-
-@keyframes stats-appear {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.stat {
-    text-align: center;
-    padding: 25px 20px;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-    min-width: 140px;
-    min-height: 120px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.stat::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, var(--quantum-blue), var(--pulsar-pink));
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
-}
-
-.stat:hover {
-    transform: translateY(-5px);
-    background: rgba(0, 243, 255, 0.1);
-    border-color: var(--quantum-blue);
-}
-
-.stat:hover::before {
-    transform: scaleX(1);
-}
-
-.stat-number {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 2.2rem;
-    font-weight: 700;
-    color: var(--quantum-blue);
-    margin-bottom: 8px;
-    text-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
-}
-
-.stat-label {
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.7);
-    line-height: 1.4;
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
 
 /* Secciones generales */
@@ -699,7 +471,7 @@ section {
     line-height: 1.6;
 }
 
-/* Sección de Propósito - MEJORADA */
+/* Sección de Propósito */
 .purpose-section {
     background: rgba(10, 10, 26, 0.3);
 }
@@ -783,7 +555,7 @@ section {
     color: rgba(255, 255, 255, 0.9);
 }
 
-/* Sección de Funcionamiento - MEJORADA */
+/* Sección de Funcionamiento */
 .workflow-section {
     background: rgba(15, 15, 35, 0.6);
 }
@@ -852,7 +624,7 @@ section {
     color: rgba(255, 255, 255, 0.9);
 }
 
-/* Sección de Roles - MEJORADA */
+/* Sección de Roles */
 .roles-section {
     background: rgba(10, 10, 26, 0.4);
 }
@@ -939,7 +711,7 @@ section {
     border: 1px solid rgba(0, 243, 255, 0.3);
 }
 
-/* Sección de Testimonios - MEJORADA */
+/* Sección de Testimonios - PSICOLÓGICAMENTE AVANZADA */
 .testimonials-section {
     background: rgba(15, 15, 35, 0.6);
 }
@@ -1035,7 +807,7 @@ section {
     color: rgba(255, 255, 255, 0.7);
 }
 
-/* CTA Section - MEJORADA */
+/* CTA Section */
 .cta-section {
     background: linear-gradient(135deg, rgba(10, 10, 26, 0.7) 0%, rgba(15, 15, 35, 0.7) 100%);
     text-align: center;
@@ -1123,13 +895,11 @@ section {
     box-shadow: 0 5px 15px rgba(0, 243, 255, 0.2);
 }
 
-/* Footer - IDÉNTICO AL FILOSOFÍA */
+/* Footer - IDÉNTICO AL DE FILOSOFÍA */
 .tech-footer {
     background: var(--dark-matter);
     border-top: 1px solid rgba(0, 243, 255, 0.2);
-    padding: 25px 0 15px;
-    position: relative;
-    z-index: 2;
+    padding: 10px 0 5px;
 }
 
 .footer-container {
@@ -1139,46 +909,39 @@ section {
 }
 
 .footer-content {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
-    margin-bottom: 15px;
-    flex-wrap: wrap;
-    gap: 15px;
+    margin-bottom: 3px;
 }
 
 .footer-logo {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    min-width: 150px;
+    text-align: left;
 }
 
 .footer-logo h3 {
     font-family: 'Orbitron', sans-serif;
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: var(--stellar-white);
-    margin-bottom: 3px;
-}
-
-.footer-logo p {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 0.7rem;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .footer-links {
     display: flex;
-    gap: 20px;
-    flex: 2;
     justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
 }
 
 .footer-link {
     color: rgba(255, 255, 255, 0.7);
     text-decoration: none;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     transition: color 0.3s ease;
     position: relative;
+    white-space: nowrap;
 }
 
 .footer-link:hover {
@@ -1202,17 +965,16 @@ section {
 
 .footer-social {
     display: flex;
-    gap: 12px;
-    flex: 1;
     justify-content: flex-end;
+    gap: 6px;
 }
 
 .social-link {
     color: rgba(255, 255, 255, 0.7);
-    font-size: 1.3rem;
+    font-size: 1rem;
     transition: all 0.3s ease;
-    width: 40px;
-    height: 40px;
+    width: 28px;
+    height: 28px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1222,19 +984,19 @@ section {
 
 .social-link:hover {
     color: var(--quantum-blue);
-    transform: translateY(-3px);
-    text-shadow: 0 0 10px rgba(0, 243, 255, 0.7);
+    transform: translateY(-2px);
+    text-shadow: 0 0 8px rgba(0, 243, 255, 0.7);
 }
 
 .footer-copyright {
     text-align: center;
-    padding-top: 15px;
+    padding-top: 3px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     color: rgba(255, 255, 255, 0.7);
-    font-size: 0.7rem;
+    font-size: 0.75rem;
 }
 
-/* Efectos de partículas - MEJORADOS */
+/* Efectos de partículas */
 .particles {
     position: fixed;
     top: 0;
@@ -1253,12 +1015,8 @@ section {
 }
 
 @keyframes cosmic-float {
-    0% {
-        transform: translateY(100vh) translateX(0) rotate(0deg);
-    }
-    100% {
-        transform: translateY(-100px) translateX(20px) rotate(180deg);
-    }
+    0% { transform: translateY(100vh) translateX(0) rotate(0deg); }
+    100% { transform: translateY(-100px) translateX(20px) rotate(180deg); }
 }
 
 /* Responsive */
@@ -1281,19 +1039,15 @@ section {
         flex-direction: column;
         gap: 12px;
     }
-    
     .cyber-header.scrolled {
         padding: 8px 20px;
     }
-    
     .logo-container h1 {
         font-size: 1rem;
     }
-    
     .cyber-nav {
         gap: 12px;
     }
-    
     .nav-link {
         font-size: 0.7rem;
     }
@@ -1329,16 +1083,17 @@ section {
     }
     
     .footer-content {
-        flex-direction: column;
-        gap: 15px;
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 8px;
+    }
+    .footer-logo {
         text-align: center;
     }
-    
     .footer-links {
         flex-wrap: wrap;
         justify-content: center;
     }
-    
     .footer-social {
         justify-content: center;
     }
@@ -1375,21 +1130,12 @@ section {
         padding: 0 15px;
     }
     
-    .stat-number {
-        font-size: 1.8rem;
-    }
-    
     .footer-content {
         gap: 12px;
     }
-    
     .footer-links {
         flex-direction: column;
         gap: 8px;
-    }
-    
-    .footer-logo {
-        min-width: 120px;
     }
     
     .hero-orbit {
