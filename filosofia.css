@@ -616,7 +616,7 @@ body {
     100% { opacity: 1; text-shadow: 0 0 25px gold, 0 0 35px orange; }
 }
 
-/* Sección del Compromiso (nueva) */
+/* Sección del Compromiso (ampliada) */
 .commitment-section {
     min-height: 60vh;
     display: flex;
@@ -707,6 +707,37 @@ body {
 .commitment-item p {
     font-size: 0.8rem;
     color: rgba(255, 255, 255, 0.9);
+}
+
+/* NUEVO: Mensaje de inclusión total */
+.commitment-invite {
+    margin: 40px 0 20px;
+    padding: 30px 20px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(0, 243, 255, 0.2);
+    border-radius: 30px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 30px rgba(0, 243, 255, 0.1);
+}
+
+.commitment-invite p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+.commitment-invite strong {
+    color: var(--quantum-blue);
+    font-weight: 700;
+    text-shadow: 0 0 10px currentColor;
+}
+
+.commitment-invite .highlight-us {
+    font-size: 1.3rem;
+    display: inline-block;
+    margin: 5px 0;
 }
 
 .commitment-extra {
@@ -1138,6 +1169,9 @@ body {
     .commitment-item {
         max-width: 280px;
         width: 100%;
+    }
+    .commitment-invite p {
+        font-size: 1rem;
     }
 }
 
