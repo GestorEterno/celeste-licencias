@@ -479,6 +479,19 @@ body {
     font-weight: 500;
 }
 
+.stat-badge {
+    display: inline-block;
+    background: rgba(0, 243, 255, 0.2);
+    color: var(--quantum-blue);
+    font-size: 0.6rem;
+    padding: 2px 6px;
+    border-radius: 10px;
+    border: 1px solid var(--quantum-blue);
+    margin-top: 4px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
 .hero-right {
     display: flex;
     flex-direction: column;
@@ -1277,31 +1290,6 @@ section {
     color: var(--quantum-blue);
 }
 
-.cta-stats {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    margin-bottom: 25px;
-}
-
-.cta-stat {
-    text-align: center;
-}
-
-.cta-stat-value {
-    display: block;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: var(--quantum-blue);
-    margin-bottom: 5px;
-}
-
-.cta-stat-label {
-    font-size: 0.75rem;
-    color: rgba(255, 255, 255, 0.8);
-}
-
 .cta-buttons {
     display: flex;
     justify-content: center;
@@ -1648,11 +1636,6 @@ section {
     
     .hero-content {
         padding: 0 15px;
-    }
-    
-    .cta-stats {
-        flex-direction: column;
-        gap: 12px;
     }
     
     .stat-number {
