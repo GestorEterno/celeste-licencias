@@ -1,4 +1,4 @@
-// tecnologia.js - Versión Corregida con nuevos datos de apps
+// tecnologia.js - Versión Corregida (Fase 2 y 3 como entidades únicas)
 
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Vision Olympus - Tecnología cargada');
@@ -292,7 +292,7 @@ function initAppModals() {
     const modal = document.querySelector('.app-modal');
     const modalClose = document.querySelector('.modal-close');
     
-    // Datos de aplicaciones actualizados
+    // Datos de aplicaciones actualizados (solo las 4 de Fase 1, más Academy y Robótica)
     const appData = {
         tempo: {
             title: 'TEMPO',
@@ -330,79 +330,23 @@ function initAppModals() {
             features: ['Sin Algoritmos', 'Comunidad Real', 'Arte en Fondos', 'Privacidad Total'],
             technical: 'Olympus es una red social donde el contenido se muestra cronológicamente, sin manipulaciones. Los artistas pueden vender sus fondos directamente. No hay seguimiento de usuarios ni venta de datos. Mensajería encriptada y perfiles personalizables. Pensada para fomentar conexiones auténticas.'
         },
-        // Fase 2: Olympus Academy (cuatro variantes)
-        academy_carreras: {
+        academy: {
             title: 'OLYMPUS ACADEMY',
-            tagline: 'Carreras de Prestigio Global',
+            tagline: 'La Primera Academia de Prestigio Global',
             badge: 'Fase 2',
             icon: 'fas fa-graduation-cap',
-            description: 'Carreras universitarias con títulos validados por tu país y reconocimiento internacional. Las más prestigiosas del mundo.',
-            features: ['Títulos Oficiales', 'Prestigio Global', 'Reconocimiento Internacional', 'Acreditación Estatal'],
-            technical: 'Olympus Academy ofrece programas de grado y posgrado diseñados en colaboración con las mejores universidades del mundo. Los títulos son validados por los ministerios de educación de cada país, garantizando su validez oficial. El plan de estudios es riguroso y actualizado constantemente por expertos de cada disciplina.'
+            description: 'Carreras con títulos validados por tu país, certificaciones de prestigio internacional, exámenes seguros y prioridad de empleo en Olympus. Educación de élite accesible para todos.',
+            features: ['Títulos Oficiales', 'Certificaciones Globales', 'Exámenes Seguros', 'Empleo Prioritario'],
+            technical: 'Olympus Academy ofrece programas de grado y posgrado diseñados en colaboración con las mejores universidades del mundo. Los títulos son validados por los ministerios de educación de cada país, garantizando su validez oficial. El plan de estudios es riguroso y actualizado constantemente por expertos de cada disciplina. Los graduados tienen acceso prioritario a oportunidades laborales dentro del ecosistema Olympus.'
         },
-        academy_cert: {
-            title: 'OLYMPUS ACADEMY',
-            tagline: 'Certificaciones de Élite',
-            badge: 'Fase 2',
-            icon: 'fas fa-certificate',
-            description: 'Certificaciones profesionales con validez en cualquier país. Avaladas por las mejores instituciones.',
-            features: ['Certificaciones', 'Reconocimiento Mundial', 'Aval Internacional', 'Especializaciones'],
-            technical: 'Las certificaciones de Olympus Academy son reconocidas por empresas y gobiernos de todo el mundo. Cada certificación implica exámenes supervisados y proyectos prácticos que demuestran la competencia del alumno. Son ideales para profesionales que buscan destacar en su campo.'
-        },
-        academy_examenes: {
-            title: 'OLYMPUS ACADEMY',
-            tagline: 'Exámenes de Élite',
-            badge: 'Fase 2',
-            icon: 'fas fa-pencil-alt',
-            description: 'Sistema de evaluación riguroso que garantiza la excelencia. Imposible de fraudes, con supervisión avanzada.',
-            features: ['Exámenes Seguros', 'Supervisión IA', 'Anti-fraude', 'Evaluación Continua'],
-            technical: 'El sistema de exámenes utiliza inteligencia artificial y supervisión remota para garantizar la integridad académica. Las pruebas son adaptativas y se realizan en entornos controlados. Los resultados son inmediatos y se emiten certificados digitales con firma electrónica verificable.'
-        },
-        academy_empleo: {
-            title: 'OLYMPUS ACADEMY',
-            tagline: 'Empleo Prioritario',
-            badge: 'Fase 2',
-            icon: 'fas fa-briefcase',
-            description: 'Los graduados tienen prioridad para ser empleados en todas las empresas del ecosistema Olympus. Tu futuro asegurado.',
-            features: ['Bolsa de Trabajo', 'Prioridad Olympus', 'Networking Exclusivo', 'Orientación Laboral'],
-            technical: 'Los graduados de Olympus Academy pasan a formar parte de una bolsa de trabajo exclusiva. Las empresas del ecosistema Olympus (y colaboradoras) tienen acceso prioritario a estos perfiles. Además, se ofrecen servicios de orientación profesional y preparación de entrevistas.'
-        },
-        // Fase 3: Robótica y tecnología futurista
-        atlas: {
-            title: 'ATLAS AI',
-            tagline: 'IA Local y Privada',
+        robotica: {
+            title: 'ROBÓTICA AVANZADA',
+            tagline: 'Tecnología Accesible y Privada',
             badge: 'Fase 3',
             icon: 'fas fa-robot',
-            description: 'Asistente de inteligencia artificial que funciona sin conexión a servidores. Tus datos nunca salen de tu dispositivo.',
-            features: ['IA Local', 'Privacidad Total', 'Sin Conexión', 'Personalizable'],
-            technical: 'Atlas es un asistente de IA que se ejecuta completamente en tu dispositivo. No requiere conexión a internet para funcionar, garantizando que tus conversaciones y datos nunca sean compartidos. Puede ayudarte con tareas, recordatorios, generación de contenido y más. Aprende de tus patrones de uso de forma privada.'
-        },
-        solaris: {
-            title: 'SOLARIS',
-            tagline: 'Control de Robots y Hogar',
-            badge: 'Fase 3',
-            icon: 'fas fa-microchip',
-            description: 'Gestiona robots y dispositivos del hogar sin conexión a la nube. Todo queda en tu red local. Tuyo de verdad.',
-            features: ['Control Local', 'Sin Telemetría', 'Automatización', 'Privacidad'],
-            technical: 'Solaris te permite controlar todos tus dispositivos inteligentes (robots, luces, termostatos) sin pasar por servidores externos. La comunicación es local y encriptada. Puedes crear automatizaciones complejas que se ejecuten sin depender de internet. Compatible con estándares abiertos.'
-        },
-        aura: {
-            title: 'AURA',
-            tagline: 'Video Consciente y Privado',
-            badge: 'Fase 3',
-            icon: 'fas fa-play-circle',
-            description: 'Plataforma de video sin recomendaciones adictivas, sin seguimiento. Contenido que suma, no que engancha.',
-            features: ['Sin Adicción', 'Privacidad', 'Contenido Auténtico', 'Control de Tiempo'],
-            technical: 'Aura es una plataforma de video donde el contenido es creado exclusivamente por humanos. No hay recomendaciones automáticas; tú eliges lo que ver. Incluye límites de tiempo configurables y estadísticas de consumo. Los creadores reciben una compensación justa basada en visualizaciones reales.'
-        },
-        terra: {
-            title: 'TERRA',
-            tagline: 'Viajes Inteligentes y Privados',
-            badge: 'Fase 3',
-            icon: 'fas fa-map-marked-alt',
-            description: 'Planificación de viajes con IA local, recomendaciones sin rastreo. Comunidad de viajeros auténticos.',
-            features: ['Sin Rastreo', 'Recomendaciones Locales', 'Comunidad', 'Privacidad'],
-            technical: 'Terra te ayuda a planificar viajes utilizando datos descargados y procesados localmente. No rastrea tu ubicación ni compra datos con terceros. Las recomendaciones provienen de una comunidad de viajeros verificados. Puedes sincronizar tus planes entre dispositivos de forma cifrada.'
+            description: 'Robots y dispositivos inteligentes que funcionan sin conexión a la nube. Tus datos nunca salen de tu hogar. Tecnología futurista realmente tuya, sin vigilancia ni dependencia de servidores externos.',
+            features: ['Control Local', 'Privacidad Total', 'Sin Telemetría', 'Independiente'],
+            technical: 'Nuestra línea de robótica y tecnología avanzada se basa en el principio de soberanía digital. Todos los dispositivos operan con inteligencia artificial local, sin necesidad de conexión a internet. Los datos de uso y sensores permanecen en tu red doméstica, bajo tu control. Los robots son completamente personalizables y no reportan información a ningún servidor externo. Así, la tecnología futurista deja de ser una amenaza para convertirse en una herramienta verdaderamente tuya.'
         }
     };
     
