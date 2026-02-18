@@ -21,6 +21,7 @@
     --energy-wave: rgba(0, 243, 255, 0.15);
     --hologram-field: rgba(157, 0, 255, 0.1);
     --laser-beam: rgba(255, 0, 255, 0.3);
+    --highlight-blue: #00aaff;
 }
 
 body {
@@ -88,7 +89,7 @@ body {
     mix-blend-mode: screen;
 }
 
-/* Barra de progreso */
+/* Barra de progreso (idéntica a filosofia) */
 .reading-progress {
     position: fixed;
     top: 0;
@@ -101,7 +102,7 @@ body {
     box-shadow: 0 0 10px var(--quantum-blue);
 }
 
-/* Cabecera */
+/* Cabecera (idéntica a filosofia) */
 .cyber-header {
     display: flex;
     justify-content: space-between;
@@ -209,7 +210,7 @@ body {
     width: 100%;
 }
 
-/* Animaciones de glitch */
+/* Animaciones de glitch (idénticas a filosofia) */
 @keyframes glitch-anim {
     0% { clip: rect(42px, 9999px, 44px, 0); }
     5% { clip: rect(12px, 9999px, 59px, 0); }
@@ -265,7 +266,7 @@ body {
     padding: 0 40px;
 }
 
-/* Hero Section */
+/* Hero Section con anillo orbital (igual a filosofia) */
 .philosophy-hero {
     min-height: 100vh;
     display: flex;
@@ -426,7 +427,6 @@ body {
     100% { opacity: 1; transform: translateY(0); }
 }
 
-/* Guía de scroll (como en filosofía) */
 .hero-guide {
     display: flex;
     flex-direction: column;
@@ -825,7 +825,7 @@ section {
     color: rgba(255, 255, 255, 0.7);
 }
 
-/* CTA Section */
+/* CTA Section - Sutil */
 .cta-section {
     background: linear-gradient(135deg, rgba(10, 10, 26, 0.7) 0%, rgba(15, 15, 35, 0.7) 100%);
     text-align: center;
@@ -850,14 +850,6 @@ section {
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.9);
     margin-bottom: 30px;
-}
-
-.cta-note {
-    margin-top: 20px;
-    font-size: 0.9rem;
-    color: var(--supernova-yellow);
-    font-style: italic;
-    text-shadow: 0 0 8px rgba(255,255,0,0.4);
 }
 
 .cta-buttons {
@@ -1094,13 +1086,18 @@ section {
         margin-bottom: 10px;
     }
 
-    .cta-buttons {
+    .cta-buttons, .hero-cta {
         flex-direction: column;
         align-items: center;
     }
     
     .section-container {
         padding: 0 20px;
+    }
+    
+    .hero-stats {
+        flex-direction: column;
+        gap: 15px;
     }
     
     .footer-content {
@@ -1164,15 +1161,9 @@ section {
     }
 }
 
-/* Highlight para textos importantes (como en filosofía) */
+/* Highlight para el texto de usuarios */
 .highlight-us {
     color: var(--quantum-blue);
-    font-weight: 700;
-    text-shadow: 0 0 10px rgba(0, 243, 255, 0.7);
-    animation: us-pulse 2s infinite alternate;
-}
-
-@keyframes us-pulse {
-    0% { text-shadow: 0 0 5px rgba(0, 243, 255, 0.6); }
-    100% { text-shadow: 0 0 20px rgba(0, 243, 255, 1); }
+    font-weight: 600;
+    text-shadow: 0 0 8px rgba(0, 243, 255, 0.4);
 }
