@@ -1,4 +1,4 @@
-// ARCHIVO: index.js (COMPLETO - VERSIÓN FINAL)
+// ARCHIVO: index.js (COMPLETO - VERSIÓN FINAL DEFINITIVA)
 
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Vision Olympus - Página de inicio cargada (visión compacta)');
