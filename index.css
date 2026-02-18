@@ -1,4 +1,4 @@
-/* ARCHIVO: index.css (COMPLETO - VERSIÓN FINAL DEFINITIVA) */
+/* ARCHIVO: index.css (COMPLETO - CON FOOTER PERFECCIONADO) */
 
 /* Reset y configuración base */
 * {
@@ -353,7 +353,7 @@ section {
     font-weight: 600;
 }
 
-/* ========== HERO (98vh para que ocupe casi toda la pantalla) ========== */
+/* ========== HERO (98vh) ========== */
 .hero-section {
     min-height: 98vh;
     display: flex;
@@ -865,11 +865,11 @@ section {
     box-shadow: 0 5px 10px rgba(0, 243, 255, 0.2);
 }
 
-/* ========== FOOTER REDUCIDO 20% (sin el párrafo) ========== */
+/* ========== FOOTER PERFECCIONADO ========== */
 .tech-footer {
     background: var(--dark-matter);
     border-top: 1px solid rgba(0, 243, 255, 0.2);
-    padding: 20px 0 10px; /* reducido de 25px 0 15px */
+    padding: 15px 0 8px; /* reducido aún más para acercar elementos */
 }
 
 .footer-container {
@@ -882,25 +882,23 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px; /* reducido */
+    margin-bottom: 5px; /* reducido para acercar a los enlaces */
     flex-wrap: wrap;
-    gap: 10px; /* reducido */
+    gap: 8px; /* reducido */
 }
 
 .footer-logo h3 {
     font-family: 'Orbitron', sans-serif;
-    font-size: 0.8rem; /* reducido de 0.9rem */
+    font-size: 0.9rem; /* aumentado un 10% respecto a 0.8rem */
     color: var(--stellar-white);
-    margin-bottom: 0; /* eliminado margen inferior */
+    margin-bottom: 0;
     text-transform: uppercase;
-    letter-spacing: 2px; /* ajustado */
+    letter-spacing: 2px;
 }
-
-/* Efecto glitch en el logo del footer (ya tiene clase logo-glitch) */
 
 .footer-links {
     display: flex;
-    gap: 15px; /* reducido de 20px */
+    gap: 12px; /* reducido */
     flex: 2;
     justify-content: center;
 }
@@ -908,7 +906,7 @@ section {
 .footer-link {
     color: rgba(255, 255, 255, 0.7);
     text-decoration: none;
-    font-size: 0.7rem; /* reducido de 0.75rem */
+    font-size: 0.7rem;
     transition: color 0.3s ease;
     position: relative;
 }
@@ -934,17 +932,17 @@ section {
 
 .footer-social {
     display: flex;
-    gap: 8px; /* reducido de 12px */
+    gap: 6px; /* reducido */
     flex: 1;
     justify-content: flex-end;
 }
 
 .social-link {
     color: rgba(255, 255, 255, 0.7);
-    font-size: 1.1rem; /* reducido de 1.3rem */
+    font-size: 1rem; /* ligeramente reducido para compensar */
     transition: all 0.3s ease;
-    width: 30px; /* reducido de 40px */
-    height: 30px; /* reducido de 40px */
+    width: 28px;
+    height: 28px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -954,16 +952,16 @@ section {
 
 .social-link:hover {
     color: var(--quantum-blue);
-    transform: translateY(-3px);
-    text-shadow: 0 0 10px rgba(0, 243, 255, 0.7);
+    transform: translateY(-2px);
+    text-shadow: 0 0 8px rgba(0, 243, 255, 0.7);
 }
 
 .footer-copyright {
     text-align: center;
-    padding-top: 10px; /* reducido de 15px */
+    padding-top: 5px; /* reducido */
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     color: rgba(255, 255, 255, 0.7);
-    font-size: 0.65rem; /* reducido de 0.7rem */
+    font-size: 0.6rem; /* reducido */
 }
 
 /* Botón Volver al Inicio */
@@ -1042,6 +1040,19 @@ section {
     .final-cta-buttons {
         flex-direction: column;
         gap: 8px;
+    }
+    /* Ajustes responsivos para footer */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+    }
+    .footer-links {
+        flex-direction: column;
+        gap: 5px;
+    }
+    .footer-social {
+        justify-content: center;
     }
     .back-to-top {
         bottom: 10px;
