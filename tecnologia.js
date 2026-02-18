@@ -1,4 +1,4 @@
-// tecnologia.js - Versión Mejorada
+// tecnologia.js - Versión Corregida
 
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Vision Olympus - Tecnología cargada');
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     createStellarField();
     initElementAnimations();
     initAppModals();
-    initOrbitalAnimation(); // NUEVO: Inicializar animación orbital
+    initOrbitalAnimation();
 });
 
 // Inicializar la página de tecnología
@@ -23,7 +23,7 @@ function initTechnologyPage() {
     initCardEffects();
     initRoadmapEffects();
     initTeamEffects();
-    initInnovationEffects(); // NUEVO: Efectos para tarjetas de innovación
+    initInnovationEffects();
 }
 
 // Configurar barra de progreso
@@ -52,6 +52,86 @@ function initProgressBar() {
     window.addEventListener('scroll', updateProgress);
 }
 
+// Configurar efectos de scroll en el header
+function setupScrollEffects() {
+    const header = document.querySelector('.cyber-header');
+    
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 80) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+}
+
+// Crear campo estelar
+function createStellarField() {
+    const particlesContainer = document.querySelector('.particles');
+    
+    for (let i = 0; i < 60; i++) {
+        createStar(particlesContainer, i);
+    }
+}
+
+function createStar(container, index) {
+    const star = document.createElement('div');
+    star.classList.add('particle');
+    
+    const posX = Math.random() * 100;
+    const posY = Math.random() * 100;
+    const size = Math.random() * 2 + 0.5;
+    const duration = Math.random() * 40 + 30;
+    const delay = Math.random() * 10;
+    
+    star.style.left = `${posX}%`;
+    star.style.top = `${posY}%`;
+    star.style.width = `${size}px`;
+    star.style.height = `${size}px`;
+    star.style.animationDuration = `${duration}s`;
+    star.style.animationDelay = `${delay}s`;
+    
+    const starTypes = [
+        { color: '#ffffff', glow: '#ffffff' },
+        { color: '#00f3ff', glow: '#00f3ff' },
+        { color: '#ff00ff', glow: '#ff00ff' }
+    ];
+    
+    const starType = starTypes[Math.floor(Math.random() * starTypes.length)];
+    star.style.backgroundColor = starType.color;
+    star.style.boxShadow = `0 0 ${size * 2}px ${starType.glow}`;
+    
+    container.appendChild(star);
+}
+
+// Inicializar animaciones de elementos
+function initElementAnimations() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+    
+    const elementsToAnimate = document.querySelectorAll(
+        '.application-card, .innovation-card, .team-member, .roadmap-phase'
+    );
+    
+    elementsToAnimate.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(el);
+    });
+}
+
 // Configurar efectos de hover en tarjetas
 function initCardEffects() {
     const cards = document.querySelectorAll('.application-card, .team-member');
@@ -77,7 +157,7 @@ function initCardEffects() {
     });
 }
 
-// Efectos para la sección de innovación - NUEVO
+// Efectos para la sección de innovación
 function initInnovationEffects() {
     const innovationCards = document.querySelectorAll('.innovation-card');
     
@@ -142,110 +222,16 @@ function initTeamEffects() {
     });
 }
 
-// Configurar efectos de scroll
-function setupScrollEffects() {
-    const header = document.querySelector('.cyber-header');
-    
-    window.addEventListener('scroll', function() {
-        if (window.pageYOffset > 80) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-    });
-}
-
-// Crear campo estelar
-function createStellarField() {
-    const particlesContainer = document.querySelector('.particles');
-    
-    // Crear estrellas principales
-    for (let i = 0; i < 60; i++) {
-        createStar(particlesContainer, i);
-    }
-}
-
-function createStar(container, index) {
-    const star = document.createElement('div');
-    star.classList.add('particle');
-    
-    // Posición aleatoria
-    const posX = Math.random() * 100;
-    const posY = Math.random() * 100;
-    
-    // Tamaño aleatorio
-    const size = Math.random() * 2 + 0.5;
-    
-    // Duración de animación aleatoria
-    const duration = Math.random() * 40 + 30;
-    
-    // Retraso aleatorio
-    const delay = Math.random() * 10;
-    
-    // Aplicar estilos
-    star.style.left = `${posX}%`;
-    star.style.top = `${posY}%`;
-    star.style.width = `${size}px`;
-    star.style.height = `${size}px`;
-    star.style.animationDuration = `${duration}s`;
-    star.style.animationDelay = `${delay}s`;
-    
-    // Color basado en el tipo de estrella
-    const starTypes = [
-        { color: '#ffffff', glow: '#ffffff' },
-        { color: '#00f3ff', glow: '#00f3ff' },
-        { color: '#ff00ff', glow: '#ff00ff' }
-    ];
-    
-    const starType = starTypes[Math.floor(Math.random() * starTypes.length)];
-    star.style.backgroundColor = starType.color;
-    star.style.boxShadow = `0 0 ${size * 2}px ${starType.glow}`;
-    
-    container.appendChild(star);
-}
-
-// Inicializar animaciones de elementos
-function initElementAnimations() {
-    // Animación para elementos con efecto de aparición
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-    
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, observerOptions);
-    
-    // Observar elementos para animación
-    const elementsToAnimate = document.querySelectorAll(
-        '.application-card, .innovation-card, .team-member, .roadmap-phase'
-    );
-    
-    elementsToAnimate.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
-    });
-}
-
-// Inicializar animación orbital MEJORADA - NUEVO: IGUAL AL DE FILOSOFÍA
+// Inicializar animación orbital
 function initOrbitalAnimation() {
     console.log('Inicializando animación orbital mejorada...');
     
-    // Crear partículas orbitales adicionales
     const orbitContainer = document.querySelector('.hero-orbit');
     
     for (let i = 0; i < 12; i++) {
         createOrbitalParticle(orbitContainer, i);
     }
     
-    // Animar los anillos con retraso escalonado
     const rings = document.querySelectorAll('.orbit-ring');
     rings.forEach((ring, index) => {
         setTimeout(() => {
@@ -274,13 +260,11 @@ function createOrbitalParticle(container, index) {
     particle.style.left = '50%';
     particle.style.opacity = '0';
     
-    // Animación de aparición
     setTimeout(() => {
         particle.style.opacity = '1';
         particle.style.transition = 'opacity 1s ease';
     }, 1000 + (index * 100));
     
-    // Animación orbital
     const keyframes = `
         @keyframes orbital-particle-${index} {
             0% {
@@ -308,115 +292,115 @@ function initAppModals() {
     const modal = document.querySelector('.app-modal');
     const modalClose = document.querySelector('.modal-close');
     
-    // Datos de aplicaciones para los modales
+    // Datos de aplicaciones para los modales (actualizados)
     const appData = {
         tempo: {
             title: 'TEMPO',
             tagline: 'Sistema Operativo de Tu Tiempo',
             badge: 'Fase 1',
             icon: 'fas fa-clock',
-            description: 'Control total de tu tiempo con notas, tracker de hábitos, calendario y gráficos de progreso para rutina diaria y uso profesional.',
-            features: ['Gestión de Tiempo', 'Tracker de Hábitos', 'Calendario Inteligente', 'Gráficos de Progreso'],
-            technical: 'Tempo es una aplicación integral para la gestión del tiempo que evolucionará desde un tracker de rutinas básico hasta un sistema completo de gestión del tiempo profesional. En sus primeras versiones incluirá funciones para hacer notas, seguimiento de hábitos, anotaciones en calendario y gráficos de progreso. Totalmente personalizable para adaptarse a las necesidades específicas de cada usuario, tanto para uso personal como profesional. La aplicación escalará progresivamente hasta convertirse en una herramienta completa de gestión del tiempo que incluye planificación de proyectos, seguimiento de objetivos y análisis de productividad avanzado.'
+            description: 'Gestión consciente del tiempo. Productividad con sentido, no vacía. Para personas, equipos y empresas.',
+            features: ['Gestión de Tiempo', 'Productividad Consciente', 'Calendario', 'Gráficos de Progreso'],
+            technical: 'Tempo es una aplicación integral para la gestión del tiempo que prioriza el bienestar sobre la productividad vacía. Incluye calendario inteligente, seguimiento de hábitos y análisis de cómo inviertes tu tiempo. Diseñada para ayudarte a enfocarte en lo que realmente importa, sin caer en la trampa de la productividad tóxica. Los datos se almacenan localmente con opción de sincronización cifrada entre dispositivos.'
         },
         noema: {
             title: 'NOEMA',
             tagline: 'Santuario Digital Mental',
             badge: 'Fase 1',
             icon: 'fas fa-brain',
-            description: 'Journaling avanzado y entrenamiento cerebral profesional que se adapta a tu progreso y gestiona tu estado de ánimo.',
-            features: ['Journaling Avanzado', 'Entrenamiento Cerebral', 'Gestión de Estado de Ánimo', 'Adaptación al Progreso'],
-            technical: 'Noema es una plataforma completa para la gestión seria de la mente que combina journaling avanzado con entrenamiento cerebral profesional. La aplicación incluye herramientas para gestionar el estado de ánimo, ejercicios cognitivos personalizados y seguimiento del progreso mental. Se adapta dinámicamente a la evolución del usuario, ofreciendo ejercicios y técnicas cada vez más avanzadas. Incluye análisis de patrones mentales, recomendaciones personalizadas y un sistema de alertas para identificar tendencias negativas. Diseñada para uso tanto personal como profesional, con enfoque en el desarrollo cognitivo a largo plazo.'
-        },
-        ecomyse: {
-            title: 'ECOMYSE',
-            tagline: 'Revolución Microeconómica',
-            badge: 'Fase 1',
-            icon: 'fas fa-coins',
-            description: 'Gestión sencilla de finanzas personales: anota ganancias y gastos, planifica ahorros y recibe recomendaciones financieras.',
-            features: ['Finanzas Personales', 'Planificación de Ahorros', 'Seguimiento de Gastos', 'Recomendaciones Financieras'],
-            technical: 'Ecomyse revoluciona la gestión financiera personal con una interfaz intuitiva que permite registrar cada ganancia y gasto de forma sencilla. La aplicación incluye herramientas para planificar ahorros específicos, establecer metas financieras y recibir recomendaciones personalizadas para mejorar la salud económica. Ofrece análisis detallados de patrones de gasto, alertas inteligentes y pronósticos financieros. Perfecta para usuarios que buscan tener mayor control sobre sus finanzas sin complicaciones técnicas. La plataforma evolucionará para incluir inversiones básicas y herramientas de planificación fiscal.'
+            description: 'Entrena tu mente: meditación, diario, test de IQ y capacidades cognitivas. Conócete a ti mismo.',
+            features: ['Entrenamiento Mental', 'Diario Personal', 'Test Cognitivos', 'Meditación Guiada'],
+            technical: 'Noema combina journaling avanzado con ejercicios de neuroplasticidad. La app aprende de tus patrones emocionales y cognitivos para ofrecerte ejercicios personalizados. Todos los datos permanecen en tu dispositivo, garantizando privacidad total. Incluye recordatorios conscientes y análisis de progreso a largo plazo.'
         },
         vitalion: {
             title: 'VITALION',
             tagline: 'Arquitectura de Salud Integral',
             badge: 'Fase 1',
             icon: 'fas fa-heartbeat',
-            description: 'El templo de tu cuerpo: entrenamiento y alimentación personalizados con seguimiento completo para tu progreso físico.',
-            features: ['Entrenamiento Personalizado', 'Alimentación Adaptativa', 'Seguimiento Completo', 'Análisis de Progreso'],
-            technical: 'Vitalion es el centro de control definitivo para la salud física, funcionando como un templo digital para el cuerpo. Ofrece entrenamientos completamente personalizados basados en objetivos, condición física y disponibilidad. El sistema de alimentación se adapta a preferencias, restricciones y metas específicas. Incluye seguimiento detallado de métricas corporales, progreso de entrenamiento y adherencia nutricional. La aplicación utiliza algoritmos avanzados para ajustar automáticamente los planes según el progreso y feedback del usuario. Ideal tanto para principiantes como atletas avanzados que buscan optimizar su rendimiento físico.'
+            description: 'Salud integral: entrenamiento, nutrición, seguimiento. Tu cuerpo como templo, no como métrica.',
+            features: ['Entrenamiento Personalizado', 'Nutrición Adaptativa', 'Seguimiento de Salud', 'Análisis de Progreso'],
+            technical: 'Vitalion ofrece planes de entrenamiento y nutrición que se adaptan a tus objetivos y condición física. Utiliza IA local para ajustar las rutinas según tu evolución. No comparte datos con terceros. Integración opcional con wearables (datos siempre bajo tu control).'
+        },
+        olympus_social: {
+            title: 'OLYMPUS (Red Social)',
+            tagline: 'La Red Social que Mereces',
+            badge: 'Fase 1',
+            icon: 'fas fa-globe',
+            description: 'Estética cuidada, fondos de artistas, sin algoritmos adictivos. Conecta de verdad, sin ser el producto.',
+            features: ['Sin Algoritmos', 'Comunidad Real', 'Arte en Fondos', 'Privacidad Total'],
+            technical: 'Olympus es una red social donde el contenido se muestra cronológicamente, sin manipulaciones. Los artistas pueden vender sus fondos directamente. No hay seguimiento de usuarios ni venta de datos. Mensajería encriptada y perfiles personalizables. Pensada para fomentar conexiones auténticas.'
         },
         halo: {
             title: 'HALO',
             tagline: 'Comunicación Segura Unificada',
             badge: 'Fase 2',
             icon: 'fas fa-comments',
-            description: 'Comunicación segura y personalizable con perfiles personal y profesional, interfaz sencilla y funciones todo-en-uno.',
-            features: ['Comunicación Segura', 'Perfiles Múltiples', 'Interfaz Personalizable', 'Funciones Todo-en-Uno'],
-            technical: 'Halo redefine la comunicación digital con un enfoque en la seguridad, privacidad y personalización. La aplicación permite crear perfiles separados para uso personal y profesional, con la capacidad de cambiar entre ellos fácilmente. Ofrece mensajería encriptada, videollamadas de alta calidad, compartimiento seguro de archivos y herramientas de colaboración. La interfaz es altamente personalizable, permitiendo a los usuarios adaptar la experiencia a sus preferencias. A diferencia de otras plataformas, Halo prioriza la privacidad del usuario sin comprometer la funcionalidad, eliminando algoritmos de recolección de datos y publicidad invasiva.'
+            description: 'Comunicación encriptada, perfiles personal y profesional, sin recolección de datos.',
+            features: ['Mensajería Segura', 'Perfiles Múltiples', 'Videollamadas', 'Sin Vigilancia'],
+            technical: 'Halo es una plataforma de comunicación todo-en-uno con cifrado de extremo a extremo. Permite crear perfiles separados para trabajo y vida personal, conmutando fácilmente. No almacena metadatos ni registra tus conversaciones. Videollamadas peer-to-peer cuando es posible.'
         },
         academy: {
             title: 'OLYMPUS ACADEMY',
-            tagline: 'Educación de Élite Accesible',
+            tagline: 'La Primera Academia de Prestigio Global',
             badge: 'Fase 2',
             icon: 'fas fa-graduation-cap',
-            description: 'La universidad del futuro: carreras prestigiosas con titulaciones de élite, educación online y salida laboral en Olympus.',
-            features: ['Carreras Prestigiosas', 'Educación Online', 'Titulaciones de Élite', 'Salida Laboral Garantizada'],
-            technical: 'Olympus Academy representa la evolución de la educación superior, ofreciendo carreras universitarias completas con titulaciones que tendrán mayor prestigio que cualquier universidad tradicional. La plataforma utiliza sistemas avanzados de verificación que hacen imposible las trampas, garantizando la integridad académica. Los programas están diseñados por expertos líderes en sus campos y combinan teoría con aplicación práctica intensiva. Los graduados tienen salida laboral directa en empresas del ecosistema Olympus, respaldados por la reputación de excelencia de la institución. La educación es completamente online pero mantiene estándares de calidad superiores a la educación presencial tradicional.'
+            description: 'Carreras con títulos validados por tu país, certificaciones reconocidas internacionalmente. Los graduados tienen prioridad para ser empleados de Olympus. Educación de élite accesible.',
+            features: ['Títulos Validados', 'Prestigio Global', 'Prioridad Laboral', 'Educación Online'],
+            technical: 'Olympus Academy ofrece carreras universitarias con validez oficial en múltiples países. Los exámenes son supervisados mediante sistemas avanzados que garantizan la integridad académica. Los graduados pasan a formar parte de una bolsa de trabajo exclusiva para empresas del ecosistema Olympus. La plataforma de aprendizaje combina vídeos, materiales interactivos y tutorías personalizadas.'
         },
         astra: {
             title: 'ASTRA',
             tagline: 'Entretenimiento Democrático',
             badge: 'Fase 2',
             icon: 'fas fa-film',
-            description: 'Plataforma de streaming con series, películas y documentales a $1 mensual, con oportunidades para pequeños productores.',
-            features: ['Streaming Accesible', 'Apoyo a Productores', 'Contenido Diverso', 'Precio Democrático'],
-            technical: 'Astra revoluciona la industria del entretenimiento con un modelo de negocio único: solo $1 mensual por acceso completo a todo el catálogo. La plataforma no solo ofrece series, películas y documentales, sino que también democratiza la producción de contenido. Cualquier persona con una cámara y una idea puede presentar su proyecto para financiación y distribución. Un equipo especializado evalúa las propuestas basándose en su calidad y potencial, no en conexiones o presupuesto. Los proyectos aprobados reciben financiación completa y los productores mantienen derechos significativos sobre su trabajo, pudiendo ganar miles de dólares por producciones exitosas. Astra elimina las barreras de entrada tradicionales de la industria.'
+            description: 'Streaming a $1 mensual, apoyo a pequeños productores, sin algoritmos de manipulación.',
+            features: ['Streaming Accesible', 'Apoyo a Creadores', 'Sin Recomendaciones', 'Contenido Diverso'],
+            technical: 'Astra ofrece series, películas y documentales por una cuota simbólica. Los productores independientes pueden financiar sus proyectos mediante la plataforma. No hay algoritmos de recomendación; el contenido se organiza por categorías y comunidad. Los ingresos se distribuyen de forma transparente.'
         },
-        olympus: {
-            title: 'OLYMPUS',
+        olympus_control: {
+            title: 'OLYMPUS HUB',
             tagline: 'Centro de Control Unificado',
             badge: 'Fase 2',
             icon: 'fas fa-tachometer-alt',
-            description: 'Vista y acceso a todas las apps desde tu PC, centro de control avanzado conectado a tus apps móviles para gestión total.',
-            features: ['Control Centralizado', 'Integración Total', 'Dashboard Personalizable', 'Sincronización en Tiempo Real'],
-            technical: 'Olympus es el centro de control maestro del ecosistema Vision Olympus, diseñado específicamente para uso en computadoras de escritorio. La aplicación proporciona una vista unificada de todas las apps del ecosistema, permitiendo gestionar cada aspecto de tu vida personal y profesional desde un solo lugar. Se sincroniza perfectamente con las versiones móviles de las aplicaciones, ofreciendo una experiencia continua entre dispositivos. El dashboard es completamente personalizable, permitiendo a los usuarios organizar la información según sus prioridades. Incluye herramientas avanzadas de análisis, automatización de tareas y gestión de flujos de trabajo entre diferentes aplicaciones del ecosistema.'
+            description: 'Vista y acceso a todas las apps desde tu PC, integración total, dashboard personalizable.',
+            features: ['Control Centralizado', 'Integración Total', 'Dashboard Personalizable', 'Sincronización'],
+            technical: 'Olympus Hub es la aplicación de escritorio que unifica todas las herramientas del ecosistema. Proporciona una visión global de tus datos (locales) y acceso rápido a cada app. Incluye automatizaciones entre apps y un sistema de plugins para expandir funcionalidades.'
         },
         atlas: {
             title: 'ATLAS AI',
             tagline: 'Asistente Inteligente Sin Límites',
             badge: 'Fase 3',
             icon: 'fas fa-robot',
-            description: 'IA avanzada incluida sin coste en apps Olympus, asistente sin límites para tareas laborales y personales, en constante evolución.',
-            features: ['IA Avanzada', 'Sin Límites de Uso', 'Integración Total', 'Evolución Continua'],
-            technical: 'Atlas AI es el asistente de inteligencia artificial más avanzado del ecosistema Olympus, disponible sin costo adicional en todas las aplicaciones. A diferencia de otros asistentes IA que tienen límites de uso o planes de pago escalonados, Atlas ofrece capacidades ilimitadas para todos los usuarios. Puede ayudar con tareas que van desde redacción de informes profesionales hasta planificación personal, aprendizaje y resolución de problemas complejos. La IA evoluciona constantemente, aprendiendo de las interacciones con todos los usuarios para mejorar sus capacidades. El desarrollo de Atlas también impulsa avances en robótica y otras tecnologías del ecosistema Olympus, creando un ciclo virtuoso de innovación.'
+            description: 'IA avanzada que funciona sin conexión a servidores. Tus datos nunca salen de tu dispositivo. Asistente verdaderamente personal.',
+            features: ['IA Local', 'Privacidad Total', 'Sin Conexión', 'Personalizable'],
+            technical: 'Atlas es un asistente de IA que se ejecuta completamente en tu dispositivo. No requiere conexión a internet para funcionar, garantizando que tus conversaciones y datos nunca sean compartidos. Puede ayudarte con tareas, recordatorios, generación de contenido y más. Aprende de tus patrones de uso de forma privada.'
         },
         aura: {
             title: 'AURA',
             tagline: 'Plataforma de Video Consciente',
             badge: 'Fase 3',
             icon: 'fas fa-play-circle',
-            description: 'YouTube sin videos con IA, streaming, interfaz personalizable y controles de tiempo para evitar consumo excesivo de contenido.',
-            features: ['Contenido Auténtico', 'Control de Tiempo', 'Interfaz Personalizable', 'Streaming de Calidad'],
-            technical: 'Aura es la respuesta al "internet muerto" generado por contenido de IA, ofreciendo una plataforma de video donde solo se permite contenido creado por humanos. La aplicación incluye herramientas avanzadas de control de tiempo que permiten a los usuarios establecer límites diarios de consumo y recibir alertas cuando se acercan a ellos. La interfaz es altamente personalizable, adaptándose a las preferencias de visualización de cada usuario. Aura también ofrece funcionalidades de streaming en vivo y una comunidad enfocada en contenido de calidad y significado. La plataforma prioriza la experiencia del usuario sobre el engagement máximo, promoviendo un consumo consciente y saludable de contenido digital.'
+            description: 'YouTube sin videos con IA, streaming, control de tiempo, sin recomendaciones adictivas. Contenido que suma.',
+            features: ['Sin Adicción', 'Contenido Auténtico', 'Control de Tiempo', 'Streaming'],
+            technical: 'Aura es una plataforma de video donde el contenido es creado exclusivamente por humanos. No hay recomendaciones automáticas; tú eliges lo que ver. Incluye límites de tiempo configurables y estadísticas de consumo. Los creadores reciben una compensación justa basada en visualizaciones reales.'
         },
-        robotika: {
+        solaris: {
             title: 'SOLARIS',
             tagline: 'Control Total de Robots y Hogar',
             badge: 'Fase 3',
             icon: 'fas fa-robot',
-            description: 'Gestiona todos los robots y tecnología del hogar desde una sola app. Controla automatización, robots asistentes y sistemas inteligentes.',
-            features: ['Control de Robots', 'Automatización Hogar', 'Sistemas Inteligentes', 'Gestión Centralizada'],
-            technical: 'Solaris es la aplicación definitiva para el control y gestión de todos los dispositivos robóticos y sistemas de automatización del hogar equipados con tecnología Vision Olympus. Permite controlar desde robots asistentes domésticos hasta sistemas de seguridad automatizados, climatización inteligente y electrodomésticos conectados. La aplicación ofrece programación de rutinas personalizadas, monitorización en tiempo real de todos los dispositivos y alertas inteligentes. Robotika aprende de tus patrones de uso para optimizar automáticamente el funcionamiento de todos los sistemas, creando un entorno doméstico perfectamente adaptado a tus necesidades. Compatible con todos los productos de robótica y automatización desarrollados por Vision Olympus.'
+            description: 'Gestiona robots y dispositivos del hogar sin conexión a la nube. Todo queda en tu red local. Tuyo de verdad.',
+            features: ['Control Local', 'Sin Telemetría', 'Automatización', 'Privacidad'],
+            technical: 'Solaris te permite controlar todos tus dispositivos inteligentes (robots, luces, termostatos) sin pasar por servidores externos. La comunicación es local y encriptada. Puedes crear automatizaciones complejas que se ejecuten sin depender de internet. Compatible con estándares abiertos.'
         },
         terra: {
             title: 'TERRA',
             tagline: 'Plataforma de Viajes Inteligentes',
             badge: 'Fase 3',
             icon: 'fas fa-map-marked-alt',
-            description: 'Planificación de viajes con recomendaciones personalizadas, reservas integradas y comunidad de viajeros con reviews auténticos.',
-            features: ['Planificación Viajes', 'Recomendaciones Personalizadas', 'Reservas Integradas', 'Comunidad Viajera'],
-            technical: 'Terra reinventa la experiencia de viajar combinando planificación inteligente con una comunidad auténtica de viajeros. La plataforma utiliza IA para crear itinerarios personalizados basados en intereses, presupuesto y estilo de viaje específicos de cada usuario. Integra reservas de vuelos, alojamiento, transporte y actividades en una experiencia sin fricciones. La comunidad de Terra se basa en reviews verificados y contenido genuino, eliminando recomendaciones pagadas o falsas. Incluye herramientas para viajeros frecuentes, nómadas digitales y aventureros ocasionales, con funcionalidades como presupuesto en tiempo real, traducción instantánea y asistencia 24/7.'
+            description: 'Planificación de viajes con IA local, recomendaciones sin seguimiento, comunidad de viajeros auténticos.',
+            features: ['Privacidad en Viajes', 'Sin Rastreo', 'Recomendaciones Locales', 'Comunidad'],
+            technical: 'Terra te ayuda a planificar viajes utilizando datos descargados y procesados localmente. No rastrea tu ubicación ni compra datos con terceros. Las recomendaciones provienen de una comunidad de viajeros verificados. Puedes sincronizar tus planes entre dispositivos de forma cifrada.'
         }
     };
     
@@ -442,7 +426,6 @@ function initAppModals() {
         const app = appData[appId];
         if (!app) return;
         
-        // Llenar modal con datos
         document.querySelector('.modal-icon').innerHTML = `<i class="${app.icon}"></i>`;
         document.querySelector('.modal-title').textContent = app.title;
         document.querySelector('.modal-tagline').textContent = app.tagline;
@@ -450,7 +433,6 @@ function initAppModals() {
         document.querySelector('.modal-description').textContent = app.description;
         document.querySelector('.modal-technical').textContent = app.technical;
         
-        // Limpiar y llenar características
         const featuresContainer = document.querySelector('.modal-features');
         featuresContainer.innerHTML = '';
         app.features.forEach(feature => {
@@ -460,7 +442,6 @@ function initAppModals() {
             featuresContainer.appendChild(featureTag);
         });
         
-        // Mostrar modal
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
     }
@@ -478,7 +459,6 @@ function initAppModals() {
         document.body.style.overflow = 'auto';
     }
     
-    // Cerrar modal con tecla Escape
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && modal.classList.contains('active')) {
             closeModal();
@@ -493,7 +473,7 @@ document.addEventListener('DOMContentLoaded', function() {
     ctaButtons.forEach(button => {
         button.addEventListener('mouseenter', function() {
             if (this.classList.contains('primary')) {
-                this.style.transform = 'translateY(-3px) scale(1.05)';
+                this.style.transform = 'translateY(-3px) scale(1.02)';
             } else {
                 this.style.transform = 'translateY(-3px)';
             }
