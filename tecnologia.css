@@ -1,4 +1,4 @@
-/* tecnologia.css - Versión Corregida (con secciones conceptuales para Fase 2 y 3) */
+/* tecnologia.css - Versión Final */
 
 /* Reset y configuración base */
 * {
@@ -473,6 +473,34 @@ body {
     font-weight: 500;
 }
 
+/* Estadística especial para el precio único */
+.stat-special {
+    position: relative;
+    overflow: visible;
+}
+
+.stat-special .stat-badge {
+    position: absolute;
+    top: -10px;
+    right: -5px;
+    background: linear-gradient(135deg, var(--quantum-blue), var(--pulsar-pink));
+    color: var(--deep-space);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 0 0 15px rgba(0,243,255,0.5);
+    white-space: nowrap;
+    z-index: 2;
+}
+
+.stat-special .stat-number s {
+    color: rgba(255,255,255,0.5);
+    text-decoration-thickness: 2px;
+}
+
 .hero-right {
     display: flex;
     flex-direction: column;
@@ -545,7 +573,7 @@ section {
     line-height: 1.6;
 }
 
-/* Sección de Aplicaciones - SOLO FASE 1 */
+/* Sección de Aplicaciones */
 .applications-section {
     background: rgba(10, 10, 26, 0.3);
 }
@@ -569,6 +597,12 @@ section {
     flex-direction: column;
     cursor: pointer;
     aspect-ratio: 1/1;
+}
+
+.application-card.card-span-2 {
+    grid-column: span 2;
+    aspect-ratio: auto;
+    min-height: 220px;
 }
 
 .application-card::before {
@@ -598,6 +632,18 @@ section {
     background: rgba(0, 243, 255, 0.05);
 }
 
+.card-planned {
+    border-color: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.02);
+    opacity: 0.9;
+}
+
+.card-future {
+    border-color: rgba(157, 0, 255, 0.2);
+    background: rgba(157, 0, 255, 0.02);
+    opacity: 0.8;
+}
+
 .app-header {
     display: flex;
     justify-content: space-between;
@@ -618,6 +664,25 @@ section {
     font-size: 0.6rem;
     font-weight: 600;
     border: 1px solid var(--quantum-blue);
+}
+
+.card-planned .app-badge {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.8);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.card-future .app-badge {
+    background: rgba(157, 0, 255, 0.2);
+    color: var(--galactic-purple);
+    border-color: var(--galactic-purple);
+}
+
+/* Badge más grande para tarjetas que ocupan 2 columnas */
+.card-span-2 .app-badge.large-badge {
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    border-radius: 8px;
 }
 
 .app-title {
@@ -643,6 +708,10 @@ section {
     flex-grow: 1;
     overflow: hidden;
     max-height: 50px;
+}
+
+.card-span-2 .app-description {
+    max-height: none;
 }
 
 .app-features {
@@ -689,84 +758,6 @@ section {
 .app-expand-btn:hover {
     background: rgba(0, 243, 255, 0.4);
     transform: scale(1.1);
-}
-
-/* SECCIONES CONCEPTUALES (FASE 2 Y 3) */
-.concept-section {
-    padding: 60px 0;
-    background: rgba(15, 15, 35, 0.6);
-    border-top: 1px solid rgba(0, 243, 255, 0.2);
-    border-bottom: 1px solid rgba(0, 243, 255, 0.2);
-}
-
-.academy-section {
-    background: linear-gradient(135deg, rgba(26, 0, 51, 0.8), rgba(0, 17, 34, 0.8));
-}
-
-.robotics-section {
-    background: linear-gradient(135deg, rgba(0, 17, 34, 0.8), rgba(26, 0, 51, 0.8));
-}
-
-.concept-content {
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.concept-icon {
-    font-size: 3rem;
-    color: var(--quantum-blue);
-    margin-bottom: 20px;
-    text-shadow: 0 0 20px var(--quantum-blue);
-}
-
-.concept-title {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 2rem;
-    font-weight: 900;
-    margin-bottom: 10px;
-    color: var(--stellar-white);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.concept-subtitle {
-    font-size: 1rem;
-    color: var(--quantum-blue);
-    margin-bottom: 25px;
-    font-weight: 500;
-}
-
-.concept-description {
-    font-size: 0.95rem;
-    line-height: 1.7;
-    color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 30px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.concept-description p {
-    margin-bottom: 15px;
-}
-
-.concept-features {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    justify-content: center;
-}
-
-.concept-feature {
-    background: rgba(0, 243, 255, 0.15);
-    color: var(--quantum-blue);
-    padding: 6px 15px;
-    border-radius: 30px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    border: 1px solid rgba(0, 243, 255, 0.3);
-    backdrop-filter: blur(5px);
 }
 
 /* Modal de detalles de aplicación */
@@ -1473,6 +1464,10 @@ section {
         grid-template-columns: repeat(2, 1fr);
     }
     
+    .application-card.card-span-2 {
+        grid-column: span 2;
+    }
+    
     .team-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1536,6 +1531,10 @@ section {
         grid-template-columns: 1fr;
     }
     
+    .application-card.card-span-2 {
+        grid-column: span 1;
+    }
+    
     .innovations-grid {
         grid-template-columns: 1fr;
     }
@@ -1590,14 +1589,6 @@ section {
         font-size: 1.5rem;
         margin: 0 auto;
     }
-    
-    .concept-title {
-        font-size: 1.6rem;
-    }
-    
-    .concept-description {
-        font-size: 0.85rem;
-    }
 }
 
 @media (max-width: 480px) {
@@ -1625,13 +1616,5 @@ section {
     
     .stat-number {
         font-size: 1.4rem;
-    }
-    
-    .concept-title {
-        font-size: 1.4rem;
-    }
-    
-    .concept-subtitle {
-        font-size: 0.85rem;
     }
 }
