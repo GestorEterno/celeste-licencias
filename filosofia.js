@@ -1,4 +1,4 @@
-// filosofia.js - Versión Mejorada
+// filosofia.js - Versión Mejorada (sin cambios estructurales, solo adaptado para nuevos elementos)
 
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Vision Olympus - Filosofía cargada');
@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initJourneyAnimations();
     initButtonEffects();
     initOrbitalAnimation();
+    initCommitmentSection(); // Nueva función para la sección de compromiso
 });
 
 // Inicializar la página de filosofía
@@ -169,7 +170,7 @@ function initJourneyAnimations() {
 
 // Inicializar efectos en botones
 function initButtonEffects() {
-    const buttons = document.querySelectorAll('.portal-button');
+    const buttons = document.querySelectorAll('.portal-button, .cta-button');
     
     buttons.forEach(button => {
         button.addEventListener('mouseenter', function() {
@@ -267,6 +268,26 @@ function createOrbitalParticle(container, index) {
     particle.style.animationDelay = `${delay}s`;
     
     container.appendChild(particle);
+}
+
+// Nueva función para animar la sección de compromiso
+function initCommitmentSection() {
+    const commitmentSection = document.querySelector('.commitment-section');
+    if (!commitmentSection) return;
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, { threshold: 0.3 });
+    
+    commitmentSection.style.opacity = '0';
+    commitmentSection.style.transform = 'translateY(30px)';
+    commitmentSection.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+    observer.observe(commitmentSection);
 }
 
 console.log('Filosofía - Vision Olympus lista');
