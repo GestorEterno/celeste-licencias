@@ -1,4 +1,4 @@
-/* ARCHIVO: index.css (COMPLETO - NUEVA VISIÓN COMPACTA) */
+/* ARCHIVO: index.css (COMPLETO - VERSIÓN FINAL) */
 
 /* Reset y configuración base */
 * {
@@ -353,7 +353,7 @@ section {
     font-weight: 600;
 }
 
-/* ========== HERO (compacto) ========== */
+/* ========== HERO ========== */
 .hero-section {
     min-height: 90vh;
     display: flex;
@@ -722,7 +722,7 @@ section {
     color: #cccccc;
 }
 
-/* ========== SECCIÓN UNIRSE ========== */
+/* ========== SECCIÓN PARA USUARIOS ========== */
 .join-section {
     padding: 20px 0;
 }
@@ -865,7 +865,7 @@ section {
     box-shadow: 0 5px 10px rgba(0, 243, 255, 0.2);
 }
 
-/* Footer (sin cambios) */
+/* Footer */
 .tech-footer {
     background: var(--dark-matter);
     border-top: 1px solid rgba(0, 243, 255, 0.2);
