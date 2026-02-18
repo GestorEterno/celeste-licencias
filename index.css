@@ -1,4 +1,4 @@
-/* ARCHIVO: index.css (COMPLETO - VERSIÓN FINAL ABSOLUTA) */
+/* ARCHIVO: index.css (COMPLETO - CON SCROLL-MARGIN-TOP PARA SECCIONES) */
 
 /* ========== RESET Y CONFIGURACIÓN BASE ========== */
 * {
@@ -236,7 +236,7 @@ body {
     width: 100%;
 }
 
-/* ========== ANIMACIONES GLITCH (COMPLETAS) ========== */
+/* ========== ANIMACIONES GLITCH ========== */
 @keyframes glitch-anim {
     0% { clip: rect(42px, 9999px, 44px, 0); }
     5% { clip: rect(12px, 9999px, 59px, 0); }
@@ -296,6 +296,8 @@ body {
 section {
     padding: 15px 0;
     position: relative;
+    /* Añadimos scroll-margin-top para que al hacer scroll a una sección quede separada del borde superior */
+    scroll-margin-top: 70px; /* Ajusta este valor según la altura de tu cabecera fija */
 }
 
 .section-title {
@@ -364,8 +366,11 @@ section {
     padding: 100px 0 60px;
     position: relative;
     overflow: hidden;
+    /* El hero no necesita scroll-margin-top porque es la primera sección */
+    scroll-margin-top: 0;
 }
 
+/* ... resto de estilos del hero (sin cambios) ... */
 .hero-orbit {
     position: absolute;
     top: 50%;
@@ -1054,6 +1059,7 @@ section {
     }
     section {
         padding: 12px 0;
+        scroll-margin-top: 60px; /* un poco más pequeño en móvil */
     }
     .contrast-grid,
     .apps-grid,
