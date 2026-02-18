@@ -1,4 +1,4 @@
-/* ARCHIVO: index.css (COMPLETO - CON HERO LIGERAMENTE MÁS GRANDE) */
+/* ARCHIVO: index.css (COMPLETO - VERSIÓN FINAL DEFINITIVA) */
 
 /* Reset y configuración base */
 * {
@@ -353,9 +353,9 @@ section {
     font-weight: 600;
 }
 
-/* ========== HERO (ligeramente más grande) ========== */
+/* ========== HERO (98vh para que ocupe casi toda la pantalla) ========== */
 .hero-section {
-    min-height: 95vh;  /* Aumentado de 90vh a 95vh para ocupar más pantalla */
+    min-height: 98vh;
     display: flex;
     align-items: center;
     padding: 100px 0 60px;
@@ -865,11 +865,11 @@ section {
     box-shadow: 0 5px 10px rgba(0, 243, 255, 0.2);
 }
 
-/* Footer */
+/* ========== FOOTER REDUCIDO 20% (sin el párrafo) ========== */
 .tech-footer {
     background: var(--dark-matter);
     border-top: 1px solid rgba(0, 243, 255, 0.2);
-    padding: 25px 0 15px;
+    padding: 20px 0 10px; /* reducido de 25px 0 15px */
 }
 
 .footer-container {
@@ -882,33 +882,25 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 10px; /* reducido */
     flex-wrap: wrap;
-    gap: 15px;
-}
-
-.footer-logo {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    min-width: 150px;
+    gap: 10px; /* reducido */
 }
 
 .footer-logo h3 {
     font-family: 'Orbitron', sans-serif;
-    font-size: 0.9rem;
+    font-size: 0.8rem; /* reducido de 0.9rem */
     color: var(--stellar-white);
-    margin-bottom: 3px;
+    margin-bottom: 0; /* eliminado margen inferior */
+    text-transform: uppercase;
+    letter-spacing: 2px; /* ajustado */
 }
 
-.footer-logo p {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 0.7rem;
-}
+/* Efecto glitch en el logo del footer (ya tiene clase logo-glitch) */
 
 .footer-links {
     display: flex;
-    gap: 20px;
+    gap: 15px; /* reducido de 20px */
     flex: 2;
     justify-content: center;
 }
@@ -916,7 +908,7 @@ section {
 .footer-link {
     color: rgba(255, 255, 255, 0.7);
     text-decoration: none;
-    font-size: 0.75rem;
+    font-size: 0.7rem; /* reducido de 0.75rem */
     transition: color 0.3s ease;
     position: relative;
 }
@@ -942,17 +934,17 @@ section {
 
 .footer-social {
     display: flex;
-    gap: 12px;
+    gap: 8px; /* reducido de 12px */
     flex: 1;
     justify-content: flex-end;
 }
 
 .social-link {
     color: rgba(255, 255, 255, 0.7);
-    font-size: 1.3rem;
+    font-size: 1.1rem; /* reducido de 1.3rem */
     transition: all 0.3s ease;
-    width: 40px;
-    height: 40px;
+    width: 30px; /* reducido de 40px */
+    height: 30px; /* reducido de 40px */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -968,10 +960,10 @@ section {
 
 .footer-copyright {
     text-align: center;
-    padding-top: 15px;
+    padding-top: 10px; /* reducido de 15px */
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     color: rgba(255, 255, 255, 0.7);
-    font-size: 0.7rem;
+    font-size: 0.65rem; /* reducido de 0.7rem */
 }
 
 /* Botón Volver al Inicio */
