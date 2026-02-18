@@ -1,4 +1,4 @@
-// comunidad.js - Versión Mejorada con Hero MEJORADO
+// comunidad.js - Versión Mejorada con header/footer idénticos a filosofia.js
 
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Vision Olympus - Comunidad cargada');
