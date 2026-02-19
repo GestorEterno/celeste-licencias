@@ -1,4 +1,4 @@
-// tecnologia.js - Versión Corregida (solo modales para Fase 1)
+// tecnologia.js - Versión Corregida (con toast para redes sociales)
 
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Vision Olympus - Tecnología cargada');
@@ -10,6 +10,9 @@ document.addEventListener('DOMContentLoaded', function() {
     initElementAnimations();
     initAppModals(); // Solo para las 4 apps de Fase 1
     initOrbitalAnimation();
+    
+    // Inicializar el toast para redes sociales
+    initSocialToast();
 });
 
 // Inicializar la página de tecnología
@@ -389,6 +392,28 @@ function initAppModals() {
         if (e.key === 'Escape' && modal.classList.contains('active')) {
             closeModal();
         }
+    });
+}
+
+// Función para el toast de redes sociales
+function initSocialToast() {
+    const socialLinks = document.querySelectorAll('.social-link');
+    const toast = document.getElementById('social-toast');
+    
+    if (!toast) return;
+    
+    socialLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault(); // Evita el comportamiento por defecto (scroll hacia arriba)
+            
+            // Mostrar el toast
+            toast.classList.add('show');
+            
+            // Ocultar después de 3 segundos
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        });
     });
 }
 
