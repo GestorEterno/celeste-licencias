@@ -1,4 +1,4 @@
-/* ARCHIVO: index.css (COMPLETO - CON SCROLL-MARGIN-TOP PARA SECCIONES) */
+/* ARCHIVO: index.css (COMPLETO - CON SCROLL-MARGIN-TOP PARA SECCIONES Y TOAST PARA REDES) */
 
 /* ========== RESET Y CONFIGURACIÓN BASE ========== */
 * {
@@ -1019,6 +1019,35 @@ section {
     box-shadow: 0 0 20px rgba(0, 243, 255, 0.8);
 }
 
+/* ========== TOAST PARA REDES SOCIALES ========== */
+.social-toast {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: rgba(10, 10, 26, 0.9);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--quantum-blue);
+    border-radius: 30px;
+    padding: 12px 24px;
+    color: var(--stellar-white);
+    font-family: 'Exo 2', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    box-shadow: 0 0 20px rgba(0, 243, 255, 0.5);
+    z-index: 2000;
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    white-space: nowrap;
+    pointer-events: none;
+    text-align: center;
+}
+
+.social-toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
 /* ========== RESPONSIVE ========== */
 @media (max-width: 1024px) {
     .hero-title {
@@ -1092,6 +1121,15 @@ section {
         height: 35px;
         font-size: 1rem;
     }
+    /* Toast responsive */
+    .social-toast {
+        font-size: 0.75rem;
+        padding: 10px 20px;
+        white-space: normal;
+        width: 90%;
+        max-width: 350px;
+        bottom: 20px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1106,58 +1144,5 @@ section {
     }
     .hero-orbit {
         display: none;
-    }
-}
-
-/* ========== TOAST PARA REDES SOCIALES ========== */
-.social-toast {
-    visibility: hidden;
-    min-width: 260px;
-    background-color: rgba(10, 10, 26, 0.95);
-    color: var(--stellar-white);
-    text-align: center;
-    border-radius: 8px;
-    padding: 14px 20px;
-    position: fixed;
-    z-index: 10000;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 0.85rem;
-    border-left: 4px solid var(--quantum-blue);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(0, 243, 255, 0.3);
-    backdrop-filter: blur(8px);
-    opacity: 0;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-    font-family: 'Exo 2', sans-serif;
-    letter-spacing: 0.5px;
-}
-
-.social-toast.show {
-    visibility: visible;
-    opacity: 1;
-}
-
-@keyframes toast-slide-up {
-    0% {
-        transform: translate(-50%, 20px);
-        opacity: 0;
-    }
-    100% {
-        transform: translate(-50%, 0);
-        opacity: 1;
-    }
-}
-
-.social-toast.show {
-    animation: toast-slide-up 0.3s ease forwards;
-}
-
-@media (max-width: 480px) {
-    .social-toast {
-        min-width: 220px;
-        font-size: 0.75rem;
-        padding: 10px 16px;
-        bottom: 20px;
     }
 }
