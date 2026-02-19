@@ -1,4 +1,4 @@
-// comunidad.js - Versión Mejorada con header/footer idénticos a filosofia.js
+// comunidad.js - Versión Mejorada con header/footer idénticos a filosofia.js y toast para redes
 
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Vision Olympus - Comunidad cargada');
@@ -9,6 +9,9 @@ document.addEventListener('DOMContentLoaded', function() {
     createStellarField();
     initElementAnimations();
     initOrbitalAnimation();
+    
+    // Inicializar el toast para redes sociales
+    initSocialToast();
 });
 
 // Inicializar la página de comunidad
@@ -290,6 +293,28 @@ function createOrbitalParticle(container, index) {
     particle.style.animationDelay = `${delay}s`;
     
     container.appendChild(particle);
+}
+
+// Función para el toast de redes sociales
+function initSocialToast() {
+    const socialLinks = document.querySelectorAll('.social-link');
+    const toast = document.getElementById('social-toast');
+    
+    if (!toast) return;
+    
+    socialLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault(); // Evita el comportamiento por defecto (scroll hacia arriba)
+            
+            // Mostrar el toast
+            toast.classList.add('show');
+            
+            // Ocultar después de 3 segundos
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        });
+    });
 }
 
 // Efectos especiales en botones CTA
