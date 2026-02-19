@@ -1,4 +1,4 @@
-// ARCHIVO: index.js (COMPLETO - VERSIÓN FINAL DEFINITIVA)
+// ARCHIVO: index.js (COMPLETO - CON TOAST PARA REDES SOCIALES)
 
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Vision Olympus - Página de inicio cargada (visión compacta)');
@@ -14,7 +14,9 @@ document.addEventListener('DOMContentLoaded', function() {
     initCardEffects();
     initLogoGlitch();
     initCtaEffects();
-    initSocialLinks();
+    
+    // Inicializar el toast para redes sociales
+    initSocialToast();
 });
 
 // Configurar barra de progreso
@@ -246,6 +248,28 @@ function initCtaEffects() {
         });
         button.addEventListener('mouseleave', function() {
             this.style.transform = 'translateY(0) scale(1)';
+        });
+    });
+}
+
+// Función para el toast de redes sociales
+function initSocialToast() {
+    const socialLinks = document.querySelectorAll('.social-link');
+    const toast = document.getElementById('social-toast');
+    
+    if (!toast) return;
+    
+    socialLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault(); // Evita el comportamiento por defecto (scroll hacia arriba)
+            
+            // Mostrar el toast
+            toast.classList.add('show');
+            
+            // Ocultar después de 3 segundos
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
         });
     });
 }
