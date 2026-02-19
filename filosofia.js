@@ -1,4 +1,4 @@
-// filosofia.js - Versión Mejorada (sin cambios estructurales, solo adaptado para nuevos elementos)
+// filosofia.js - Versión Mejorada (con toast para redes sociales)
 
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Vision Olympus - Filosofía cargada');
@@ -11,6 +11,9 @@ document.addEventListener('DOMContentLoaded', function() {
     initButtonEffects();
     initOrbitalAnimation();
     initCommitmentSection(); // Nueva función para la sección de compromiso
+    
+    // Inicializar el toast para redes sociales
+    initSocialToast();
 });
 
 // Inicializar la página de filosofía
@@ -288,6 +291,28 @@ function initCommitmentSection() {
     commitmentSection.style.transform = 'translateY(30px)';
     commitmentSection.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
     observer.observe(commitmentSection);
+}
+
+// Función para el toast de redes sociales
+function initSocialToast() {
+    const socialLinks = document.querySelectorAll('.social-link');
+    const toast = document.getElementById('social-toast');
+    
+    if (!toast) return;
+    
+    socialLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault(); // Evita el comportamiento por defecto (scroll hacia arriba)
+            
+            // Mostrar el toast
+            toast.classList.add('show');
+            
+            // Ocultar después de 3 segundos
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        });
+    });
 }
 
 console.log('Filosofía - Vision Olympus lista');
