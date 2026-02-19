@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initCardEffects();
     initLogoGlitch();
     initCtaEffects();
+    initSocialLinks();
 });
 
 // Configurar barra de progreso
