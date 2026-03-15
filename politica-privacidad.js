@@ -51,7 +51,7 @@ function initProgressBar() {
 // Configurar efectos de hover en tarjetas (si las hubiera)
 function initCardEffects() {
     // Esta función se mantiene por compatibilidad, aunque no haya tarjetas específicas en esta página
-    const cards = document.querySelectorAll('.contact-info, .acceptance-section');
+    const cards = document.querySelectorAll('.contact-info');
     
     cards.forEach(card => {
         card.addEventListener('mouseenter', function() {
@@ -144,7 +144,7 @@ function initElementAnimations() {
     
     // Observar elementos para animación
     const elementsToAnimate = document.querySelectorAll(
-        '.privacy-section, .contact-info, .acceptance-section'
+        '.privacy-section, .contact-info'
     );
     
     elementsToAnimate.forEach(el => {
