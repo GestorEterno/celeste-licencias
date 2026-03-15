@@ -444,20 +444,9 @@ body {
     margin-bottom: 10px;
 }
 
-/* Sección de aceptación */
+/* Sección de aceptación (estilo mantenido pero contenido eliminado) */
 .acceptance-section {
-    text-align: center;
-    margin-top: 40px;
-    padding: 30px;
-    background: rgba(0, 243, 255, 0.1);
-    border: 1px solid var(--quantum-blue);
-    border-radius: 12px;
-}
-
-.acceptance-section p {
-    font-family: 'Orbitron', sans-serif;
-    color: var(--quantum-blue);
-    font-size: 1.1rem;
+    display: none;
 }
 
 /* Footer - IDÉNTICO A INDEX */
