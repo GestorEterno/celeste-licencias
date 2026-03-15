@@ -1,7 +1,7 @@
 // politica-privacidad-ocaso.js - Versión Mejorada
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('Vision Olympus - Política de Privacidad Ocaso cargada');
+    console.log('Vision Olympus - Lista de Políticas de Privacidad cargada');
     
     // Inicializar funcionalidades
     initPrivacyPage();
@@ -10,14 +10,14 @@ document.addEventListener('DOMContentLoaded', function() {
     initElementAnimations();
 });
 
-// Inicializar la página de privacidad
+// Inicializar la página de listado
 function initPrivacyPage() {
-    console.log('Configurando página de política de privacidad Ocaso...');
+    console.log('Configurando página de listado de políticas...');
     
     // Inicializar barra de progreso
     initProgressBar();
     
-    // Inicializar efectos de hover
+    // Inicializar efectos de hover en las tarjetas de apps
     initCardEffects();
     initBackToTop();
 }
@@ -48,10 +48,9 @@ function initProgressBar() {
     window.addEventListener('scroll', updateProgress);
 }
 
-// Configurar efectos de hover en tarjetas (si las hubiera)
+// Configurar efectos de hover en tarjetas (ahora para .app-card)
 function initCardEffects() {
-    // Esta función se mantiene por compatibilidad, aunque no haya tarjetas específicas en esta página
-    const cards = document.querySelectorAll('.contact-info');
+    const cards = document.querySelectorAll('.app-card, .contact-info');
     
     cards.forEach(card => {
         card.addEventListener('mouseenter', function() {
@@ -144,7 +143,7 @@ function initElementAnimations() {
     
     // Observar elementos para animación
     const elementsToAnimate = document.querySelectorAll(
-        '.privacy-section, .contact-info'
+        '.privacy-section, .app-card, .contact-info'
     );
     
     elementsToAnimate.forEach(el => {
@@ -175,7 +174,7 @@ function initBackToTop() {
 
 // Efectos de hover en enlaces
 document.addEventListener('DOMContentLoaded', function() {
-    const links = document.querySelectorAll('.privacy-section a');
+    const links = document.querySelectorAll('.privacy-section a, .app-link');
     
     links.forEach(link => {
         link.addEventListener('mouseenter', function() {
@@ -188,4 +187,4 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-console.log('Política de Privacidad Ocaso - Vision Olympus lista');
+console.log('Lista de Políticas de Privacidad - Vision Olympus lista');
