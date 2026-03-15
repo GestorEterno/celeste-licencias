@@ -1,7 +1,7 @@
-// politica-privacidad.js - Versión Mejorada
+// politica-privacidad-ocaso.js - Versión Mejorada
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('Vision Olympus - Política de Privacidad cargada');
+    console.log('Vision Olympus - Política de Privacidad Ocaso cargada');
     
     // Inicializar funcionalidades
     initPrivacyPage();
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Inicializar la página de privacidad
 function initPrivacyPage() {
-    console.log('Configurando página de política de privacidad...');
+    console.log('Configurando página de política de privacidad Ocaso...');
     
     // Inicializar barra de progreso
     initProgressBar();
@@ -48,9 +48,10 @@ function initProgressBar() {
     window.addEventListener('scroll', updateProgress);
 }
 
-// Configurar efectos de hover en tarjetas
+// Configurar efectos de hover en tarjetas (si las hubiera)
 function initCardEffects() {
-    const cards = document.querySelectorAll('.app-info-item, .right-item');
+    // Esta función se mantiene por compatibilidad, aunque no haya tarjetas específicas en esta página
+    const cards = document.querySelectorAll('.contact-info, .acceptance-section');
     
     cards.forEach(card => {
         card.addEventListener('mouseenter', function() {
@@ -143,7 +144,7 @@ function initElementAnimations() {
     
     // Observar elementos para animación
     const elementsToAnimate = document.querySelectorAll(
-        '.privacy-section, .app-info-item, .right-item'
+        '.privacy-section, .contact-info, .acceptance-section'
     );
     
     elementsToAnimate.forEach(el => {
@@ -187,4 +188,4 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-console.log('Política de Privacidad - Vision Olympus lista');
+console.log('Política de Privacidad Ocaso - Vision Olympus lista');
