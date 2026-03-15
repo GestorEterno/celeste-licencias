@@ -1,7 +1,7 @@
-// términos-condiciones.js - Versión Mejorada
+// terminos-condiciones.js - Versión Mejorada
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('Vision Olympus - Términos y Condiciones cargados');
+    console.log('Vision Olympus - Lista de Términos y Condiciones cargada');
     
     // Inicializar funcionalidades
     initTermsPage();
@@ -10,14 +10,14 @@ document.addEventListener('DOMContentLoaded', function() {
     initElementAnimations();
 });
 
-// Inicializar la página de términos
+// Inicializar la página de listado
 function initTermsPage() {
-    console.log('Configurando página de términos y condiciones...');
+    console.log('Configurando página de listado de términos...');
     
     // Inicializar barra de progreso
     initProgressBar();
     
-    // Inicializar efectos de hover
+    // Inicializar efectos de hover en las tarjetas de apps
     initCardEffects();
     initBackToTop();
 }
@@ -48,9 +48,9 @@ function initProgressBar() {
     window.addEventListener('scroll', updateProgress);
 }
 
-// Configurar efectos de hover en tarjetas
+// Configurar efectos de hover en tarjetas (ahora para .app-card)
 function initCardEffects() {
-    const cards = document.querySelectorAll('.app-info-item, .right-item');
+    const cards = document.querySelectorAll('.app-card, .contact-info');
     
     cards.forEach(card => {
         card.addEventListener('mouseenter', function() {
@@ -66,18 +66,12 @@ function initCardEffects() {
 // Configurar efectos de scroll
 function setupScrollEffects() {
     const header = document.querySelector('.cyber-header');
-    const termsContent = document.querySelector('.terms-content');
     
     window.addEventListener('scroll', function() {
         if (window.pageYOffset > 80) {
             header.classList.add('scrolled');
         } else {
             header.classList.remove('scrolled');
-        }
-        
-        // Efecto de aparición del borde superior
-        if (window.pageYOffset > 200) {
-            termsContent.classList.add('appear');
         }
     });
 }
@@ -149,7 +143,7 @@ function initElementAnimations() {
     
     // Observar elementos para animación
     const elementsToAnimate = document.querySelectorAll(
-        '.terms-section, .app-info-item, .right-item'
+        '.terminos-section, .app-card, .contact-info'
     );
     
     elementsToAnimate.forEach(el => {
@@ -168,7 +162,7 @@ function initBackToTop() {
         });
     });
     
-    // Mostrar/ocultar botón de volver al inicio
+    // Mostrar/ocultar botón según scroll
     window.addEventListener('scroll', function() {
         if (window.pageYOffset > 300) {
             backToTop.classList.add('visible');
@@ -178,19 +172,19 @@ function initBackToTop() {
     });
 }
 
-// Efectos en enlaces
+// Efectos de hover en enlaces
 document.addEventListener('DOMContentLoaded', function() {
-    const links = document.querySelectorAll('.terms-section a');
+    const links = document.querySelectorAll('.terminos-section a, .app-link');
     
     links.forEach(link => {
         link.addEventListener('mouseenter', function() {
-            this.style.textShadow = '0 0 8px currentColor';
+            this.style.color = 'var(--pulsar-pink)';
         });
         
         link.addEventListener('mouseleave', function() {
-            this.style.textShadow = 'none';
+            this.style.color = 'var(--quantum-blue)';
         });
     });
 });
 
-console.log('Términos y Condiciones - Vision Olympus listos');
+console.log('Lista de Términos y Condiciones - Vision Olympus lista');
