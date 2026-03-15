@@ -327,127 +327,103 @@ body {
     font-size: 0.9rem;
 }
 
-.privacy-section {
-    margin-bottom: 40px;
-    padding-bottom: 30px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.5s, transform 0.5s;
+/* --- NUEVOS ESTILOS PARA LA LISTA DE APPS --- */
+.app-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
 }
 
-.privacy-section.appear {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.privacy-section:last-of-type {
-    border-bottom: none;
-}
-
-.privacy-section h2 {
-    color: var(--quantum-blue);
-    margin-bottom: 25px;
-    font-family: 'Orbitron', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 1.5rem;
-    position: relative;
-    padding-left: 20px;
-}
-
-.privacy-section h2::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 5px;
-    height: 25px;
-    background: var(--quantum-blue);
-    border-radius: 2px;
-}
-
-.privacy-section h3 {
-    color: var(--nova-green);
-    margin: 25px 0 15px;
-    font-family: 'Exo 2', sans-serif;
-    font-size: 1.2rem;
-    font-weight: 600;
-}
-
-.privacy-section p, .privacy-section ul {
-    margin-bottom: 15px;
-    line-height: 1.7;
-    color: rgba(255, 255, 255, 0.9);
-}
-
-.privacy-section ul {
-    padding-left: 25px;
-}
-
-.privacy-section li {
-    margin-bottom: 10px;
-    position: relative;
-    padding-left: 10px;
-}
-
-.privacy-section li::before {
-    content: '▸';
-    color: var(--quantum-blue);
-    position: absolute;
-    left: -15px;
-}
-
-.privacy-section a {
-    color: var(--quantum-blue);
-    text-decoration: none;
-    transition: color 0.3s;
-    position: relative;
-}
-
-.privacy-section a:hover {
-    color: var(--pulsar-pink);
-}
-
-.privacy-section a::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 1px;
-    background: var(--pulsar-pink);
-    transition: width 0.3s;
-}
-
-.privacy-section a:hover::after {
-    width: 100%;
-}
-
-/* Información de contacto */
-.contact-info {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(0, 243, 255, 0.2);
-    border-radius: 12px;
+.app-card {
+    display: flex;
+    align-items: center;
+    gap: 25px;
     padding: 25px;
-    margin: 20px 0;
-    transition: all 0.3s;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(0, 243, 255, 0.15);
+    border-radius: 15px;
+    text-decoration: none;
+    color: var(--stellar-white);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
-.contact-info:hover {
+.app-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 243, 255, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.app-card:hover {
+    transform: translateY(-5px);
     border-color: var(--quantum-blue);
-    box-shadow: 0 8px 25px rgba(0, 243, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 243, 255, 0.2);
 }
 
-.contact-info p {
+.app-card:hover::before {
+    left: 100%;
+}
+
+.app-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--quantum-blue), var(--pulsar-pink));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    color: var(--stellar-white);
+    box-shadow: 0 0 20px rgba(0, 243, 255, 0.5);
+    flex-shrink: 0;
+}
+
+.app-info {
+    flex: 1;
+}
+
+.app-info h2 {
+    color: var(--quantum-blue);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+}
+
+.app-info p {
+    color: rgba(255, 255, 255, 0.8);
     margin-bottom: 10px;
+    font-size: 1rem;
 }
 
-/* Sección de aceptación (estilo mantenido pero contenido eliminado) */
-.acceptance-section {
-    display: none;
+.app-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--pulsar-pink);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: gap 0.3s;
 }
+
+.app-link i {
+    font-size: 0.8rem;
+}
+
+.app-card:hover .app-link {
+    gap: 12px;
+    color: var(--quantum-blue);
+}
+/* --- FIN DE NUEVOS ESTILOS --- */
 
 /* Footer - IDÉNTICO A INDEX */
 .tech-footer {
@@ -648,8 +624,21 @@ body {
         font-size: 1.8rem;
     }
 
-    .app-specific-info, .rights-grid {
-        grid-template-columns: 1fr;
+    /* Responsive para la lista de apps */
+    .app-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .app-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.8rem;
+    }
+
+    .app-info h2 {
+        font-size: 1.5rem;
     }
     
     .footer-content {
@@ -679,10 +668,6 @@ body {
 @media (max-width: 480px) {
     .privacy-title {
         font-size: 1.5rem;
-    }
-    
-    .privacy-section h2 {
-        font-size: 1.3rem;
     }
     
     .privacy-content {
